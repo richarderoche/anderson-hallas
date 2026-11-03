@@ -1,0 +1,17 @@
+/* from md/_md-project.scss */
+@media (min-width: 680px) {
+aside.project-info .vid-wrap {
+  margin-bottom: 0;
+}
+aside.project-info .vid-thumb {
+  width: 100%;
+}
+aside.project-info .vid-thumb .play {
+  width: 2.5em;
+  height: 2.5em;
+  overflow: visible;
+}
+aside.project-info .recognition.side {
+  margin-top: 0;
+}
+}

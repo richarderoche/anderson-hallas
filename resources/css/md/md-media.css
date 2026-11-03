@@ -1,0 +1,37 @@
+/* from md/_md-media.scss */
+@media (min-width: 680px) {
+.page-body-wrap.news header.page {
+  text-align: left;
+}
+.page-body-wrap.news .pagination {
+  margin-top: 2em;
+}
+.page-body-wrap.news .pagination .prev + .next {
+  margin-left: 6em;
+}
+
+h1.page-section-title.resources {
+  text-align: left;
+}
+
+article.media {
+  text-align: left;
+}
+article.media:nth-child(odd) {
+  clear: both;
+}
+article.media .image {
+  width: 100%;
+  margin: 0 0 0.5em;
+}
+
+.lb-wrap.media .panel-wrap {
+  margin-left: 8.3333333333%;
+}
+.lb-wrap.media .content {
+  padding: 1.3333333333em 1.3333333333em 1.1em;
+}
+.lb-wrap.media h2 {
+  margin-right: 2.6666666667em;
+}
+}

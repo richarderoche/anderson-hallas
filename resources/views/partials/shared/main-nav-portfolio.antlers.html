@@ -1,0 +1,35 @@
+{{ if url | segment:1 == parent_slug }}
+
+<div class="nav-link current parent {{ url | segment:1 | remove_left:/ | replace('/', '-') }} {{ url | remove_left:/ | replace('/', '-') or template | slugify }}">
+
+<div class="parent-wrap expandable expanded">
+
+{{ else }}
+
+<div class="nav-link parent {{ url | segment:1 | remove_left:/ | replace('/', '-') }} {{ url | remove_left:/ | replace('/', '-') or template | slugify }}">
+
+<div class="parent-wrap expandable">
+
+{{ /if }}
+<a class="top-link parent-link" href="{{ url }}">{{ title }}</a>
+<div class="toggle-sec md-down">
+  <svg aria-labelledby="title" class="ico triangle" role="img" title="Expand or Collapse">
+    <use xlink:href="#triangle"></use>
+  </svg>
+</div>
+<div class="children-wrap toggle-section">
+  <div class="sub-link duplicate">
+    <a class="child-link" href="{{ url }}">{{ title }}</a>
+  </div>
+  {{ project_filters }}
+  {{ if current_uri == "/portfolio/categories/{slug}" }}
+  <div class="sub-link current portfolio-categories-{{ slug }}">
+  {{ else }}
+  <div class="sub-link portfolio-categories-{{ slug }}">
+  {{ /if }}
+  <a class="child-link" href="/portfolio/categories/{{ slug }}">{{ title }}</a>
+  </div>
+  {{ /project_filters }}
+</div>
+</div>
+</div>

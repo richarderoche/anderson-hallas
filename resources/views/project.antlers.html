@@ -1,0 +1,54 @@
+<main class="id-{{ id }} project {{ slug }}">
+  {{ partial src="partials/projects/info-panel" }}
+  {{ partial src="partials/projects/slider" }}
+  <a class="slide-nav slide-prev lg-only">
+    <div class="slide-arrow prev" href="#prev-slide">
+      <svg aria-labelledby="title" class="ico" role="img" title="Previous Slide">
+        <use xlink:href="#arrow-left"></use>
+      </svg>
+    </div>
+  </a>
+  <a class="slide-nav slide-next lg-only">
+    <div class="slide-arrow next" href="#next-slide">
+      <svg aria-labelledby="title" class="ico" role="img" title="Next Slide">
+        <use xlink:href="#arrow-right"></use>
+      </svg>
+    </div>
+  </a>
+  {{ if show_video }}
+  <div class="lb-wrap project">
+    <div class="lb">
+      <div class="grid-wrap">
+        <div class="row">
+          <div class="panel-wrap smd-6-6 lg-6-12">
+            <div class="panel project-vid-popup">
+              <div class="close-lb-wrap">
+                <a class="toggle close-lb" href="#close">
+                  <svg aria-labelledby="title" class="ico nav-close" role="img" title="Close Lightbox">
+                    <use xlink:href="#nav-close"></use>
+                  </svg>
+                </a>
+              </div>
+              <div class="content">
+                {{ if show_video == "upload" }}
+                {{ upload_video }}
+                <div class="video-holder">
+                  <video class="vid" controls="" preload="metadata">
+                    <source src="{{ url }}" type="video/mp4">
+                  </video>
+                </div>
+                {{ /upload_video }}
+                {{ else }}
+                <div class="video-holder">
+                  <iframe src="{{ embed_video | embed_url }}" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                </div>
+                {{ /if }}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  {{ /if }}
+</main>

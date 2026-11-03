@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" class="splash">
+<head>
+  {{ if config:app:env == "production" && global:analytics_code }}
+  {{ partial src="partials/shared/meta-gtag" }}
+  {{ /if }}
+  {{ partial src="partials/shared/meta-siteTitles" }}
+  {{ partial src="partials/shared/meta-standard" }}
+  {{ partial src="partials/shared/meta-apple" }}
+  {{ partial src="partials/shared/meta-fb" }}
+  <meta name="google-site-verification" content="dSRnMqlmd7i30vYUWeZpc_zfUrfTHLGnnn6uyAHSsxI" />
+  <link href="/favicon.ico" rel="shortcut icon">
+  {{ vite src="resources/css/site.css|resources/js/site.js" }}
+  {{ if js_head }}
+  {{ js_head }}
+  {{ /if }}
+</head>
+{{ body_base = "{page:template | slugify} {config:app:env}" }}
+{{ body_classes = segment_2 ? "{parent:template | slugify}-child child {body_base}" : "{body_base} not-child" }}
+<body class="{{ body_classes }}">
+
+{{ if js_body_top }}
+{{ js_body_top }}
+{{ /if }}
+{{ partial src="partials/shared/svg-icons" }}
+<div id="wrapper">
+  <header class="top">
+    {{ partial src="partials/shared/site-header" }}
+  </header>
+  <div id="main-content">
+    {{ template_content }}
+  </div>
+</div>
+<footer class="bottom invert">
+  {{ partial src="partials/shared/site-footer" }}
+</footer>
+{{ if js_body_bottom }}
+{{ js_body_bottom }}
+{{ /if }}
+</body>
+</html>

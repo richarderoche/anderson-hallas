@@ -1,0 +1,28 @@
+<article class="person employee sm-6-6 md-3-6 lg-4-12 lb-btn" data-id="id-{{ id }}">
+  <div class="images">
+    <div class="headshot">
+      {{ portrait }}
+      {{ partial src="partials/images/staff-team" }}
+      {{ /portrait }}
+    </div>
+    <div class="candid">
+      {{ candid }}
+      {{ partial src="partials/images/staff-team" }}
+      {{ /candid }}
+    </div>
+  </div>
+  <div class="info">
+    <h1>
+      <span class="name">{{ first_name | smartypants }} {{ last_name | smartypants }}</span>
+      {{ if associate }}
+      <span class="associate">{{ associate_title | smartypants }}</span>
+      {{ /if }}
+    </h1>
+    {{ if credentials }}
+    <h2 class="cred">{{ credentials }}</h2>
+    {{ /if }}
+    {{ if position }}
+    <h3 class="position">{{ position | smartypants }}</h3>
+    {{ /if }}
+  </div>
+</article>

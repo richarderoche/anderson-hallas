@@ -1,0 +1,19 @@
+{{ nav:collection:pages include_home="true" }}
+{{ unless nav_hide }}
+{{ if template == "portfolio" }}
+{{ if segment_1 }}
+{{ partial src="partials/shared/main-nav-portfolio" parent_slug="{segment_1}" }}
+{{ else }}
+{{ partial src="partials/shared/main-nav-portfolio" parent_slug="none" }}
+{{ /if }}
+{{ elseif children }}
+{{ if segment_1 }}
+{{ partial src="partials/shared/main-nav-parent" parent_slug="{segment_1}" }}
+{{ else }}
+{{ partial src="partials/shared/main-nav-parent" parent_slug="none" }}
+{{ /if }}
+{{ else }}
+{{ partial src="partials/shared/main-nav-link" parent_url="{parent:url}" }}
+{{ /if }}
+{{ /unless }}
+{{ /nav:collection:pages }}

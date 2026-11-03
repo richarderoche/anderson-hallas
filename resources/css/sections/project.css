@@ -1,0 +1,92 @@
+/* from sections/_project.scss */
+main.project {
+  padding-bottom: 4em;
+}
+main.project .slide {
+  margin-bottom: 0.5555555556em;
+}
+main.project .slide:last-child {
+  margin-bottom: 0;
+}
+
+aside.project-info {
+  margin-bottom: 0.6em;
+}
+aside.project-info .meta-inner {
+  padding-bottom: 1em;
+}
+aside.project-info header {
+  margin-top: 1.5em;
+}
+aside.project-info header.md-down .less-more-wrap {
+  text-align: left;
+  padding: 0.8em 0;
+}
+aside.project-info header.md-down .less-more-wrap span.txt {
+  margin-right: 0;
+  margin-left: 1.5em;
+}
+aside.project-info header.md-down .less-more-wrap span.txt span {
+  right: auto;
+  left: 0;
+}
+aside.project-info header.md-down .less-more-wrap .ico {
+  margin-left: -1em;
+}
+aside.project-info .meta-wrap h2 {
+  margin-bottom: 0.4em;
+}
+aside.project-info .project-quotes {
+  margin: 1.4em 0 0;
+}
+aside.project-info .vid-thumb {
+  margin-top: 0.6em;
+  width: 66%;
+  position: relative;
+}
+aside.project-info .vid-thumb .play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  width: 3em;
+  height: 3em;
+  overflow: visible;
+}
+aside.project-info .quote-row {
+  margin-bottom: 0.8em;
+}
+aside.project-info .quote-row:last-child {
+  margin-bottom: 0;
+}
+aside.project-info p.quote {
+  position: relative;
+}
+aside.project-info p.quote:before {
+  content: "“";
+  position: absolute;
+  left: -0.45em;
+  top: auto;
+}
+aside.project-info p.quote:after {
+  content: "”";
+}
+aside.project-info p.quote-credit {
+  margin-top: 0.4em;
+}
+aside.project-info .foot-wrap {
+  margin-top: 1.6em;
+}
+aside.project-info .foot-wrap p {
+  margin: 0.35em 0;
+}
+aside.project-info .vid-wrap {
+  margin-bottom: 1.4em;
+}
+aside.project-info .recognition {
+  margin-top: 1em;
+}

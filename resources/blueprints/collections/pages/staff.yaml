@@ -1,0 +1,117 @@
+title: 'Staff Index'
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              display: Title
+          -
+            handle: alt_title
+            field:
+              display: 'Alternate Title (Optional)'
+              instructions: 'Fill in to show longer title on page'
+              type: text
+          -
+            handle: template
+            field:
+              type: hidden
+              default: staff
+      -
+        display: 'Cover Hero'
+        fields:
+          -
+            handle: cover_image
+            field:
+              display: 'Optional Hero Image'
+              type: assets
+              max_files: 1
+              container: assets
+              folder: heroes
+              instructions: 'JPG, Ideally at least 2560px wide'
+              width: 66
+          -
+            handle: cover_crop
+            field:
+              display: 'Crop?'
+              type: toggle
+              default: true
+              width: 33
+      -
+        display: Leadership
+        fields:
+          -
+            handle: leadership_title
+            field:
+              type: text
+              display: 'Leadership section title'
+              default: Principals
+              width: 33
+          -
+            handle: leadership
+            field:
+              instructions: 'Choose individuals for leadership section, place in desired order (shown left to right, top to bottom)'
+              type: entries
+              collections:
+                - staff-members
+              width: 66
+      -
+        display: Associate
+        fields:
+          -
+            handle: associate_format
+            field:
+              type: radio
+              options:
+                two: 'Two wide - Large'
+                twosmall: 'Two wide - Small'
+                three: 'Three wide'
+          -
+            handle: associates
+            field:
+              instructions: 'Choose individuals for associate section, place in desired order (shown left to right, top to bottom)'
+              type: entries
+              collections:
+                - staff-members
+              width: 66
+      -
+        display: Team
+        fields:
+          -
+            handle: team_alpha
+            field:
+              display: 'Alphabetize Team Section'
+              type: toggle
+              default: true
+          -
+            handle: team_title
+            field:
+              type: text
+              display: 'Team section title'
+              default: 'Our Team'
+              width: 33
+          -
+            handle: team
+            field:
+              instructions: 'If you are not displaying team members alphabetically, you must manually create a list and order here.'
+              type: entries
+              collections:
+                - staff-members
+              width: 66
+              if:
+                team_alpha: 'equals false'
+      -
+        display: 'Popup Settings'
+        fields:
+          -
+            handle: popup_image
+            field:
+              type: radio
+              options:
+                headshot: Headshot
+                candid: Candid
+              default: candid

@@ -1,0 +1,191 @@
+title: Portfolio
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              display: Title
+          -
+            handle: alt_title
+            field:
+              display: 'Alternate Title (Optional)'
+              instructions: 'Fill in to show longer title on page'
+              type: text
+          -
+            handle: template
+            field:
+              type: hidden
+              default: portfolio
+      -
+        display: 'Filter Menu'
+        fields:
+          -
+            handle: project_filters
+            field:
+              display: 'Choose Categories and Order'
+              type: terms
+              taxonomies:
+                - categories
+      -
+        display: 'Project Thumbnails'
+        fields:
+          -
+            handle: thumbnail_blocks
+            field:
+              type: replicator
+              sets:
+                single:
+                  display: Single
+                  fields:
+                    -
+                      handle: project
+                      field:
+                        type: entries
+                        collections:
+                          - projects
+                        max_items: 1
+                double:
+                  display: Double
+                  fields:
+                    -
+                      handle: projectL
+                      field:
+                        display: 'Left Project'
+                        type: entries
+                        collections:
+                          - projects
+                        max_items: 1
+                        width: 50
+                    -
+                      handle: projectR
+                      field:
+                        display: 'Right Project'
+                        type: entries
+                        collections:
+                          - projects
+                        max_items: 1
+                        width: 50
+                    -
+                      handle: proportions
+                      field:
+                        type: radio
+                        options:
+                          even: Even
+                          wleft: 'Wide Left'
+                          wright: 'Wide Right'
+                        inline: true
+                        default: even
+                triple:
+                  display: Triple
+                  fields:
+                    -
+                      handle: projectL
+                      field:
+                        display: 'Left Project'
+                        type: entries
+                        collections:
+                          - projects
+                        max_items: 1
+                        width: 33
+                    -
+                      handle: projectM
+                      field:
+                        display: 'Middle Project'
+                        type: entries
+                        collections:
+                          - projects
+                        max_items: 1
+                        width: 33
+                    -
+                      handle: projectR
+                      field:
+                        display: 'Right Project'
+                        type: entries
+                        collections:
+                          - projects
+                        max_items: 1
+                        width: 33
+                quad:
+                  display: Quad
+                  fields:
+                    -
+                      handle: projectT
+                      field:
+                        display: 'Tall Project'
+                        type: entries
+                        collections:
+                          - projects
+                        max_items: 1
+                        width: 33
+                    -
+                      handle: projectW
+                      field:
+                        display: 'Wide Top Project'
+                        type: entries
+                        collections:
+                          - projects
+                        max_items: 1
+                        width: 66
+                    -
+                      handle: tall_position
+                      field:
+                        display: 'Postion of Tall Project'
+                        type: radio
+                        options:
+                          left: Left
+                          right: Right
+                        default: left
+                        width: 33
+                        inline: true
+                    -
+                      handle: projectL
+                      field:
+                        display: 'Small Bottom Project - Left'
+                        type: entries
+                        collections:
+                          - projects
+                        max_items: 1
+                        width: 33
+                    -
+                      handle: projectR
+                      field:
+                        display: 'Small Bottom Project - Right'
+                        type: entries
+                        collections:
+                          - projects
+                        max_items: 1
+                        width: 33
+      -
+        display: 'Past Clients'
+        fields:
+          -
+            handle: past_intro
+            field:
+              type: text
+              display: 'Intro Text'
+          -
+            handle: past_list
+            field:
+              type: grid
+              display: List
+              width: 66
+              fields:
+                -
+                  handle: client
+                  field:
+                    type: text
+          -
+            handle: past_order
+            field:
+              display: 'Display Order'
+              width: 33
+              instructions: 'Choose whether to display this list on the font end using the order shown here, or alphabetically.'
+              type: radio
+              options:
+                Alphabetical: Alphabetical
+                Manual: Manual

@@ -1,0 +1,33 @@
+<meta content="{{ global:short_name }}" property="og:site_name">
+<meta content="{{ current_url }}" property="og:url">
+<meta content="website" property="og:type">
+{{ if ! segment_1 }}
+<meta content="{{ global:short_name }} • {{ global:page_title_base }}" property="og:title">
+{{ else }}
+{{ if title }}
+<meta content="{{ title }} • {{ global:short_name }} • {{ global:page_title_base }}" property="og:title">
+{{ else }}
+<meta content="{{ last_segment | deslugify | title }} • {{ global:short_name }} • {{ global:page_title_base }}" property="og:title">
+{{ /if }}
+{{ /if }}
+{{ if template == "project" }}
+{{ if manual_thumb }}
+<meta content="{{ permalink }}{{ glide:thumbnail width="800" quality="65" }}" property="og:image">
+{{ else }}
+{{ slider_images limit="1" }}
+{{ if image }}
+<meta content="{{ permalink }}{{ glide:image width="800" quality="65" }}" property="og:image">
+{{ else }}
+<meta content="{{ permalink }}{{ glide:left_image width="800" quality="65" }}" property="og:image">
+{{ /if }}
+{{ /slider_images }}
+{{ /if }}
+<meta content="{{ description | explode:'<ul>' | first | strip_tags | collapse_whitespace }}" property="og:description">
+{{ else }}
+{{ if cover_image }}
+<meta content="{{ permalink }}{{ glide:cover_image width="800" quality="65" }}" property="og:image">
+{{ else }}
+<meta content="{{ config:app:url }}/fb-img.png" property="og:image">
+{{ /if }}
+<meta content="{{ seo_description }}" property="og:description">
+{{ /if }}

@@ -1,0 +1,14 @@
+/* Design tokens from shared/_sizes.scss (media queries still use literal px). */
+:root {
+  --font-sm: 18;
+  --font-md: 18;
+  --font-lg: 14;
+  --gut-sm: 10;
+  --gut-md: 12;
+  --gut-lg: 12.36;
+  --bp-min: 272px;
+  --bp-mid: 680px;
+  --bp-full: 1018px;
+  --bp-exlg: 1360px;
+  --header-sm: 3em;
+}

@@ -1,0 +1,271 @@
+title: Project
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: title
+            field:
+              display: 'Project Title'
+              type: text
+              instructions: 'Keep reasonably short (less than 30 characters)'
+          -
+            handle: template
+            field:
+              type: hidden
+              default: project
+          -
+            handle: description_title
+            field:
+              type: text
+              width: 33
+          -
+            handle: description
+            field:
+              display: 'Description (400–600 characters suggested)'
+              type: bard
+              save_html: true
+              buttons:
+                - h2
+                - h3
+                - bold
+                - italic
+                - unorderedlist
+                - orderedlist
+                - removeformat
+                - anchor
+              width: 66
+          -
+            handle: categories
+            field:
+              type: terms
+              taxonomies:
+                - categories
+              instructions: 'Choose one or more categories. If you add a new category, you will need to add it to the filter menu in the portfolio page settings.'
+              width: 33
+          -
+            handle: details
+            field:
+              type: grid
+              instructions: 'Example lines shown, but lines may be added, deleted, or reordered.'
+              width: 66
+              fields:
+                -
+                  handle: line
+                  field:
+                    display: Lines
+                    type: text
+              default:
+                -
+                  line: 'Location Here (example: Denver, CO)'
+                -
+                  line: 'Project Type (example: Historic Preservation)'
+                -
+                  line: 'Size (example: 7,000 ft²)'
+      -
+        display: 'Option Settings'
+        instructions: 'Choose which optional sections are visible'
+        fields:
+          -
+            handle: show_quotes
+            field:
+              display: 'Testimonials?'
+              type: toggle
+              default: false
+              width: 25
+          -
+            handle: show_recognition
+            field:
+              display: 'Recognition?'
+              type: toggle
+              default: false
+              width: 25
+          -
+            handle: show_video
+            field:
+              display: 'Video?'
+              type: radio
+              options:
+                none: None
+                embed: Youtube/Vimeo
+                upload: 'Upload mp4'
+              default: none
+              inline: true
+              width: 50
+      -
+        display: 'Testimonials Section'
+        instructions: 'Keep these limited to 1 or 2 and use […] to trim them to the most important parts of the quote.'
+        fields:
+          -
+            handle: project_quotes
+            field:
+              type: grid
+              if:
+                show_quotes: true
+              fields:
+                -
+                  handle: quote
+                  field:
+                    type: text
+                    width: 66
+                -
+                  handle: credit
+                  field:
+                    type: text
+                    width: 33
+      -
+        display: Recognition
+        fields:
+          -
+            handle: recognition
+            field:
+              type: grid
+              if:
+                show_recognition: true
+              fields:
+                -
+                  handle: line
+                  field:
+                    display: Lines
+                    type: text
+      -
+        display: 'Embed Video'
+        fields:
+          -
+            handle: embed_video
+            field:
+              type: video
+              instructions: 'Paste a vimeo or youtube link here to embed'
+              width: 50
+              if:
+                show_video: embed
+          -
+            handle: upload_video
+            field:
+              display: 'Video (Upload an MP4 file)'
+              type: assets
+              container: assets
+              folder: videos
+              max_files: 1
+              width: 50
+              if:
+                show_video: upload
+          -
+            handle: video_thumb
+            field:
+              display: 'Thumbnail Image'
+              instructions: 'JPG, at least 400px wide'
+              type: assets
+              container: assets
+              folder: projects
+              max_files: 1
+              width: 50
+              if:
+                show_video: 'contains_any upload,embed'
+          -
+            handle: vwidth
+            field:
+              display: 'Video Width'
+              type: text
+              default: '1920'
+              width: 25
+              if:
+                show_video: upload
+          -
+            handle: vheight
+            field:
+              display: 'Video Height'
+              type: text
+              default: '1080'
+              width: 25
+              if:
+                show_video: upload
+      -
+        display: Images
+        fields:
+          -
+            handle: manual_thumb
+            field:
+              display: 'Manual Thumbnail?'
+              instructions: 'First slide is used for thumbnail by default. Toggle this to override it and upload a custom thumbnail image.'
+              type: toggle
+              width: 33
+              default: false
+          -
+            handle: thumbnail
+            field:
+              type: assets
+              instructions: 'Choose or upload high-res JPG'
+              container: assets
+              folder: projects
+              max_files: 1
+              width: 66
+              validate: 'ext:jpg'
+              if:
+                manual_thumb: true
+          -
+            handle: slider_images
+            field:
+              type: replicator
+              sets:
+                single_image:
+                  display: 'Single Image'
+                  fields:
+                    -
+                      handle: image
+                      field:
+                        type: assets
+                        instructions: 'Choose or upload high-res JPG'
+                        container: assets
+                        folder: projects
+                        max_files: 1
+                        width: 50
+                        validate: 'ext:jpg'
+                    -
+                      handle: alt
+                      field:
+                        type: text
+                        display: 'Alternate Text'
+                        instructions: 'Describe what the image is of for accessibility (example: Lobby Interior)'
+                        width: 50
+                double_image:
+                  display: 'Double Image'
+                  fields:
+                    -
+                      handle: left_image
+                      field:
+                        display: 'Left Image'
+                        type: assets
+                        instructions: 'Choose or upload high-res JPG'
+                        container: assets
+                        folder: projects
+                        max_files: 1
+                        width: 50
+                        validate: 'ext:jpg'
+                    -
+                      handle: altL
+                      field:
+                        type: text
+                        display: 'Left Alternate Text'
+                        instructions: 'Describe what the image is of for accessibility (example: Lobby Interior)'
+                        width: 50
+                    -
+                      handle: right_image
+                      field:
+                        display: 'Right Image'
+                        type: assets
+                        instructions: 'Choose or upload high-res JPG'
+                        container: assets
+                        folder: projects
+                        max_files: 1
+                        width: 50
+                        validate: 'ext:jpg'
+                    -
+                      handle: altR
+                      field:
+                        type: text
+                        display: 'Right Alternate Text'
+                        instructions: 'Describe what the image is of for accessibility (example: Lobby Interior)'
+                        width: 50

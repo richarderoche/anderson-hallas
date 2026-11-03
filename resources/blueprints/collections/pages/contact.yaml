@@ -1,0 +1,221 @@
+title: Contact
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              display: Title
+          -
+            handle: alt_title
+            field:
+              display: 'Alternate Title (Optional)'
+              instructions: 'Fill in to show longer title on page'
+              type: text
+      -
+        display: 'Cover Hero'
+        fields:
+          -
+            handle: cover_image
+            field:
+              display: 'Optional Hero Image'
+              type: assets
+              max_files: 1
+              container: assets
+              folder: heroes
+              instructions: 'JPG, Ideally at least 2560px wide'
+              width: 66
+          -
+            handle: cover_crop
+            field:
+              display: 'Crop?'
+              type: toggle
+              default: true
+              width: 33
+      -
+        display: 'Contact Info'
+        fields:
+          -
+            handle: contact_email
+            field:
+              display: 'Main Email'
+              type: text
+              instructions: 'Used in footer and default address in form'
+              width: 50
+              default: info@andarch.com
+              validate: email
+          -
+            handle: contact_phone
+            field:
+              display: 'Main Phone'
+              type: text
+              instructions: 'Shown on this page and footer'
+              width: 50
+              default: '303 278 4378'
+          -
+            handle: contact_address
+            field:
+              display: 'Office Address'
+              type: grid
+              instructions: 'Use a row per line'
+              width: 50
+              fields:
+                -
+                  handle: address_line
+                  field:
+                    display: 'Address Line'
+                    type: text
+          -
+            handle: location_info
+            field:
+              display: 'Location info (parking etc.)'
+              type: bard
+              save_html: true
+              buttons:
+                - h2
+                - h3
+                - bold
+                - italic
+                - unorderedlist
+                - orderedlist
+                - removeformat
+                - anchor
+              width: 50
+      -
+        display: Form
+        fields:
+          -
+            handle: form_name_label
+            field:
+              display: 'Name Label'
+              type: text
+              default: Name
+              width: 33
+          -
+            handle: form_name_ph
+            field:
+              display: 'Name Placeholder'
+              type: text
+              default: 'Your Name'
+              width: 33
+          -
+            handle: form_name_required
+            field:
+              display: 'Required?'
+              type: toggle
+              default: true
+              width: 33
+          -
+            handle: form_email_label
+            field:
+              display: 'Email Label'
+              type: text
+              default: Email
+              width: 33
+          -
+            handle: form_email_ph
+            field:
+              display: 'Email Placeholder'
+              type: text
+              default: 'Your Email'
+              width: 33
+          -
+            handle: form_email_required
+            field:
+              display: 'Required?'
+              type: toggle
+              default: true
+              width: 33
+          -
+            handle: form_phone_label
+            field:
+              display: 'Phone Label'
+              type: text
+              default: Phone
+              width: 33
+          -
+            handle: form_phone_ph
+            field:
+              display: 'Phone Placeholder'
+              type: text
+              default: 'Your Phone Number'
+              width: 33
+          -
+            handle: form_phone_required
+            field:
+              display: 'Required?'
+              type: toggle
+              default: false
+              width: 33
+          -
+            handle: form_company_label
+            field:
+              display: 'Company Label'
+              type: text
+              default: Company
+              width: 33
+          -
+            handle: form_company_ph
+            field:
+              display: 'Company Placeholder'
+              type: text
+              default: 'Company Name'
+              width: 33
+          -
+            handle: form_company_required
+            field:
+              display: 'Required?'
+              type: toggle
+              default: false
+              width: 33
+          -
+            handle: form_subjects_label
+            field:
+              display: 'Subject Label'
+              type: text
+              default: Subject
+          -
+            handle: form_subjects
+            field:
+              display: 'Subject Options'
+              type: grid
+              fields:
+                -
+                  handle: subject
+                  field:
+                    display: 'Subject Line'
+                    type: text
+                    width: 50
+                -
+                  handle: email
+                  field:
+                    type: text
+                    display: 'Email (Optional, if different from main default)'
+                    width: 50
+                    validate: email
+          -
+            handle: form_msg_label
+            field:
+              display: 'Message Label'
+              type: text
+              default: Message
+              width: 33
+          -
+            handle: form_msg_ph
+            field:
+              display: 'Message Placeholder'
+              type: text
+              default: 'Your Message'
+              width: 66
+          -
+            handle: form_success_page
+            field:
+              display: 'Success Message Page'
+              type: entries
+              collections:
+                - pages
+              max_items: 1

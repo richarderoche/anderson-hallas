@@ -1,0 +1,25 @@
+<article class="media sm-6-6 md-3-6 lg-4-12">
+  <div class="image">
+    {{ thumbnail }}
+    {{ partial src="partials/images/staff-team" }}
+    {{ /thumbnail }}
+  </div>
+  <h1 class="media-title">{{ title | smartypants }}</h1>
+  {{ if media_type == "popup" }}
+  <div class="action lb-btn" data-id="id-{{ id }}">
+    {{ media_text_btn | smartypants }} →
+  </div>
+  {{ elseif media_type == "page" }}
+  {{ media_page }}
+  <a class="action" href="{{ url }}">{{ media_page_btn | smartypants }} →</a>
+  {{ /media_page }}
+  {{ elseif media_type == "project" }}
+  {{ media_project }}
+  <a class="action" href="{{ url }}">{{ media_project_btn | smartypants }} →</a>
+  {{ /media_project }}
+  {{ elseif media_type == "site" }}
+  <a class="action" href="{{ media_site }}" target="_blank">{{ media_site_btn | smartypants }} →</a>
+  {{ elseif media_type == "download" }}
+  <a class="action" href="{{ media_file }}" target="_blank">{{ media_file_btn | smartypants }} ↓</a>
+  {{ /if }}
+</article>

@@ -1,0 +1,58 @@
+<div class="page-body-wrap portfolio">
+  <div class="grid-wrap">
+    <div class="row">
+      <header class="page smd-6-6 lg-4-12">
+        <h1 class="page-title">{{ alt_title | smartypants ?? title | smartypants }}</h1>
+      </header>
+      <form class="cat-select sm-4-6 md-3-6 md-down">
+        <h3>Category</h3>
+        <div class="select-wrap">
+          <select class="projcats detect" name="projcats">
+            <option class="opt-all" data-tag="all" value="All">All</option>
+            {{ project_filters }}
+            <option class="opt-{{ slug }}" data-tag="{{ slug }}" value="{{ title }}">{{ title }}</option>
+            {{ /project_filters }}
+          </select>
+        </div>
+      </form>
+      <nav class="cat lg-8-12 lg-only">
+        <a class="tag-nav nav-all active" data-tag="all" href="#filter">All</a>
+        {{ project_filters }}
+        <a class="nav-{{ slug }} tag-nav" data-tag="{{ slug }}" href="#filter">{{ title }}</a>
+        {{ /project_filters }}
+      </nav>
+    </div>
+    <main class="id-{{ id }} page portfolio {{ slug }}">
+      <section class="featured">
+        <div id="tag-content">
+          <div id="tag-box">
+            {{ partial src="partials/projects/thumbnail-blocks" }}
+          </div>
+        </div>
+      </section>
+      <div class="portfolio-past-clients">
+        <div class="body-content">
+          <div class="cb row">
+            <section class="introtxt smd-6-6 lg-8-12">
+              <h2>{{ past_intro | smartypants }}</h2>
+            </section>
+          </div>
+        </div>
+        <ul class="client-list-wrap row">
+          {{ if past_order == "Alphabetical" }}
+          {{ past_list sort="client:asc" }}
+          <li class="sm-6-6 md-3-6 lg-4-12">{{ client | smartypants }}</li>
+          {{ /past_list }}
+          {{ else }}
+          {{ past_list }}
+          <li class="sm-6-6 md-3-6 lg-4-12">{{ client | smartypants }}</li>
+          {{ /past_list }}
+          {{ /if }}
+          <li class="note sm-6-6 md-3-6 lg-4-12">
+            <em>Among many others…</em>
+          </li>
+        </ul>
+      </div>
+    </main>
+  </div>
+</div>

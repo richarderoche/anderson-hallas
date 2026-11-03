@@ -1,0 +1,25 @@
+<div class="page-body-wrap portfolio category">
+  <div class="grid-wrap">
+    <div class="row">
+      <header class="page smd-6-6 lg-6-12">
+        <h1 class="page-title">{{ title | smartypants }}</h1>
+      </header>
+      <nav class="cat smd-6-6 lg-6-12">
+        <a class="nav-all active" href="/{{ segment_1 }}">View All Categories →</a>
+      </nav>
+    </div>
+    <main class="category id-{{ id | slugify }} page portfolio {{ slug }}">
+      <section class="featured">
+        <div id="tag-content">
+          <div id="tag-box">
+            <div class="row">
+              {{ entries }}
+              {{ partial src="partials/projects/cat-thumb-builder" }}
+              {{ /entries }}
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+</div>

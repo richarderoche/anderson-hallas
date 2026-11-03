@@ -1,0 +1,56 @@
+/* from sections/_portfolio.scss */
+form.cat-select {
+  margin-bottom: 1.2em;
+}
+form.cat-select h3 {
+  margin-bottom: 0.6em;
+}
+
+.project-thumb {
+  margin-top: 0.5555555556em;
+}
+.project-thumb a.thumbnail {
+  display: block;
+  position: relative;
+}
+.project-thumb .thumb-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  padding: 0.4em 0.5em 0.325em;
+}
+
+@media (hover: hover) and (pointer: fine) {
+.project-thumb a:hover .thumb-image {
+  opacity: 0.75;
+}
+}
+
+@media (hover: hover) and (pointer: fine) {
+.project-thumb a:hover .thumb-info {
+  background: #FF551E;
+}
+}
+
+
+#tag-content {
+  position: relative;
+  overflow: hidden;
+}
+#tag-content .tag-item {
+  display: none;
+}
+#tag-content .tag-item.active {
+  display: block;
+}
+
+.portfolio-past-clients {
+  margin-top: 1em;
+}
+.portfolio-past-clients li {
+  font-size: 0.875em;
+  line-height: 1.35;
+  margin-bottom: 0.4em;
+}

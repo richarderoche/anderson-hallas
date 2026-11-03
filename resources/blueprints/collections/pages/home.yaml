@@ -1,0 +1,54 @@
+title: Home
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              display: Title
+      -
+        display: 'Slider Options'
+        fields:
+          -
+            handle: randomize
+            field:
+              type: toggle
+              display: 'Randomize slide order on each visit?'
+              default: true
+      -
+        display: Slider
+        instructions: 'Limit 15. Suggest lower to improve loading times.'
+        fields:
+          -
+            handle: home_slides
+            field:
+              type: replicator
+              sets:
+                slide:
+                  display: Slide
+                  fields:
+                    -
+                      handle: project
+                      field:
+                        type: entries
+                        display: Project
+                        instructions: 'Choose which project to feature on this slide'
+                        collections:
+                          - projects
+                        max_items: 1
+                        width: 33
+                    -
+                      handle: image
+                      field:
+                        display: 'Optional Image'
+                        instructions: "Choose/upload high-res JPG, or leave blank to use the first image in the project's slide show"
+                        width: 66
+                        type: assets
+                        container: assets
+                        folder: projects
+                        max_files: 1
+                        validate: 'ext:jpg'

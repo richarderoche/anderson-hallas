@@ -1,0 +1,113 @@
+/* from shared/_type1.scss */
+/* ===============================================
+/* DEFAULTS (BODY SIZE)
+/* ============================================ */
+body {
+  font-size: 1.8em;
+  line-height: 1.475;
+  font-family: "FFMarkWeb", "Helvetica Neue", Arial, sans-serif;
+  -moz-font-feature-settings: "kern" 1, "liga" 1, "onum" 1;
+  -ms-font-feature-settings: "kern" 1, "liga" 1, "onum" 1;
+  -o-font-feature-settings: "kern" 1, "liga" 1, "onum" 1;
+  -webkit-font-feature-settings: "kern" 1, "liga" 1, "onum" 1;
+  font-feature-settings: "kern" 1, "liga" 1, "onum" 1;
+}
+
+.bodytxt strong {
+  font-style: normal;
+  font-weight: 700;
+}
+
+em {
+  font-style: italic;
+  font-weight: normal;
+}
+
+/* ===============================================
+/* LARGE TO SMALL
+/* ============================================ */
+.contact-form .select-wrap, .contact-form textarea, .contact-form input, .contact-form .submit .txt, section.office p.large, article.person h1 .name, .cat-select .select-wrap, section.big-list h2, article.job h1, .cb p.quote, section.content.large .bodytxt, .bodytxt h2 {
+  font-size: 1.1944444444em;
+  line-height: 1.375;
+}
+
+.panel.media-popup h2, article.media .action, section.contact-form label, main.home .title-wrap h2, .staff-popup h3, article.person h2, aside.project-info .foot-wrap h3, .count-wrap h4, nav.cat a, .cat-select h3, .project-thumb h2, section.big-link h3, .cb p.quote-credit {
+  font-size: 0.7333333333em;
+  line-height: 1.375;
+  text-transform: uppercase;
+  letter-spacing: 0.13em;
+  font-style: normal;
+  font-weight: 600;
+}
+
+.bodytxt .ee-lb-btn, .bodytxt .tag-word, section.office h1, aside.project-info h1.normal, .bodytxt h3 {
+  font-size: 0.8777777778em;
+  line-height: 1.375;
+  text-transform: uppercase;
+  letter-spacing: 0.13em;
+  font-style: normal;
+  font-weight: 600;
+}
+
+h1.page-section-title, h1.page-title {
+  font-size: 3.4444444444em;
+  line-height: 1.025;
+  font-family: "GTSectraWeb", Georgia, Times, "Times New Roman", serif;
+  font-style: italic;
+  font-weight: normal;
+}
+
+.staff-popup h2, aside.project-info h2, section.big-link a, section.introtxt h2 {
+  font-size: 1.8333333333em;
+  line-height: 1.025;
+  font-family: "GTSectraWeb", Georgia, Times, "Times New Roman", serif;
+  font-style: italic;
+  font-weight: normal;
+}
+
+footer.bottom h2 {
+  font-size: 0.8777777778em;
+  line-height: 1.375;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+}
+
+footer.bottom h3 {
+  font-size: 0.8777777778em;
+  line-height: 1.375;
+}
+
+article.person h1 .associate, aside.project-info h1.tiny, .staff-popup .sm-only.email a, article.person h3, aside.project-info .data-wrap p, .project-quotes p, .less-more-wrap .txt, .cb h4.caption {
+  font-size: 0.7333333333em;
+  line-height: 1.225;
+  font-style: normal;
+  font-weight: 600;
+  letter-spacing: 0.015em;
+}
+
+.home-splash h2 {
+  font-size: 1em;
+  line-height: 1.025;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  font-style: normal;
+  font-weight: 600;
+}
+
+/* ===============================================
+/* MOBILE / HYBRID
+/* ============================================ */
+nav.mobile a {
+  font-size: 1em;
+  line-height: 1.025;
+  text-transform: uppercase;
+  letter-spacing: 0.13em;
+}
+
+h1.wordmark-wrap {
+  font-size: 0.6666666667em;
+  line-height: 1.275;
+  text-transform: uppercase;
+  letter-spacing: 0.13em;
+}
+.widont, .widont p, h1, h2, h3, h4 { text-wrap: pretty; }

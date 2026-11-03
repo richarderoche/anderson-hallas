@@ -1,0 +1,68 @@
+/*! Anderson Hallas — CSS partials (converted from Sass; same folders & order as theme.scss) */
+
+/* tokens (CSS vars; optional reference) */
+@import "./shared/tokens.css";
+
+/* foundation (sizes/mixins/typestyles were Sass-only → expanded into each partial) */
+@import "./shared/fontface.css";
+
+/* reset */
+@import "./shared/reset.css";
+@import "./shared/resetforms.css";
+
+/* global */
+@import "./shared/colors.css";
+@import "./shared/icons.css";
+@import "./shared/animations.css";
+
+/* small (mobile first) + type1 */
+@import "./shared/type1.css";
+@import "./shared/layout.css";
+@import "./shared/site-header.css";
+@import "./shared/site-footer.css";
+@import "./shared/page-content.css";
+@import "./shared/bodytxt.css";
+@import "./shared/components.css";
+@import "./shared/forms.css";
+
+/* sections */
+@import "./sections/home.css";
+@import "./sections/project.css";
+@import "./sections/portfolio.css";
+@import "./sections/staff.css";
+@import "./sections/media.css";
+@import "./sections/contact.css";
+
+/* md (wrapped @ 680px during convert) — same set as md/_mdstyles.scss */
+@import "./shared/type2.css";
+@import "./md/md-layout.css";
+@import "./md/md-site-header.css";
+@import "./md/md-site-footer.css";
+@import "./md/md-page-content.css";
+@import "./md/md-home.css";
+@import "./md/md-staff.css";
+@import "./md/md-media.css";
+@import "./md/md-portfolio.css";
+@import "./md/md-project.css";
+@import "./md/md-contact.css";
+
+/* lg (wrapped @ 1018px) — same set as lg/_lgstyles.scss */
+@import "./shared/type3.css";
+@import "./lg/lg-layout.css";
+@import "./lg/lg-site-header.css";
+@import "./lg/lg-site-footer.css";
+@import "./lg/lg-page-content.css";
+@import "./lg/lg-components.css";
+@import "./lg/lg-forms.css";
+@import "./lg/lg-home.css";
+@import "./lg/lg-staff.css";
+@import "./lg/lg-media.css";
+@import "./lg/lg-project.css";
+@import "./lg/lg-portfolio.css";
+@import "./lg/lg-contact.css";
+
+/* exlg (wrapped @ 1360px) */
+@import "./exlg/exlg-project.css";
+
+/* fluid body type-scale ladder (nested md/lg/exlg imports removed; see above) */
+@import "./shared/media.css";

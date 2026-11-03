@@ -1,0 +1,35 @@
+/* from lg/_lg-staff.scss */
+@media (min-width: 1018px) {
+article.person {
+  margin-bottom: 2em;
+}
+article.person .images {
+  margin-bottom: 0.8em;
+}
+
+.team-wrap article.person:nth-child(odd), .associate-wrap.format-three article.person:nth-child(odd) {
+  clear: none;
+}
+.team-wrap article.person:nth-child(3n+1), .associate-wrap.format-three article.person:nth-child(3n+1) {
+  clear: both;
+}
+
+.lb-wrap.staff .panel-wrap {
+  margin-left: 16.6666666667%;
+}
+.lb-wrap.staff .content {
+  padding: 0 0 0 1.7657142857em;
+}
+.lb-wrap.staff .name {
+  margin-top: 0.8em;
+}
+.lb-wrap.staff .email {
+  padding-bottom: 1.4em;
+}
+.lb-wrap.staff h3 {
+  display: inline;
+}
+.lb-wrap.staff h3.cred {
+  padding-right: 1em;
+}
+}

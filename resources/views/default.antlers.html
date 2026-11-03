@@ -1,0 +1,28 @@
+{{ if redirect_page }}
+{{ redirect to="{ redirect_page:url }" }}
+{{ /if }}
+<div class="page-body-wrap default">
+  {{ if cover_image }}
+  <div class="cover-image-wrap default">
+    {{ cover_image }}
+    {{ partial src="partials/images/cover" }}
+    {{ /cover_image }}
+  </div>
+  {{ /if }}
+  <div class="grid-wrap">
+    <div class="row">
+      <header class="page smd-6-6 lg-10-12">
+        <h1 class="page-title">{{ alt_title | smartypants ?? title | smartypants }}</h1>
+      </header>
+    </div>
+    <main class="default id-{{ id }} page {{ slug }}">
+      <div class="body-content">
+        {{ if content_blocks }}
+        {{ content_blocks }}
+        {{ partial src="partials/shared/body-content" }}
+        {{ /content_blocks }}
+        {{ /if }}
+      </div>
+    </main>
+  </div>
+</div>

@@ -1,0 +1,143 @@
+<aside class="project-info expandable smd-grid-wrap">
+  <header class="project-info lg-only toggle-sec">
+    <div class="row">
+      <div class="title-wrap lg-5-7">
+        {{ if title | length > 50 }}
+        <h1 class="tiny">{{ title | smartypants | truncate:75:… }}</h1>
+        {{ elseif title | length > 30 }}
+        <h1 class="small">{{ title | smartypants }}</h1>
+        {{ else }}
+        <h1 class="normal">{{ title | smartypants }}</h1>
+        {{ /if }}
+      </div>
+      <div class="less-more-wrap lg-1-7">
+        <span class="txt">
+          <span class="more">Show Info</span>
+          <span class="less">Hide Info</span>
+        </span>
+        <svg aria-labelledby="title" class="ico show" role="img" title="Show or Hide">
+          <use xlink:href="#show"></use>
+        </svg>
+      </div>
+      <div class="count-wrap lg-1-7 lg-only">
+        <h4>
+          <span class="slide-num" id="slidecounter">1</span>
+          <span class="sep">/</span>
+          <span class="total" id="slidetotal">{{ slider_images | count }}</span>
+        </h4>
+      </div>
+    </div>
+  </header>
+  <div class="panel-wrap">
+    <div class="row">
+      <div class="panel smd-6-6">
+        <header class="project-info md-down">
+          <h1 class="normal">{{ title | smartypants }}</h1>
+          <div class="less-more-wrap toggle-sec">
+            <span class="txt">
+              <span class="more">Show Info</span>
+              <span class="less">Hide Info</span>
+            </span>
+            <svg aria-labelledby="title" class="ico show" role="img" title="Show or Hide">
+              <use xlink:href="#show"></use>
+            </svg>
+          </div>
+        </header>
+        <div class="meta-wrap toggle-section">
+          <div class="meta-inner">
+            <div class="row">
+              {{ if description | length > 500 }}
+              <div class="description-wrap lg-7-7">
+                <h2 class="sm-only">{{ description_title | smartypants }}</h2>
+                <h2 class="md-up">{{ description_title | smartypants }}</h2>
+                <div class="bodytxt">{{ description | smartypants }}</div>
+              </div>
+              {{ else }}
+              <div class="description-wrap lg-6-7">
+                <h2 class="sm-only">{{ description_title | smartypants }}</h2>
+                <h2 class="md-up">{{ description_title | smartypants }}</h2>
+                <div class="bodytxt">{{ description | smartypants }}</div>
+              </div>
+              {{ /if }}
+            </div>
+            {{ if show_quotes }}
+            <div class="project-quotes">
+              <div class="md-grid-inset">
+                <div class="row">
+                  {{ project_quotes }}
+                  <div class="quote-row md-5-6 lg-6-7">
+                    <p class="quote">{{ quote | smartypants }}</p>
+                    {{ if credit }}
+                    <p class="quote-credit">{{ credit | smartypants }}</p>
+                    {{ /if }}
+                  </div>
+                  {{ /project_quotes }}
+                </div>
+              </div>
+            </div>
+            {{ /if }}
+            <div class="foot-wrap md-grid-inset">
+              <div class="row">
+                {{ unless show_video == "none" }}
+                <div class="vid-wrap md-2-6 lg-2-7">
+                  <h3>Video</h3>
+                  <div class="vid-thumb lb-btn">
+                    {{ video_thumb }}
+                    {{ partial src="partials/images/project-vid-thumb" }}
+                    {{ /video_thumb }}
+                    <svg aria-labelledby="title" class="ico play" role="img" title="Play">
+                      <use xlink:href="#play"></use>
+                    </svg>
+                  </div>
+                </div>
+                <div class="data-wrap md-4-6 lg-4-7">
+                  <div class="details">
+                    <h3>Details</h3>
+                    {{ details }}
+                    <p>{{ line | smartypants }}</p>
+                    {{ /details }}
+                  </div>
+                  {{ if show_recognition }}
+                  <div class="recognition">
+                    <h3>Recognition</h3>
+                    {{ recognition }}
+                    <p>{{ line | smartypants }}</p>
+                    {{ /recognition }}
+                  </div>
+                  {{ /if }}
+                </div>
+                {{ else }}
+                {{ if show_recognition }}
+                <div class="data-wrap row">
+                  <div class="details md-2-6 lg-3-7">
+                    <h3>Details</h3>
+                    {{ details }}
+                    <p>{{ line | smartypants }}</p>
+                    {{ /details }}
+                  </div>
+                  <div class="recognition md-4-6 lg-4-7 side">
+                    <h3>Recognition</h3>
+                    {{ recognition }}
+                    <p>{{ line | smartypants }}</p>
+                    {{ /recognition }}
+                  </div>
+                </div>
+                {{ else }}
+                <div class="data-wrap md-6-6 lg-6-7">
+                  <div class="details">
+                    <h3>Details</h3>
+                    {{ details }}
+                    <p>{{ line | smartypants }}</p>
+                    {{ /details }}
+                  </div>
+                </div>
+                {{ /if }}
+                {{ /unless }}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</aside>

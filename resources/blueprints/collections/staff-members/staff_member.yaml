@@ -1,0 +1,122 @@
+title: 'Staff Member'
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: title
+            field:
+              display: 'Entry Title'
+              type: text
+              instructions: 'This is just for backend reference'
+      -
+        display: Info
+        fields:
+          -
+            handle: first_name
+            field:
+              type: text
+              width: 33
+          -
+            handle: last_name
+            field:
+              type: text
+              width: 33
+          -
+            handle: credentials
+            field:
+              type: text
+              display: 'Certifications (e.g. AIA LEED AP)'
+              width: 33
+          -
+            handle: principal
+            field:
+              type: toggle
+              display: 'Is this a principal?'
+              instructions: 'Toggle this on to sort person into principal section.'
+              default: false
+              width: 33
+              if:
+                associate: false
+          -
+            handle: associate
+            field:
+              type: toggle
+              display: 'Is this an associate?'
+              instructions: 'Toggle this on to sort person into associate section.'
+              default: false
+              width: 33
+              if:
+                principal: false
+          -
+            handle: associate_title
+            field:
+              type: text
+              instructions: 'e.g. "Senior Associate"'
+              width: 33
+              default: Associate
+              if:
+                associate: true
+          -
+            handle: position
+            field:
+              type: text
+              instructions: 'e.g. "Project Manager"'
+              width: 33
+              if:
+                principal: false
+          -
+            handle: bio
+            field:
+              type: bard
+              save_html: true
+              buttons:
+                - h2
+                - h3
+                - bold
+                - italic
+                - unorderedlist
+                - orderedlist
+                - removeformat
+                - anchor
+              width: 66
+      -
+        display: Contact
+        fields:
+          -
+            handle: personal_email
+            field:
+              type: text
+              width: 66
+              if:
+                show_email: true
+          -
+            handle: show_email
+            field:
+              display: 'Show Email?'
+              type: toggle
+              width: 33
+              default: true
+      -
+        display: Photo
+        fields:
+          -
+            handle: portrait
+            field:
+              type: assets
+              max_files: 1
+              container: assets
+              folder: staff
+              instructions: 'JPG, Ideally at least 1000px wide'
+              width: 50
+          -
+            handle: candid
+            field:
+              type: assets
+              max_files: 1
+              container: assets
+              folder: staff
+              instructions: 'JPG, Ideally at least 1500px wide'
+              width: 50

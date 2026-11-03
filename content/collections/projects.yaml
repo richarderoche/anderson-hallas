@@ -1,0 +1,11 @@
+title: Projects
+route: '/portfolio/{slug}'
+template: project
+orderable: true
+mount: 58ff9cf2-f42c-4c9c-bc92-b038e400d761
+taxonomies:
+  - categories
+blueprints:
+  - project
+structure:
+  max_depth: 1

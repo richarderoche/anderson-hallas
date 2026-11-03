@@ -1,0 +1,21 @@
+title: Footer
+id: 27fc24e0-8d32-4eac-ba08-cf881a398b6f
+data:
+  footer_nav_on: true
+  footer_nav:
+    - db0ae4e3-4f10-4802-bc40-0b880cbf02c7
+    - 57ac61fb-a48d-461a-acbc-636ca6ece2e0
+  social_links:
+    -
+      network: Facebook
+      url: 'https://www.facebook.com/andersonhallasarchitects'
+    -
+      network: Instagram
+      url: 'https://www.instagram.com/anderson_hallas_architects'
+    -
+      network: 'Linked In'
+      url: 'https://www.linkedin.com/company/anderson-hallas-architects-pc'
+  ee_video: videos/ah-whimsy.mp4
+  ee_vwidth: '1440'
+  ee_vheight: '1080'
+  title: Footer

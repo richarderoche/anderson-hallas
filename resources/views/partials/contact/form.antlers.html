@@ -1,0 +1,111 @@
+{{ form:create in="contact" }}
+<fieldset>
+  <div class="row">
+    <div class="left-col sm-6-6 md-5-6 lg-5-12">
+      <div class="form-block input-block">
+        {{ if form_name_required }}
+        <div class="input-wrap">
+          <input name="name" placeholder="{{ form_name_ph | smartypants }}" required="" type="text">
+        </div>
+        <div class="label-wrap">
+          <label>{{ form_name_label | smartypants }}*</label>
+        </div>
+        {{ else }}
+        <div class="input-wrap">
+          <input name="name" placeholder="{{ form_name_ph | smartypants }}" type="text">
+        </div>
+        <div class="label-wrap">
+          <label>{{ form_name_label | smartypants }}</label>
+        </div>
+        {{ /if }}
+      </div>
+      <div class="form-block input-block">
+        {{ if form_email_required }}
+        <div class="input-wrap">
+          <input name="email" placeholder="{{ form_email_ph | smartypants }}" required="" type="text">
+        </div>
+        <div class="label-wrap">
+          <label>{{ form_email_label | smartypants }}*</label>
+        </div>
+        {{ else }}
+        <div class="input-wrap">
+          <input name="email" placeholder="{{ form_email_ph | smartypants }}" type="text">
+        </div>
+        <div class="label-wrap">
+          <label>{{ form_email_label | smartypants }}</label>
+        </div>
+        {{ /if }}
+      </div>
+      <div class="form-block input-block">
+        {{ if form_phone_required }}
+        <div class="input-wrap">
+          <input name="phone" placeholder="{{ form_phone_ph | smartypants }}" required="" type="text">
+        </div>
+        <div class="label-wrap">
+          <label>{{ form_phone_label | smartypants }}*</label>
+        </div>
+        {{ else }}
+        <div class="input-wrap">
+          <input name="phone" placeholder="{{ form_phone_ph | smartypants }}" type="text">
+        </div>
+        <div class="label-wrap">
+          <label>{{ form_phone_label | smartypants }}</label>
+        </div>
+        {{ /if }}
+      </div>
+      <div class="form-block input-block">
+        {{ if form_company_required }}
+        <div class="input-wrap">
+          <input name="company" placeholder="{{ form_company_ph | smartypants }}" required="" type="text">
+        </div>
+        <div class="label-wrap">
+          <label>{{ form_company_label | smartypants }}*</label>
+        </div>
+        {{ else }}
+        <div class="input-wrap">
+          <input name="company" placeholder="{{ form_company_ph | smartypants }}" type="text">
+        </div>
+        <div class="label-wrap">
+          <label>{{ form_company_label | smartypants }}</label>
+        </div>
+        {{ /if }}
+      </div>
+      <div class="form-block input-block bot">
+        <div class="input-wrap">
+          <input name="website" placeholder="Leave blank so we know you're human" type="text">
+        </div>
+        <div class="label-wrap">
+          <label>Leave Blank</label>
+        </div>
+      </div>
+    </div>
+    <div class="right-col sm-6-6 md-5-6 lg-6-12 lg-left-1">
+      <div class="form-block select-block">
+        <div class="select-wrap">
+          <select name="subject">
+            {{ form_subjects }}
+            <option value="{{ email | obfuscate ?? contact_email | obfuscate }}">{{ subject }}</option>
+            {{ /form_subjects }}
+          </select>
+        </div>
+        <div class="label-wrap">
+          <label>{{ form_subjects_label | smartypants }}*</label>
+        </div>
+      </div>
+      <div class="form-block textarea-block">
+        <div class="label-wrap">
+          <label>{{ form_msg_label | smartypants }}*</label>
+        </div>
+        <div class="textarea-wrap">
+          <textarea name="message" placeholder="{{ form_msg_ph | smartypants }}" required=""></textarea>
+        </div>
+      </div>
+      <div class="submit-block">
+        <button class="submit btn" type="submit">
+          <span class="txt">Submit →</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</fieldset>
+{{ /form:create }}

@@ -1,0 +1,32 @@
+/* from shared/_fontface.scss */
+@import url("//hello.myfonts.net/count/37d756");
+@font-face {
+  font-family: "FFMarkWeb";
+  src:  url("../../fonts/37D756_0_0.woff2") format("woff2"), url("../../fonts/37D756_0_0.woff") format("woff");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "FFMarkWeb";
+  src:  url("../../fonts/37D756_1_0.woff2") format("woff2"), url("../../fonts/37D756_1_0.woff") format("woff");
+  font-style: italic;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "FFMarkWeb";
+  src:  url("../../fonts/37D756_2_0.woff2") format("woff2"), url("../../fonts/37D756_2_0.woff") format("woff");
+  font-style: normal;
+  font-weight: 600;
+}
+@font-face {
+  font-family: "FFMarkWeb";
+  src:  url("../../fonts/37D756_3_0.woff2") format("woff2"), url("../../fonts/37D756_3_0.woff") format("woff");
+  font-style: normal;
+  font-weight: 700;
+}
+@font-face {
+  font-family: "GTSectraWeb";
+  src:  url("../../fonts/GT-Sectra-Display-Medium-Italic.woff2") format("woff2"), url("../../fonts/GT-Sectra-Display-Medium-Italic.woff") format("woff");
+  font-style: italic;
+  font-weight: normal;
+}

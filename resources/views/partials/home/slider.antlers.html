@@ -1,0 +1,15 @@
+{{ if first }}
+{{ slide:project }}
+<a class="display fit-bg full id-{{ id }} show slide" data-id="id-{{ id }}" href="{{ url }}">
+  {{ partial src="partials/home/slide" }}
+  <div data-id="id-{{ id }}" class="dot id-{{ id }} active"><div class="circle"></div></div>
+</a>
+{{ /slide:project }}
+{{ else }}
+{{ slide:project }}
+<a class="fit-bg full id-{{ id }} slide" data-id="id-{{ id }}" href="{{ url }}">
+  {{ partial src="partials/home/slide" }}
+  <div data-id="id-{{ id }}" class="dot id-{{ id }}"><div class="circle"></div></div>
+</a>
+{{ /slide:project }}
+{{ /if }}

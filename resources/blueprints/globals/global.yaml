@@ -1,0 +1,68 @@
+title: 'Default Globals'
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        display: 'Site Information'
+        fields:
+          -
+            handle: short_name
+            field:
+              instructions: 'Used in browser/search engine page titles'
+              default: Company
+              type: text
+          -
+            handle: long_name
+            field:
+              display: 'Official Name'
+              instructions: 'Used in footer'
+              default: 'Company Name LLC'
+              type: text
+          -
+            handle: company_location
+            field:
+              instructions: 'Used in footer and browser/search engine page titles'
+              default: 'Boulder, CO'
+              type: text
+          -
+            handle: page_title_base
+            field:
+              instructions: 'Used in browser/search engine page titles'
+              default: 'This is a website'
+              type: text
+          -
+            handle: seo_description
+            field:
+              display: 'SEO Description'
+              instructions: 'Used in search engine descriptions, keep at 160 or fewer characters.'
+              default: 'We do things.'
+              type: text
+          -
+            handle: analytics_code
+            field:
+              display: 'Google Analytics ID'
+              instructions: 'e.g. UA-XXXXXXXXX-1'
+              type: text
+      -
+        display: 'Code/JS Embeds'
+        instructions: 'For inserting javascript or other code globally'
+        fields:
+          -
+            handle: js_head
+            field:
+              display: Head
+              instructions: 'Code inserted just before closing <head> tag'
+              type: textarea
+          -
+            handle: js_body_top
+            field:
+              display: 'Body Top'
+              instructions: 'Code inserted just after opening <body> tag'
+              type: textarea
+          -
+            handle: js_body_bottom
+            field:
+              display: 'Body Bottom'
+              instructions: 'Code inserted just before closing </body> tag'
+              type: textarea

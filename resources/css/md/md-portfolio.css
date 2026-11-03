@@ -1,0 +1,11 @@
+/* from md/_md-portfolio.scss */
+@media (min-width: 680px) {
+.project-thumb {
+  margin-top: 0.6666666667em;
+}
+
+.portfolio-past-clients li {
+  font-size: 0.8em;
+  margin-bottom: 0.7em;
+}
+}

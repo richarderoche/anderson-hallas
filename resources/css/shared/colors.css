@@ -1,0 +1,118 @@
+/* from shared/_colors.scss */
+/* ===============================================
+/* DEFAULTS
+/* ============================================ */
+body, html {
+  color: #493421;
+  background: #3B2B1E;
+}
+
+#wrapper {
+  background: #F1EEEA;
+}
+
+.invert {
+  color: #F1EEEA;
+  background: #3B2B1E;
+}
+
+::selection {
+  background: #A49990;
+}
+
+::-moz-selection {
+  background: #A49990;
+}
+
+/* ===============================================
+/* FOREGROUND
+/* ============================================ */
+main.project .slide-arrow,
+.close-lb-wrap,
+nav.mobile {
+  color: #F1EEEA;
+}
+
+.bodytxt .ee-lb-btn,
+article.media .action,
+.splash .whimsy,
+.splash .symbol-wrap,
+article.person h1 .associate,
+section.contact-form .submit .txt,
+.staff-popup .position,
+.select-wrap:before,
+nav.cat .active,
+.cat-select h3,
+section.big-list h2,
+.bodytxt a,
+.bodytxt li:before,
+.less-more-wrap .txt,
+article.job h1,
+p.quote-credit,
+.bodytxt .orange,
+footer.bottom .whimsy,
+nav.mobile a:before,
+.logo-wrap .ico {
+  color: #FF551E;
+}
+
+.panel.media-popup h2,
+section.contact-form label,
+section.office h1,
+article.person h2,
+article.person h3,
+aside.project-info .foot-wrap h3,
+.count-wrap h4,
+.client-list-wrap .note,
+span.file-info,
+section.introtxt h2,
+footer.bottom .social-wrap a,
+footer.bottom .nav a,
+footer.bottom h3.txt,
+footer.bottom h3 a,
+nav.main-menu .current.parent .duplicate.current .child-link,
+nav.main-menu .sub-link.current .child-link,
+.parent-wrap .triangle {
+  opacity: 0.6;
+}
+
+@media (hover: hover) and (pointer: fine) {
+/* =============================================== /* FOREGROUND HOVER/ACTIVE /* ============================================ */ .vid-thumb:hover .play, .slide-nav-wrap .dot:hover, .less-more-wrap:hover, .btn.submit:hover, article.media .action:hover {
+  opacity: 0.4;
+}
+}
+
+@media (hover: hover) and (pointer: fine) {
+nav.cat a:hover, .close-lb-wrap a:hover, .lb-wrap.staff .email a:hover, .big-link a:hover, .bodytxt a:hover {
+  opacity: 0.4;
+}
+}
+
+
+@media (hover: none), (pointer: coarse) {
+.vid-thumb:active .play, .slide-nav-wrap .dot:active, .less-more-wrap:active, .btn.submit:active, article.media .action:active {
+  opacity: 0.4;
+}
+}
+
+@media (hover: none), (pointer: coarse) {
+nav.cat a:active, .close-lb-wrap a:active, .lb-wrap.staff .email a:active, .big-link a:active, .bodytxt a:active {
+  opacity: 0.4;
+}
+}
+
+
+/* ===============================================
+/* BACKGROUND
+/* ============================================ */
+.slide.empty {
+  background: #A49990;
+}
+
+.divider {
+  background: #FF551E;
+}
+
+/* ===============================================
+/* BACKGROUND HOVER/ACTIVE
+/* ============================================ */

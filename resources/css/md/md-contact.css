@@ -1,0 +1,6 @@
+/* from md/_md-contact.scss */
+@media (min-width: 680px) {
+main.contact .map {
+  height: 15em;
+}
+}

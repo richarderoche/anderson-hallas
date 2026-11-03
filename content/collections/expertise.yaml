@@ -1,0 +1,10 @@
+title: Expertise
+date: true
+sort_by: date
+sort_dir: desc
+mount: 8f140739-d215-4bc6-bb01-4674b2f4f973
+blueprints:
+  - mediathumb
+date_behavior:
+  past: public
+  future: private

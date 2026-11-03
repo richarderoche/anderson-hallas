@@ -1,0 +1,6 @@
+<picture class='img'>
+  <source media='(min-width: 1441px)' srcset='{{ glide:url width="840" quality="75" fit="crop_focal" }}'>
+  <source media='(min-width: 680px)' srcset='{{ glide:url width="640" quality="75" fit="crop_focal" }}'>
+  <source srcset='{{ glide:url width="400" quality="80" fit="crop_focal" }}'>
+  <img alt='{{ alt ?? title ?? page:title }}' srcset='{{ glide:url width="400" quality="80" fit="crop_focal" }}'>
+</picture>

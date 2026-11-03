@@ -1,0 +1,14 @@
+name: 'Richard IP'
+super: true
+id: e669f68b-47bb-4fdf-a6fd-607890b68354
+password_hash: $2y$12$0Srb/56pz.agqq7Q/7Da0emRYaHIQkQPggPCGAwUZ15nsd99bXiGC
+preferences:
+  collections:
+    pages:
+      view: tree
+    projects:
+      view: list
+    staff-members:
+      view: list
+    expertise:
+      view: list

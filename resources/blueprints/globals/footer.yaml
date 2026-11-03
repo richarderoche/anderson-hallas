@@ -1,0 +1,89 @@
+title: Footer
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        display: 'Footer Navigation'
+        fields:
+          -
+            handle: footer_note
+            field:
+              type: info
+              display: Note
+              content: 'Contact info is managed on the Contact page. Company name and location are managed in the General Globals.'
+              state: notice
+          -
+            handle: footer_nav_on
+            field:
+              display: 'Show footer nav links?'
+              type: toggle
+              default: true
+              width: 25
+          -
+            handle: footer_nav
+            field:
+              display: 'Page Links (Limit 4)'
+              instructions: 'Click into field and select a page from dropdown (start typing to narrow list), drag and drop to change order.'
+              type: entries
+              collections:
+                - pages
+              max_items: 4
+              width: 75
+      -
+        display: 'Social Links'
+        fields:
+          -
+            handle: social_links
+            field:
+              type: grid
+              fields:
+                -
+                  handle: network
+                  field:
+                    type: select
+                    instructions: 'Choose a social network from the dropdown'
+                    options:
+                      Facebook: Facebook
+                      'Linked In': 'Linked In'
+                      Instagram: Instagram
+                    width: 50
+                -
+                  handle: url
+                  field:
+                    type: text
+                    instructions: 'e.g. https://www.facebook.com/andersonhallasarchitects'
+                    width: 50
+      -
+        display: 'Easter Egg'
+        fields:
+          -
+            handle: ee_video
+            field:
+              display: 'Easter Egg Video (Upload an MP4 file)'
+              type: assets
+              container: assets
+              folder: videos
+              max_files: 1
+              width: 50
+          -
+            handle: ee_dimensions_info
+            field:
+              type: info
+              display: 'Video Dimensions'
+              content: 'Change values if different from 1920x1080 to allow for proper responsive resizing.'
+              state: notice
+          -
+            handle: ee_vwidth
+            field:
+              display: Width
+              type: text
+              default: '1920'
+              width: 25
+          -
+            handle: ee_vheight
+            field:
+              display: Height
+              type: text
+              default: '1080'
+              width: 25

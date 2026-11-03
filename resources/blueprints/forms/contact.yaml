@@ -1,0 +1,39 @@
+title: Contact
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: name
+            field:
+              type: text
+              display: Name
+          -
+            handle: email
+            field:
+              type: text
+              display: 'Email Address'
+              validate: email
+          -
+            handle: phone
+            field:
+              type: text
+              display: 'Phone Number'
+          -
+            handle: company
+            field:
+              type: text
+              display: Company
+          -
+            handle: message
+            field:
+              type: textarea
+              display: Message
+          -
+            handle: subject
+            field:
+              type: text
+              display: 'Sent to'
+              validate: email

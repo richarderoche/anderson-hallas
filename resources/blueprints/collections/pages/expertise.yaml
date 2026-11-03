@@ -1,0 +1,82 @@
+title: Expertise
+tabs:
+  sidebar:
+    display: Sidebar
+    sections:
+      -
+        fields:
+          -
+            handle: nav_hide
+            field:
+              display: 'Exclude from Header Navigation'
+              type: toggle
+              default: false
+          -
+            handle: redirect_page
+            field:
+              display: 'Optional Redirect'
+              type: entries
+              collections:
+                - pages
+              max_items: 1
+              instructions: 'Pick a page to redirect to if this is a contentless parent page with child pages (e.g. the first child).'
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              display: Title
+          -
+            handle: alt_title
+            field:
+              display: 'Alternate Title (Optional)'
+              instructions: 'Fill in to show longer title on page'
+              type: text
+          -
+            handle: template
+            field:
+              type: hidden
+              default: default
+      -
+        display: 'Cover Hero'
+        fields:
+          -
+            handle: cover_image
+            field:
+              display: 'Optional Hero Image'
+              type: assets
+              max_files: 1
+              container: assets
+              folder: heroes
+              instructions: 'JPG, Ideally at least 2560px wide'
+              width: 66
+          -
+            handle: cover_crop
+            field:
+              display: 'Crop?'
+              type: toggle
+              default: true
+              width: 33
+          -
+            import: bodytxt
+      -
+        display: 'Resources Settings'
+        fields:
+          -
+            handle: resources_title
+            field:
+              type: text
+              default: Resources
+              width: 66
+          -
+            handle: resources_limit
+            field:
+              display: 'Number of most recent thumbnails to show'
+              type: text
+              input_type: number
+              default: '6'
+              width: 33

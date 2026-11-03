@@ -1,0 +1,41 @@
+{{ if name }}
+From: {{ name }}
+{{ /if }}
+{{ if email }}
+Email: {{ email }}
+{{ /if }}
+{{ if phone }}
+Phone: {{ phone }}
+{{ /if }}
+{{ if company }}
+Company: {{ company }}
+{{ /if }}
+—
+{{ message }}
+---
+{{ if name }}
+<p>
+  <strong style="color:#A49990">From</strong>
+  {{ name }}
+</p>
+{{ /if }}
+{{ if email }}
+<p>
+  <strong style="color:#A49990">Email</strong>
+  {{ email }}
+</p>
+{{ /if }}
+{{ if phone }}
+<p>
+  <strong style="color:#A49990">Phone</strong>
+  {{ phone }}
+</p>
+{{ /if }}
+{{ if company }}
+<p>
+  <strong style="color:#A49990">Company</strong>
+  {{ company }}
+</p>
+{{ /if }}
+<p style="color:#FF551E;">—</p>
+<p>{{ message }}</p>

@@ -1,0 +1,43 @@
+/* from sections/_media.scss */
+.page-body-wrap.news header.page {
+  text-align: center;
+}
+.page-body-wrap.news .pagination {
+  margin-top: 1em;
+  text-align: center;
+}
+.page-body-wrap.news .pagination .prev + .next {
+  margin-left: 1.5em;
+}
+
+h1.page-section-title.resources {
+  text-align: center;
+}
+
+article.media {
+  text-align: center;
+  margin-bottom: 2em;
+}
+article.media .image {
+  width: 76%;
+  margin: 0 auto 0.7em;
+}
+article.media .action {
+  margin-top: 0.8em;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.lb-wrap.media .panel-wrap {
+  margin-bottom: 0;
+}
+.lb-wrap.media .content {
+  padding: 1.1111111111em 1.1111111111em 1em;
+}
+.lb-wrap.media h2 {
+  margin-right: 2.7777777778em;
+  margin-bottom: 1em;
+}
+.lb-wrap.media .bodytxt p:last-child, .lb-wrap.media .bodytxt ul:last-child, .lb-wrap.media .bodytxt ol:last-child, .lb-wrap.media .bodytxt blockquote:last-child {
+  margin-bottom: 0;
+}

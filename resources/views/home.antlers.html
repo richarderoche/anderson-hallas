@@ -1,0 +1,35 @@
+<main class="home id-{{ id }} {{ slug }}">
+  <div class="slide-wrap autoplay">
+    <div class="slide-container">
+      {{ if randomize }}
+      {{ home_slides scope="slide" limit="15" shuffle="true" }}
+      {{ partial src="partials/home/slider" }}
+      {{ /home_slides }}
+      {{ else }}
+      {{ home_slides scope="slide" limit="15" }}
+      {{ partial src="partials/home/slider" }}
+      {{ /home_slides }}
+      {{ /if }}
+    </div>
+    <div class="slide-nav-wrap">
+      <div class="dots">
+      </div>
+    </div>
+  </div>
+</main>
+<div class="home-splash invert">
+  <div class="splash row">
+    <div class="symbol-wrap">
+      <div class="symbol-inner">
+        <svg aria-labelledby="title" class="ico symbol" role="img" title="Anderson Hallas Architects">
+          <use xlink:href="#symbol"></use>
+        </svg>
+      </div>
+    </div>
+    <div class="tagline-wrap">
+      <h2 class="craft">Craft</h2>
+      <h2 class="balance">Balance</h2>
+      <h2 class="whimsy">Whimsy</h2>
+    </div>
+  </div>
+</div>

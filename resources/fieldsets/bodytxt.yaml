@@ -1,0 +1,490 @@
+title: Bodytxt
+sections:
+  -
+    display: Content
+    fields:
+      -
+        handle: content_blocks
+        field:
+          type: replicator
+          display: 'Content Blocks'
+          sets:
+            intro_text:
+              display: 'Big Intro Text'
+              fields:
+                -
+                  handle: text
+                  field:
+                    type: text
+                    width: 75
+                -
+                  handle: align
+                  field:
+                    type: select
+                    options:
+                      Left: Left
+                      Indented: Indented
+                    width: 25
+                    default: Indented
+            content_single:
+              display: 'Text Block Single'
+              fields:
+                -
+                  handle: column
+                  field:
+                    display: Content
+                    type: bard
+                    save_html: true
+                    buttons:
+                      - h2
+                      - h3
+                      - bold
+                      - italic
+                      - unorderedlist
+                      - orderedlist
+                      - removeformat
+                      - anchor
+                    width: 66
+                -
+                  handle: size
+                  field:
+                    display: 'Text Size'
+                    type: select
+                    options:
+                      Regular: Regular
+                      Large: Large
+                    width: 33
+                    default: Regular
+            content_double:
+              display: 'Text Block Double'
+              fields:
+                -
+                  handle: left_column
+                  field:
+                    display: 'Left Column'
+                    type: bard
+                    save_html: true
+                    buttons:
+                      - h2
+                      - h3
+                      - bold
+                      - italic
+                      - unorderedlist
+                      - orderedlist
+                      - removeformat
+                      - anchor
+                    width: 50
+                -
+                  handle: right_column
+                  field:
+                    display: 'Right Column'
+                    type: bard
+                    save_html: true
+                    buttons:
+                      - h2
+                      - h3
+                      - bold
+                      - italic
+                      - unorderedlist
+                      - orderedlist
+                      - removeformat
+                      - anchor
+                    width: 50
+            image_big:
+              display: 'Image Big'
+              fields:
+                -
+                  handle: img
+                  field:
+                    display: Image
+                    type: assets
+                    max_files: 1
+                    container: assets
+                    folder: page-content
+                    instructions: 'JPG, Ideally at least 2560px wide'
+                    width: 50
+                -
+                  handle: caption
+                  field:
+                    display: 'Optional Caption'
+                    type: bard
+                    save_html: true
+                    buttons:
+                      - h2
+                      - h3
+                      - bold
+                      - italic
+                      - unorderedlist
+                      - orderedlist
+                      - removeformat
+                      - anchor
+                    width: 50
+            image_small:
+              display: 'Image Small'
+              fields:
+                -
+                  handle: img
+                  field:
+                    display: Image
+                    type: assets
+                    max_files: 1
+                    container: assets
+                    folder: page-content
+                    instructions: 'JPG, Ideally at least 1680px wide'
+                    width: 50
+                -
+                  handle: caption
+                  field:
+                    display: 'Optional Caption'
+                    type: bard
+                    save_html: true
+                    buttons:
+                      - h2
+                      - h3
+                      - bold
+                      - italic
+                      - unorderedlist
+                      - orderedlist
+                      - removeformat
+                      - anchor
+                    width: 50
+            image_double:
+              display: 'Image Double'
+              fields:
+                -
+                  handle: img_left
+                  field:
+                    display: 'Left Image'
+                    type: assets
+                    max_files: 1
+                    container: assets
+                    folder: page-content
+                    instructions: 'JPG, Ideally at least 1920px wide'
+                    width: 33
+                -
+                  handle: img_right
+                  field:
+                    display: 'Right Image'
+                    type: assets
+                    max_files: 1
+                    container: assets
+                    folder: page-content
+                    instructions: 'JPG, Ideally at least 1920px wide'
+                    width: 33
+                -
+                  handle: ratio
+                  field:
+                    type: radio
+                    options:
+                      Portrait: Portrait
+                      Square: Square
+                    default: Portrait
+                    width: 33
+                -
+                  handle: caption
+                  field:
+                    display: 'Optional Caption'
+                    type: bard
+                    save_html: true
+                    buttons:
+                      - h2
+                      - h3
+                      - bold
+                      - italic
+                      - unorderedlist
+                      - orderedlist
+                      - removeformat
+                      - anchor
+                    width: 66
+            block_quote:
+              display: 'Pull Quote'
+              fields:
+                -
+                  handle: quote
+                  field:
+                    display: Text
+                    type: textarea
+                    width: 66
+                -
+                  handle: align
+                  field:
+                    type: select
+                    options:
+                      Left: Left
+                      Indented: Indented
+                    width: 33
+                    default: Indented
+                -
+                  handle: optional_credit
+                  field:
+                    display: 'Optional Credit'
+                    type: text
+                    width: 33
+                -
+                  handle: marks
+                  field:
+                    display: 'Show quote marks?'
+                    type: toggle
+                    default: true
+                    width: 33
+            cta_link:
+              display: 'Link Text'
+              fields:
+                -
+                  handle: url
+                  field:
+                    type: text
+                -
+                  handle: pre_text
+                  field:
+                    display: 'Optional Pre Text'
+                    type: text
+                    width: 33
+                -
+                  handle: text
+                  field:
+                    display: 'Link text'
+                    type: text
+                    width: 33
+                -
+                  handle: align
+                  field:
+                    type: select
+                    options:
+                      Left: Left
+                      Indented: Indented
+                    width: 33
+                    default: Indented
+            file_link:
+              display: 'Link File'
+              fields:
+                -
+                  handle: file_link
+                  field:
+                    display: 'File Upload'
+                    type: assets
+                    container: assets
+                    folder: uploads
+                    max_files: 1
+                -
+                  handle: pre_text
+                  field:
+                    display: 'Optional Pre Text'
+                    type: text
+                    width: 33
+                -
+                  handle: text
+                  field:
+                    display: 'Link text'
+                    type: text
+                    width: 33
+                -
+                  handle: align
+                  field:
+                    type: select
+                    options:
+                      Left: Left
+                      Indented: Indented
+                    width: 33
+                    default: Indented
+            upload_video:
+              display: 'Video Upload'
+              fields:
+                -
+                  handle: upload_instructions
+                  field:
+                    type: info
+                    display: 'Upload an MP4 file'
+                    content: 'Upload an MP4 file.'
+                    state: tip
+                -
+                  handle: video
+                  field:
+                    type: assets
+                    container: assets
+                    folder: videos
+                    max_files: 1
+                    width: 50
+                -
+                  handle: align
+                  field:
+                    type: select
+                    options:
+                      Left: Left
+                      Indented: Indented
+                    width: 25
+                    default: Indented
+                -
+                  handle: auto
+                  field:
+                    display: 'Autoplay as silent loop?'
+                    instructions: 'Only choose for small videos with no sound (less than 10mb)'
+                    type: toggle
+                    width: 25
+                    default: false
+                -
+                  handle: caption
+                  field:
+                    display: 'Optional Caption'
+                    type: bard
+                    save_html: true
+                    buttons:
+                      - h2
+                      - h3
+                      - bold
+                      - italic
+                      - unorderedlist
+                      - orderedlist
+                      - removeformat
+                      - anchor
+                    width: 50
+                -
+                  handle: dimensions_info
+                  field:
+                    type: info
+                    display: Dimensions
+                    content: 'Change values if different from 1920x1080 to allow for proper responsive resizing.'
+                    state: notice
+                -
+                  handle: vwidth
+                  field:
+                    type: text
+                    default: '1920'
+                    width: 25
+                -
+                  handle: vheight
+                  field:
+                    type: text
+                    default: '1080'
+                    width: 25
+            embed_video:
+              display: 'Video Embed'
+              fields:
+                -
+                  handle: embed_instructions
+                  field:
+                    type: info
+                    display: 'Video embed'
+                    content: 'Paste a Vimeo or YouTube link here to embed.'
+                    state: tip
+                -
+                  handle: video
+                  field:
+                    type: video
+                    width: 66
+                -
+                  handle: align
+                  field:
+                    type: select
+                    options:
+                      Left: Left
+                      Indented: Indented
+                    width: 33
+                    default: Indented
+                -
+                  handle: caption
+                  field:
+                    display: 'Optional Caption'
+                    type: bard
+                    save_html: true
+                    buttons:
+                      - h2
+                      - h3
+                      - bold
+                      - italic
+                      - unorderedlist
+                      - orderedlist
+                      - removeformat
+                      - anchor
+                    width: 50
+            new_section:
+              display: 'New Section Heading'
+              fields:
+                -
+                  handle: sec_title
+                  field:
+                    display: Title
+                    type: text
+            big_list:
+              display: 'Double Wide List'
+              fields:
+                -
+                  handle: heading
+                  field:
+                    type: text
+                -
+                  handle: list
+                  field:
+                    type: bard
+                    save_html: true
+                    buttons:
+                      - h2
+                      - h3
+                      - bold
+                      - italic
+                      - unorderedlist
+                      - orderedlist
+                      - removeformat
+                      - anchor
+                    instructions: 'Separate each line by a single return. Flows left to right, top to bottom.'
+            job_list:
+              display: 'Job List'
+              fields:
+                -
+                  handle: postings
+                  field:
+                    display: Postings
+                    type: replicator
+                    sets:
+                      posting:
+                        display: Posting
+                        fields:
+                          -
+                            handle: job_title
+                            field:
+                              display: 'Job Title'
+                              type: text
+                          -
+                            handle: left_column
+                            field:
+                              display: 'Left Column'
+                              type: bard
+                              save_html: true
+                              buttons:
+                                - h2
+                                - h3
+                                - bold
+                                - italic
+                                - unorderedlist
+                                - orderedlist
+                                - removeformat
+                                - anchor
+                              width: 50
+                              default: |
+                                <h3>Job Description</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis.</p>
+                          -
+                            handle: right_column
+                            field:
+                              display: 'Right Column'
+                              type: bard
+                              save_html: true
+                              buttons:
+                                - h2
+                                - h3
+                                - bold
+                                - italic
+                                - unorderedlist
+                                - orderedlist
+                                - removeformat
+                                - anchor
+                              width: 50
+                              default: |
+                                <h3>Qualifications & Experience</h3>
+                                <ul>
+                                <li>List Example</li>
+                                <li>List Example</li>
+                                <li>List Example</li>
+                                </ul>
+                                <h3>Application Process</h3>
+                                <p>To apply, please send your resume and cover letter to <a href="mailto:jobs@andarch.com">jobs@andarch.com</a></p>

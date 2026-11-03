@@ -1,0 +1,25 @@
+/* from lg/_lg-contact.scss */
+@media (min-width: 1018px) {
+main.contact form .right-col {
+  margin-top: 0;
+}
+main.contact form .submit-block {
+  margin-top: 2em;
+}
+main.contact form .select-block {
+  margin-bottom: 2.25em;
+}
+main.contact section.office {
+  margin-top: 5.5em;
+}
+main.contact section.office .address, main.contact section.office .phone {
+  margin-top: 1.2em;
+}
+main.contact section.office .location-info {
+  margin-top: 1.6em;
+}
+main.contact .map {
+  margin-top: 0;
+  height: 22em;
+}
+}

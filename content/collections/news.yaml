@@ -1,0 +1,10 @@
+title: News
+date: true
+sort_by: date
+sort_dir: desc
+mount: 33be106b-4bd4-45e7-bd60-29e3fac55a35
+blueprints:
+  - mediathumb
+date_behavior:
+  past: public
+  future: private

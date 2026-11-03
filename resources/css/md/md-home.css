@@ -1,0 +1,27 @@
+/* from md/_md-home.scss */
+@media (min-width: 680px) {
+main.home .slide-nav-wrap {
+  bottom: 1em;
+}
+main.home .slide-nav-wrap .dot {
+  padding: 0.5em;
+}
+main.home .slide-nav-wrap .dot .circle {
+  width: 1.1em;
+  height: 1.1em;
+}
+
+.home-splash .ico, .home-splash .symbol-inner {
+  width: 10em;
+  height: 10em;
+  overflow: visible;
+}
+.home-splash .symbol-wrap {
+  padding-right: 1.5em;
+  height: 10em;
+}
+.home-splash .tagline-wrap {
+  padding-top: 1.9em;
+  padding-left: 2.2em;
+}
+}

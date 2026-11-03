@@ -1,0 +1,105 @@
+/* from shared/_resetforms.scss */
+input, textarea, button, select {
+  width: 100%;
+  font: inherit;
+  letter-spacing: inherit;
+  color: inherit;
+  opacity: 1;
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  border-radius: 0;
+  text-align: left;
+  text-decoration: none;
+  text-indent: 0;
+  -moz-font-feature-settings: "kern" 1, "liga" 1;
+  -ms-font-feature-settings: "kern" 1, "liga" 1;
+  -o-font-feature-settings: "kern" 1, "liga" 1;
+  -webkit-font-feature-settings: "kern" 1, "liga" 1;
+  font-feature-settings: "kern" 1, "liga" 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+input[type=text], input[type=email],
+input[type=password], input[type=search],
+input[type=number], input[type=tel],
+select, textarea {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+textarea {
+  min-width: 100%;
+  max-width: 100%;
+  vertical-align: top;
+  overflow: auto;
+}
+
+input:not([type=radio]):not([type=checkbox]),
+textarea, button, select {
+  -webkit-appearance: none;
+}
+
+input[type=search]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+select {
+  -moz-appearance: none;
+  text-indent: 0.01px;
+  text-overflow: "";
+}
+
+select:-moz-focusring {
+  color: transparent;
+  text-shadow: 0 0 0 #3a3936;
+}
+
+input:focus, textarea:focus,
+button:focus, select:focus {
+  outline: 0;
+}
+
+input::-moz-focus-inner,
+button::-moz-focus-inner,
+select::-moz-focus-inner {
+  padding: 0;
+}
+
+input[type=radio], input[type=checkbox],
+input[type=submit], button, select {
+  cursor: pointer;
+}
+
+input[placeholder]::-webkit-input-placeholder,
+textarea[placeholder]::-webkit-input-placeholder {
+  color: inherit;
+  opacity: 1;
+}
+
+input[placeholder]:-moz-placeholder,
+textarea[placeholder]:-moz-placeholder {
+  color: inherit;
+  opacity: 1;
+}
+
+input[placeholder]::-moz-placeholder,
+textarea[placeholder]::-moz-placeholder {
+  color: inherit;
+  opacity: 1;
+}
+
+input[placeholder]::input-placeholder,
+textarea[placeholder]::input-placeholder {
+  color: inherit;
+  opacity: 1;
+}
+
+input[placeholder]::placeholder,
+textarea[placeholder]::placeholder {
+  color: inherit;
+  opacity: 1;
+}

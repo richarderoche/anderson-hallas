@@ -1,0 +1,29 @@
+.redactor-editor h2,
+.redactor-dropdown .redactor-formatting-h2,
+.redactor-dropdown .redactor-formatting-h2-orange {
+  font-size: 24px;
+  line-height: 1.2;
+  font-weight: 400;
+}
+
+.redactor-dropdown .redactor-formatting-span-ee-lb-btn,
+.redactor-dropdown .redactor-formatting-span-tag-word,
+.redactor-editor .ee-lb-btn,
+.redactor-editor .tag-word,
+.redactor-editor h3,
+.redactor-dropdown .redactor-formatting-h3,
+.redactor-dropdown .redactor-formatting-h3-orange {
+  font-size: 16px;
+  line-height: 1;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.redactor-dropdown .ee-lb-btn,
+.redactor-editor .ee-lb-btn,
+.redactor-editor .orange,
+.redactor-dropdown .redactor-formatting-h3-orange,
+.redactor-dropdown .redactor-formatting-h2-orange {
+  color: #FF551E;
+}

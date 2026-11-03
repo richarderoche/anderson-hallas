@@ -1,0 +1,14 @@
+title: Contact
+honeypot: website
+email:
+  -
+    to: '{{ subject }}'
+    from: info@andarch.com
+    subject: 'Contact Form Message from {{ company or name }}'
+    reply_to: '{{ email }}'
+    html:
+      - emails/contact_form
+metrics:
+  -
+    type: total
+    label: Total Responses

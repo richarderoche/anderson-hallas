@@ -1,0 +1,20 @@
+/* from md/_md-page-content.scss */
+@media (min-width: 680px) {
+main.page {
+  padding-bottom: 5em;
+}
+
+.body-content section.big-list p {
+  font-size: 0.8em;
+  margin-bottom: 0.7em;
+  float: left;
+  width: 50%;
+}
+.body-content section.big-list p:nth-child(odd) {
+  clear: both;
+  padding-right: 0.6em;
+}
+.body-content section.big-list p:nth-child(even) {
+  padding-left: 0.6em;
+}
+}

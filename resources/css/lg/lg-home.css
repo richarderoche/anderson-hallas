@@ -1,0 +1,87 @@
+/* from lg/_lg-home.scss */
+@media (min-width: 1018px) {
+.home-splash .ico, .home-splash .symbol-inner {
+  width: 11em;
+  height: 11em;
+  overflow: visible;
+}
+.home-splash .symbol-wrap {
+  width: 40%;
+  padding-right: 1.4em;
+  height: 11em;
+}
+.home-splash .tagline-wrap {
+  width: 60%;
+  padding-top: 4.7em;
+  padding-left: 1.5em;
+}
+.home-splash h2 {
+  display: inline-block;
+  margin-bottom: 0;
+  margin-right: 1.5em;
+}
+.home-splash h2:last-child {
+  margin-right: 0;
+}
+
+html.splash .home-splash .symbol-inner {
+  -moz-transform: translateX(-110%);
+  -ms-transform: translateX(-110%);
+  -o-transform: translateX(-110%);
+  -webkit-transform: translateX(-110%);
+  transform: translateX(-110%);
+}
+html.splash .home-splash .ico {
+  -moz-transform: rotate(-210deg);
+  -ms-transform: rotate(-210deg);
+  -o-transform: rotate(-210deg);
+  -webkit-transform: rotate(-210deg);
+  transform: rotate(-210deg);
+}
+html.splash .home-splash .whimsy {
+  -moz-transform: scale(1, -1) translateY(-5.5%);
+  -ms-transform: scale(1, -1) translateY(-5.5%);
+  -o-transform: scale(1, -1) translateY(-5.5%);
+  -webkit-transform: scale(1, -1) translateY(-5.5%);
+  transform: scale(1, -1) translateY(-5.5%);
+}
+
+main.home .slide-nav-wrap {
+  bottom: 0.8em;
+}
+main.home .slide-nav-wrap .dot {
+  padding: 0.4em;
+}
+main.home .slide-nav-wrap .dot .circle {
+  width: 0.8em;
+  height: 0.8em;
+}
+main.home .title-wrap {
+  height: 24em;
+  width: 2.65em;
+  background: rgba(241, 238, 234, 0.9);
+  text-align: center;
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  margin-top: 1.7em;
+  position: fixed;
+  top: 50%;
+  right: 0;
+}
+main.home .title-wrap h2 {
+  white-space: nowrap;
+  display: inline-block;
+  -moz-transform: rotate(-90deg) translateX(-50%);
+  -ms-transform: rotate(-90deg) translateX(-50%);
+  -o-transform: rotate(-90deg) translateX(-50%);
+  -webkit-transform: rotate(-90deg) translateX(-50%);
+  transform: rotate(-90deg) translateX(-50%);
+  transform-origin: 0 0;
+  position: absolute;
+  top: 50%;
+  left: 1.15em;
+}
+}

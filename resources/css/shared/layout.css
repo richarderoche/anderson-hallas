@@ -1,0 +1,232 @@
+/* from shared/_layout.scss */
+html, body {
+  height: 100%;
+}
+
+body {
+  min-width: 272px;
+}
+
+@media (hover: hover) and (pointer: fine) {
+.loading body {
+  overflow: hidden;
+}
+}
+
+
+#wrapper {
+  overflow: hidden;
+}
+
+
+
+
+/* ===============================================
+/* GRID
+/* ============================================ */
+.grid-wrap, .sm-grid-wrap, .smd-grid-wrap {
+  padding: 0 3.6231884058%;
+}
+
+.sm-grid-inset {
+  margin-left: -0.5555555556em;
+  margin-right: -0.5555555556em;
+}
+.sm-grid-inset:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.sm-1-6, .sm-2-6, .sm-3-6, .sm-4-6, .sm-5-6, .sm-6-6 {
+  padding-left: 0.5555555556em;
+  padding-right: 0.5555555556em;
+  float: left;
+}
+.sm-1-6.fillbox, .sm-2-6.fillbox, .sm-3-6.fillbox, .sm-4-6.fillbox, .sm-5-6.fillbox, .sm-6-6.fillbox {
+  padding-left: 1.1111111111em;
+  padding-right: 1.1111111111em;
+}
+
+.fullcol {
+  padding-left: 0.5555555556em;
+  padding-right: 0.5555555556em;
+}
+
+.sm-1-6 {
+  width: 16.6666666667%;
+}
+
+.sm-2-6 {
+  width: 33.3333333333%;
+}
+
+.sm-3-6 {
+  width: 50%;
+}
+
+.sm-4-6 {
+  width: 66.6666666667%;
+}
+
+.sm-5-6 {
+  width: 83.3333333333%;
+}
+
+.sm-6-6 {
+  width: 100%;
+}
+
+.sm-row:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.smd-grid-inset {
+  margin-left: -0.5555555556em;
+  margin-right: -0.5555555556em;
+}
+.smd-grid-inset:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.smd-1-6, .smd-2-6, .smd-3-6, .smd-4-6, .smd-5-6, .smd-6-6 {
+  padding-left: 0.5555555556em;
+  padding-right: 0.5555555556em;
+  float: left;
+}
+.smd-1-6.fillbox, .smd-2-6.fillbox, .smd-3-6.fillbox, .smd-4-6.fillbox, .smd-5-6.fillbox, .smd-6-6.fillbox {
+  padding-left: 1.1111111111em;
+  padding-right: 1.1111111111em;
+}
+
+.fullcol {
+  padding-left: 0.5555555556em;
+  padding-right: 0.5555555556em;
+}
+
+.smd-1-6 {
+  width: 16.6666666667%;
+}
+
+.smd-2-6 {
+  width: 33.3333333333%;
+}
+
+.smd-3-6 {
+  width: 50%;
+}
+
+.smd-4-6 {
+  width: 66.6666666667%;
+}
+
+.smd-5-6 {
+  width: 83.3333333333%;
+}
+
+.smd-6-6 {
+  width: 100%;
+}
+
+.smd-row:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.fullcol {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.sm-left-1 {
+  margin-left: 16.6666666667%;
+}
+
+.md-only, .md-only-in,
+.md-up, .md-up-in,
+.lg-only, .lg-only-in {
+  display: none;
+}
+
+/* ===============================================
+/* GLOBAL COMPONENTS
+/* ============================================ */
+.circle, .circle img {
+  border-radius: 50%;
+}
+
+@media (hover: hover) and (pointer: fine) {
+.tap-click b {
+  position: absolute;
+  top: -9999em;
+  left: -9999em;
+}
+}
+
+@media (hover: hover) and (pointer: fine) {
+.tap-click:after {
+  content: "Click";
+}
+}
+
+
+picture.img img {
+  width: 100%;
+}
+
+
+
+
+
+
+
+
+.video-holder {
+  position: relative;
+  padding-top: 56.25%;
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+}
+.video-holder iframe, .video-holder object, .video-holder embed, .video-holder video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.r-banner:after {
+  padding-top: 37.5%;
+}
+
+.r-2-1:after {
+  padding-top: 50%;
+}
+
+.r-16-9:after {
+  padding-top: 56.25%;
+}
+
+.r-16-10:after {
+  padding-top: 62.5%;
+}
+
+.r-square:after {
+  padding-top: 100%;
+}
+
+.r-portrait:after {
+  padding-top: 150%;
+}
+
+.rp:after {
+  padding-top: 56.25%;
+}

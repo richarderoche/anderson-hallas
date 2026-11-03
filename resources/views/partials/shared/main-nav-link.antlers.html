@@ -1,0 +1,21 @@
+{{ if ! segment_2 }}
+
+{{ if is_current }}
+<div class="nav-link single current {{ url | remove_left:/ | replace('/', '-') or template | slugify }}">
+{{ else }}
+<div class="nav-link single {{ url | remove_left:/ | replace('/', '-') or template | slugify }}">
+{{ /if }}
+
+{{ else }}
+
+{{ if is_current }}
+<div class="nav-link single current {{ url | remove_left:/ | replace('/', '-') or template | slugify }}">
+{{ elseif url == parent_url }}
+<div class="nav-link single current parent {{ url | remove_left:/ | replace('/', '-') or template | slugify }}">
+{{ else }}
+<div class="nav-link single {{ url | remove_left:/ | replace('/', '-') or template | slugify }}">
+{{ /if }}
+
+{{ /if }}
+<a class="top-link" href="{{ url }}">{{ title }}</a>
+</div>

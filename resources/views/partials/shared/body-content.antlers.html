@@ -1,0 +1,182 @@
+<div class="cb cb-{{ index }} cb-{{ type | slugify }} row">
+  {{ if type == "intro_text" }}
+  <section class="align-{{ align | slugify }} introtxt lg-8-12 smd-6-6">
+    <h2>{{ text | smartypants }}</h2>
+  </section>
+  {{ elseif type == "content_single" }}
+  {{ if size == "Large" }}
+  <section class="content lg-8-12 md-6-6 single sm-6-6 {{ size | slugify }}">
+    <div class="bodytxt">
+      {{ column | smartypants }}
+    </div>
+  </section>
+  {{ else }}
+  <section class="content lg-7-12 md-5-6 single sm-6-6 {{ size | slugify }}">
+    <div class="bodytxt">
+      {{ column | smartypants }}
+    </div>
+  </section>
+  {{ /if }}
+  {{ elseif type == "content_double" }}
+  <section class="content double left sm-6-6 md-5-6 lg-6-12">
+    <div class="bodytxt">
+      {{ left_column | smartypants }}
+    </div>
+  </section>
+  <section class="content double right sm-6-6 md-5-6 lg-6-12">
+    <div class="bodytxt">
+      {{ right_column | smartypants }}
+    </div>
+  </section>
+  {{ elseif type == "image_big" }}
+  <section class="image big smd-6-6 lg-10-12">
+    {{ img }}
+    {{ partial src="partials/images/cb-large" }}
+    {{ /img }}
+    {{ if caption }}
+    <h4 class="caption">{{ caption | smartypants }}</h4>
+    {{ /if }}
+  </section>
+  {{ elseif type == "image_small" }}
+  <section class="image small smd-4-6 lg-5-12">
+    {{ img }}
+    {{ partial src="partials/images/cb-small" }}
+    {{ /img }}
+    {{ if caption }}
+    <h4 class="caption">{{ caption | smartypants }}</h4>
+    {{ /if }}
+  </section>
+  {{ elseif type == "image_double" }}
+  <section class="image double">
+    <div class="row">
+      <div class="left smd-3-6 lg-5-12">
+        {{ img_left }}
+        {{ partial src="partials/images/cb-two-up" crop="{ratio | slugify}" }}
+        {{ /img_left }}
+      </div>
+      <div class="right smd-3-6 lg-5-12">
+        {{ img_right }}
+        {{ partial src="partials/images/cb-two-up" crop="{ratio | slugify}" }}
+        {{ /img_right }}
+      </div>
+    </div>
+    {{ if caption }}
+    <div class="row">
+      <div class="caption-wrap smd-6-6 lg-10-12">
+        <h4 class="caption">{{ caption | smartypants }}</h4>
+      </div>
+    </div>
+    {{ /if }}
+  </section>
+  {{ elseif type == "block_quote" }}
+  <section class="align-{{ align | slugify }} block-quote lg-8-12 md-5-6 sm-6-6">
+    <p class="marks-{{ marks }} quote">{{ quote | smartypants }}</p>
+    {{ if optional_credit }}
+    <p class="quote-credit">{{ optional_credit | smartypants }}</p>
+    {{ /if }}
+  </section>
+  {{ elseif type == "cta_link" }}
+  <section class="align-{{ align | slugify }} big-link cta lg-8-12 smd-6-6">
+    {{ if pre_text }}
+    <h3 class="pre">{{ pre_text }}</h3>
+    {{ /if }}
+    <a class="underline" href="{{ url }}">
+      {{ text | smartypants }}
+    </a>
+  </section>
+  {{ elseif type == "file_link" }}
+  <section class="align-{{ align | slugify }} big-link cta lg-8-12 smd-6-6">
+    {{ if pre_text }}
+    <h3 class="pre">
+      {{ pre_text }}
+      {{ file_link }}
+      <span class="file-info">({{ size_megabytes | round:1 }}MB {{ extension | upper }})</span>
+      {{ /file_link }}
+    </h3>
+    {{ /if }}
+    <a class="underline" href="{{ file_link }}" target="_blank">
+      {{ text | smartypants }}
+    </a>
+  </section>
+  {{ elseif type == "embed_video" }}
+  <section class="align-{{ align | slugify }} lg-6-12 md-5-6 sm-6-6 video video-embed">
+    {{ if video:height && video:width }}
+    <div class="video-holder" style="padding-top: {{ video:height | divide:video:width | multiply:100 | round:6 }}%">
+      <iframe src="{{ video:url | embed_url }}" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+    </div>
+    {{ else }}
+    <div class="video-holder">
+      <iframe src="{{ video:url | embed_url }}" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+    </div>
+    {{ /if }}
+    {{ if caption }}
+    <h4 class="caption">{{ caption | smartypants }}</h4>
+    {{ /if }}
+  </section>
+  {{ elseif type == "upload_video" }}
+  <section class="align-{{ align | slugify }} lg-8-12 md-5-6 sm-6-6 video video-upload">
+    {{ video }}
+    <div class="video-holder" style="padding-top: {{ vheight | divide:vwidth | multiply:100 | round:6 }}%">
+      {{ if auto }}
+      <video autoplay="" class="vid" loop="true" muted="" playsinline="" preload="">
+        <source src="{{ url }}" type="video/mp4">
+      </video>
+      {{ else }}
+      <video class="vid" controls="" playsinline="" preload="metadata">
+        <source src="{{ url }}" type="video/mp4">
+      </video>
+      {{ /if }}
+    </div>
+    {{ /video }}
+    {{ if caption }}
+    <h4 class="caption">{{ caption | smartypants }}</h4>
+    {{ /if }}
+  </section>
+  {{ elseif type == "new_section" }}
+  <header class="lg-10-12 page-section smd-6-6 {{ size | slugify }}">
+    <h1 class="page-section-title">{{ sec_title | smartypants }}</h1>
+  </header>
+  {{ elseif type == "big_list" }}
+  <section class="big-list sm-6-6 md-6-6 lg-12-12">
+    <h2>{{ heading | smartypants }}</h2>
+    <div class="bodytxt">
+      <div class="row">
+        {{ list | smartypants }}
+      </div>
+    </div>
+  </section>
+  {{ elseif type == "job_list" }}
+  <section class="jobs sm-6-6 md-5-6 lg-12-12">
+    {{ postings }}
+    <article class="job expandable">
+      <header class="toggle-sec">
+        <div class="row">
+          <div class="title-wrap">
+            <h1>{{ job_title }}</h1>
+          </div>
+          <div class="less-more-wrap">
+            <span class="txt">
+              <span class="more">Show More</span>
+              <span class="less">Show Less</span>
+            </span>
+            <svg aria-labelledby="title" class="ico show" role="img" title="Show or Hide">
+              <use xlink:href="#show"></use>
+            </svg>
+          </div>
+        </div>
+      </header>
+      <div class="content-wrap lg-grid-inset toggle-section">
+        <div class="row">
+          <div class="bodytxt left lg-6-12">
+            {{ left_column | smartypants }}
+          </div>
+          <div class="bodytxt right lg-6-12">
+            {{ right_column | smartypants }}
+          </div>
+        </div>
+      </div>
+    </article>
+    {{ /postings }}
+  </section>
+  {{ /if }}
+</div>

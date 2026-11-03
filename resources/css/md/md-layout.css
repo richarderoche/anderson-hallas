@@ -1,0 +1,134 @@
+/* from md/_md-layout.scss */
+@media (min-width: 680px) {
+/* ===============================================
+/* GRID
+/* ============================================ */
+.sm-grid-wrap {
+  padding: 0;
+}
+
+.grid-wrap, .md-grid-wrap, .smd-grid-wrap {
+  padding: 0 2.9411764706%;
+}
+
+.sm-1-6, .sm-2-6, .sm-3-6, .sm-4-6, .sm-5-6, .sm-6-6, .sm-grid-inset {
+  width: auto;
+  float: none;
+  padding-left: 0;
+  padding-right: 0;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.sm-row:before, .sm-row:after {
+  content: none;
+  display: none;
+}
+.sm-row:after {
+  clear: auto;
+}
+
+.md-grid-inset {
+  margin-left: -0.6666666667em;
+  margin-right: -0.6666666667em;
+}
+.md-grid-inset:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.md-1-6, .md-2-6, .md-3-6, .md-4-6, .md-5-6, .md-6-6 {
+  padding-left: 0.6666666667em;
+  padding-right: 0.6666666667em;
+  float: left;
+}
+.md-1-6.fillbox, .md-2-6.fillbox, .md-3-6.fillbox, .md-4-6.fillbox, .md-5-6.fillbox, .md-6-6.fillbox {
+  padding-left: 1.3333333333em;
+  padding-right: 1.3333333333em;
+}
+
+.fullcol {
+  padding-left: 0.6666666667em;
+  padding-right: 0.6666666667em;
+}
+
+.md-1-6 {
+  width: 16.6666666667%;
+}
+
+.md-2-6 {
+  width: 33.3333333333%;
+}
+
+.md-3-6 {
+  width: 50%;
+}
+
+.md-4-6 {
+  width: 66.6666666667%;
+}
+
+.md-5-6 {
+  width: 83.3333333333%;
+}
+
+.md-6-6 {
+  width: 100%;
+}
+
+.md-row:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.smd-grid-inset {
+  margin-left: -0.6666666667em;
+  margin-right: -0.6666666667em;
+}
+.smd-grid-inset:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.smd-1-6, .smd-2-6, .smd-3-6, .smd-4-6, .smd-5-6, .smd-6-6 {
+  padding-left: 0.6666666667em;
+  padding-right: 0.6666666667em;
+  float: left;
+}
+.smd-1-6.fillbox, .smd-2-6.fillbox, .smd-3-6.fillbox, .smd-4-6.fillbox, .smd-5-6.fillbox, .smd-6-6.fillbox {
+  padding-left: 1.3333333333em;
+  padding-right: 1.3333333333em;
+}
+
+.fullcol {
+  padding-left: 0.6666666667em;
+  padding-right: 0.6666666667em;
+}
+
+.sm-left-1 {
+  margin-left: 0;
+}
+
+.md-left-1 {
+  margin-left: 16.6666666667%;
+}
+
+.sm-only {
+  display: none !important;
+}
+
+.md-only, .md-up {
+  display: block;
+}
+
+.md-only-in, .md-up-in {
+  display: inline;
+}
+
+/* ===============================================
+/* GLOBAL COMPONENTS
+/* ============================================ */
+}

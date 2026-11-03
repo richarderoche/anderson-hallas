@@ -1,0 +1,102 @@
+/* from lg/_lg-page-content.scss */
+@media (min-width: 1018px) {
+main.page {
+  padding-bottom: 6.5em;
+}
+
+header.page,
+header.page-section {
+  padding-top: 5em;
+  padding-bottom: 3em;
+}
+
+.body-content section.image.double .caption-wrap,
+.body-content section.image.double .left,
+.body-content section.image.big {
+  margin-left: 8.3333333333%;
+}
+.body-content section.image.small,
+.body-content section.content.single,
+.body-content section.align-indented {
+  margin-left: 16.6666666667%;
+}
+.body-content section.introtxt {
+  margin-top: 3em;
+  margin-bottom: 3em;
+}
+.body-content section.content.single,
+.body-content section.content.right {
+  margin-bottom: 0.4em;
+}
+.body-content section.image, .body-content section.video {
+  margin-top: 2.2em;
+  margin-bottom: 2.8em;
+}
+.body-content section.image .caption, .body-content section.video .caption {
+  margin-top: 1em;
+}
+.body-content .block-quote {
+  margin-top: 2.2em;
+  margin-bottom: 2.8em;
+}
+.body-content .block-quote .quote-credit {
+  margin-top: 1.6em;
+}
+.body-content section.big-link {
+  margin-top: 2.5em;
+  margin-bottom: 2.5em;
+}
+.body-content section.big-link .pre {
+  margin-bottom: 0.8em;
+}
+.body-content section.big-list {
+  margin-top: 0.8em;
+  margin-bottom: 1em;
+}
+.body-content section.big-list h2 {
+  margin-bottom: 0.4em;
+}
+.body-content section.big-list p {
+  font-size: 1em;
+  margin-bottom: 0.65em;
+}
+.body-content section.big-list p:nth-child(odd) {
+  padding-right: 0.8828571429em;
+}
+.body-content section.big-list p:nth-child(even) {
+  padding-left: 0.8828571429em;
+}
+.body-content section.jobs {
+  margin-top: 2.5em;
+  margin-bottom: 2.5em;
+}
+.body-content article.job header {
+  padding: 0.75em 0 0.9em;
+}
+.body-content article.job .title-wrap {
+  width: 85%;
+}
+.body-content article.job .less-more-wrap {
+  width: 15%;
+  margin-top: 0.3em;
+}
+.body-content article.job .content-wrap .row {
+  padding-bottom: 0.8em;
+}
+.body-content .cb-content-single + .cb-content-double section.content {
+  margin-top: 2em;
+}
+.body-content .cb-new-section + .cb-intro-text section.introtxt {
+  margin-top: 0;
+}
+.body-content .cb-1 section.big-list, .body-content .cb-1 section.introtxt,
+.body-content .cb-1 section.link, .body-content .cb-1 section.video,
+.body-content .cb-1 section.image, .body-content .cb-1 .staff-member {
+  margin-top: 0;
+}
+.body-content .cb:last-child section.jobs, .body-content .cb:last-child section.big-list,
+.body-content .cb:last-child section.big-link, .body-content .cb:last-child section.video,
+.body-content .cb:last-child section.image, .body-content .cb:last-child .block-quote {
+  margin-bottom: 0;
+}
+}

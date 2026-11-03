@@ -1,0 +1,80 @@
+{{ thumbnail_blocks }}
+{{ if type == "single" }}
+<div class="thumb-group single row">
+  {{ project }}
+  {{ partial src="partials/projects/thumb-builder" lgrid="lg-12-12" picfile="single" }}
+  {{ /project }}
+</div>
+{{ elseif type == "double" }}
+<div class="double row thumb-group {{ proportions | slugify }}">
+  {{ if proportions == "wleft" }}
+  {{ projectL }}
+  {{ partial src="partials/projects/thumb-builder" lgrid="lg-8-12" picfile="double-wide" }}
+  {{ /projectL }}
+  {{ projectR }}
+  {{ partial src="partials/projects/thumb-builder" lgrid="lg-4-12" picfile="double-narrow" }}
+  {{ /projectR }}
+  {{ elseif proportions == "wright" }}
+  {{ projectL }}
+  {{ partial src="partials/projects/thumb-builder" lgrid="lg-4-12" picfile="double-narrow" }}
+  {{ /projectL }}
+  {{ projectR }}
+  {{ partial src="partials/projects/thumb-builder" lgrid="lg-8-12" picfile="double-wide" }}
+  {{ /projectR }}
+  {{ else }}
+  {{ projectL }}
+  {{ partial src="partials/projects/thumb-builder" lgrid="lg-6-12" picfile="double-even" }}
+  {{ /projectL }}
+  {{ projectR }}
+  {{ partial src="partials/projects/thumb-builder" lgrid="lg-6-12" picfile="double-even" }}
+  {{ /projectR }}
+  {{ /if }}
+</div>
+{{ elseif type == "triple" }}
+<div class="thumb-group triple row">
+  {{ projectL }}
+  {{ partial src="partials/projects/thumb-builder" lgrid="lg-4-12" picfile="double-narrow" }}
+  {{ /projectL }}
+  {{ projectM }}
+  {{ partial src="partials/projects/thumb-builder" lgrid="lg-4-12" picfile="double-narrow" }}
+  {{ /projectM }}
+  {{ projectR }}
+  {{ partial src="partials/projects/thumb-builder" lgrid="lg-4-12" picfile="double-narrow" }}
+  {{ /projectR }}
+</div>
+{{ elseif type == "quad" }}
+<div class="quad row tall-{{ tall_position | slugify }} thumb-group">
+  {{ unless tall_position == "right" }}
+  <div class="tall-col lg-4-12">
+    {{ projectT }}
+    {{ partial src="partials/projects/thumb-builder" lgrid="lg" picfile="quad-tall" }}
+    {{ /projectT }}
+  </div>
+  {{ /unless }}
+  <div class="group-col lg-8-12">
+    <div class="lg-grid-inset">
+      <div class="top row">
+        {{ projectW }}
+        {{ partial src="partials/projects/thumb-builder" lgrid="lg-8-8" picfile="quad-wide" }}
+        {{ /projectW }}
+      </div>
+      <div class="bottom row">
+        {{ projectL }}
+        {{ partial src="partials/projects/thumb-builder" lgrid="lg-4-8" picfile="quad-small" }}
+        {{ /projectL }}
+        {{ projectR }}
+        {{ partial src="partials/projects/thumb-builder" lgrid="lg-4-8" picfile="quad-small" }}
+        {{ /projectR }}
+      </div>
+    </div>
+  </div>
+  {{ if tall_position == "right" }}
+  <div class="tall-col lg-4-12">
+    {{ projectT }}
+    {{ partial src="partials/projects/thumb-builder" lgrid="lg" picfile="quad-tall" }}
+    {{ /projectT }}
+  </div>
+  {{ /if }}
+</div>
+{{ /if }}
+{{ /thumbnail_blocks }}

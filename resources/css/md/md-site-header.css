@@ -1,0 +1,10 @@
+/* from md/_md-site-header.scss */
+@media (min-width: 680px) {
+header.top .logo-wrap h1 {
+  margin-top: 0.35em;
+}
+header.top .logo-wrap .new-line:before {
+  content: "";
+  white-space: nowrap;
+}
+}

@@ -1,0 +1,200 @@
+/* from shared/_site-header.scss */
+#wrapper {
+  padding-top: 3em;
+}
+
+header.top, .header-wrap {
+  height: 3em;
+}
+
+header.top {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-width: 272px;
+  z-index: 999;
+  -webkit-backface-visibility: hidden;
+}
+header.top .logo-wrap {
+  margin-top: 0.6em;
+}
+header.top .logo-wrap .ico {
+  float: left;
+  width: 1.8em;
+  height: 1.8em;
+  overflow: visible;
+}
+header.top .logo-wrap h1 {
+  display: inline-block;
+  margin-top: 0.1em;
+  margin-left: 0.9em;
+  float: left;
+}
+header.top .logo-wrap .new-line:before {
+  content: "\a";
+  white-space: pre;
+}
+header.top .nav-toggle-wrap {
+  text-align: right;
+  margin-top: 0.85em;
+}
+header.top .nav-toggle-wrap .inner {
+  position: relative;
+}
+header.top .nav-toggle-wrap a, header.top .nav-toggle-wrap .ico {
+  width: 1.5em;
+  height: 1.2692307692em;
+  overflow: visible;
+}
+header.top .nav-toggle-wrap .toggle-nav-close {
+  position: absolute;
+  -moz-transform: translateX(-999em);
+  -ms-transform: translateX(-999em);
+  -o-transform: translateX(-999em);
+  -webkit-transform: translateX(-999em);
+  transform: translateX(-999em);
+  visibility: hidden;
+  opacity: 0;
+  right: 0;
+}
+
+nav.mobile {
+  position: fixed;
+  top: 3em;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  -webkit-overflow-scrolling: touch;
+  overflow: auto;
+  min-width: 272px;
+  -moz-transform: translateY(-101%);
+  -ms-transform: translateY(-101%);
+  -o-transform: translateY(-101%);
+  -webkit-transform: translateY(-101%);
+  transform: translateY(-101%);
+  visibility: hidden;
+  background: rgba(59, 43, 30, 0.95);
+  opacity: 0;
+  z-index: -1;
+}
+nav.mobile .nav-mobile-wrap {
+  margin-left: 16.6666666667%;
+  padding-top: 1.3em;
+  padding-bottom: 1.55em;
+  position: relative;
+  left: -1.1111111111em;
+}
+nav.mobile .parent-wrap {
+  position: relative;
+}
+nav.mobile .parent-wrap .toggle-sec {
+  position: absolute;
+  top: 0;
+  right: 0em;
+  padding: 0.4em;
+  cursor: pointer;
+}
+nav.mobile .parent-wrap .triangle {
+  width: 0.75em;
+  height: 0.65em;
+  overflow: visible;
+  display: block;
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+nav.mobile .parent-wrap.expanded .triangle {
+  -moz-transform: rotate(0);
+  -ms-transform: rotate(0);
+  -o-transform: rotate(0);
+  -webkit-transform: rotate(0);
+  transform: rotate(0);
+}
+nav.mobile .parent-wrap.expanded .children-wrap {
+  visibility: visible;
+}
+nav.mobile .children-wrap {
+  padding-left: 1.1111111111em;
+  max-height: 0;
+  overflow: hidden;
+  visibility: hidden;
+}
+nav.mobile .expanded .children-wrap {
+  max-height: 99em;
+  visibility: visible;
+}
+nav.mobile .nav-link, nav.mobile .sub-link {
+  margin-top: 0.6em;
+}
+nav.mobile .current.nav-link.single .top-link,
+nav.mobile .current.parent .duplicate.current .child-link,
+nav.mobile .sub-link.current .child-link {
+  position: relative;
+}
+nav.mobile .current.nav-link.single .top-link:before,
+nav.mobile .current.parent .duplicate.current .child-link:before,
+nav.mobile .sub-link.current .child-link:before {
+  content: "•";
+  position: relative;
+  display: inline-block;
+  width: 0;
+  left: -1.2em;
+  top: -0.065em;
+}
+
+@media (hover: hover) and (pointer: fine) {
+header.top .nav-toggle-wrap a:hover, header.top .logo-wrap a:hover {
+  opacity: 0.6;
+}
+}
+
+@media (hover: hover) and (pointer: fine) {
+header.top nav a:hover {
+  color: #FF551E;
+}
+}
+
+
+@media (hover: none), (pointer: coarse) {
+header.top .nav-toggle-wrap a:active, header.top .logo-wrap a:active {
+  opacity: 0.6;
+}
+}
+
+@media (hover: none), (pointer: coarse) {
+header.top nav a:active {
+  color: #FF551E;
+}
+}
+
+
+.main-nav-on header.top .toggle-nav-open {
+  -moz-transform: translateX(-999em);
+  -ms-transform: translateX(-999em);
+  -o-transform: translateX(-999em);
+  -webkit-transform: translateX(-999em);
+  transform: translateX(-999em);
+  visibility: hidden;
+  opacity: 0;
+}
+.main-nav-on header.top .toggle-nav-close {
+  -moz-transform: translateX(0);
+  -ms-transform: translateX(0);
+  -o-transform: translateX(0);
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
+  visibility: visible;
+  opacity: 1;
+}
+.main-nav-on nav.mobile {
+  -moz-transform: translateY(0);
+  -ms-transform: translateY(0);
+  -o-transform: translateY(0);
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+  visibility: visible;
+  opacity: 1;
+}

@@ -1,0 +1,26 @@
+<picture class="img load">
+  {{ if slide:image }}
+  {{ slide:image }}
+  {{ partial src="partials/images/slide-home" }}
+  {{ /slide:image }}
+  {{ else }}
+  {{ slide:project }}
+  {{ slider_images limit="1" }}
+  {{ if image }}
+  {{ image }}
+  {{ partial src="partials/images/slide-home" }}
+  {{ /image }}
+  {{ else }}
+  {{ left_image }}
+  {{ partial src="partials/images/slide-home" }}
+  {{ /left_image }}
+  {{ /if }}
+  {{ /slider_images }}
+  {{ /slide:project }}
+  {{ /if }}
+</picture>
+<div class="title-wrap lg-only">
+  {{ slide:project }}
+  <h2>{{ title | smartypants | truncate:32:… }}</h2>
+  {{ /slide:project }}
+</div>

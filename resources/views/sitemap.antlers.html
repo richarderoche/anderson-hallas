@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>{{ config:app:url }}</loc>
+    {{ collection:pages slug="home" }}
+    <lastmod>{{ updated_at format="Y-m-d" }}</lastmod>
+    {{ /collection:pages }}
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  {{ nav:collection:pages include_home="false" max_depth="2" }}
+  {{ unless nav_hide }}
+  <url>
+    <loc>{{ permalink }}</loc>
+    <lastmod>{{ updated_at format="Y-m-d" }}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  {{ /unless }}
+  {{ /nav:collection:pages }}
+  {{ collection:projects }}
+  <url>
+    <loc>{{ permalink }}</loc>
+    <lastmod>{{ updated_at format="Y-m-d" }}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  {{ /collection:projects }}
+  {{ collection:pages slug="portfolio" }}
+  {{ project_filters }}
+  <url>
+    <loc>{{ config:app:url }}/portfolio/categories/{{ slug }}</loc>
+    <lastmod>{{ updated_at format="Y-m-d" }}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  {{ /project_filters }}
+  {{ /collection:pages }}
+</urlset>

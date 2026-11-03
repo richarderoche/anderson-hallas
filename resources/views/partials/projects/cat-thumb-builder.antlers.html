@@ -1,0 +1,24 @@
+<article class="sm-6-6 md-5-6 lg-6-12 tag-item project-thumb active{{ categories }} tag-{{ slug }}{{ /categories }}">
+<a class="thumbnail" href="{{ url }}">
+  <div class="thumb-image">
+    {{ if manual_thumb }}
+    {{ thumbnail }}
+    {{ partial src="partials/images/project-thumb-cat" }}
+    {{ /thumbnail }}
+    {{ else }}
+    {{ slider_images limit="1" }}
+    {{ if image }}
+    {{ image }}
+    {{ partial src="partials/images/project-thumb-cat" }}
+    {{ /image }}
+    {{ else }}
+    {{ left_image }}
+    {{ partial src="partials/images/project-thumb-cat" }}
+    {{ /left_image }}
+    {{ /if }}
+    {{ /slider_images }}
+    {{ /if }}
+  </div>
+  {{ partial src="partials/projects/thumb-info" }}
+</a>
+</article>

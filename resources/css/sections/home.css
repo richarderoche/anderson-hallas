@@ -1,0 +1,161 @@
+/* from sections/_home.scss */
+body.home {
+  overflow: hidden;
+}
+body.home #wrapper {
+  padding-top: 0;
+}
+
+main.home, main.home .slide-wrap, .home-splash {
+  display: block;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+}
+
+.home-splash {
+  z-index: 9999;
+  min-width: 272px;
+  top: 0;
+  opacity: 0;
+  -moz-transform: translateX(-101%);
+  -ms-transform: translateX(-101%);
+  -o-transform: translateX(-101%);
+  -webkit-transform: translateX(-101%);
+  transform: translateX(-101%);
+  visibility: hidden;
+  overflow: hidden;
+}
+.home-splash .splash {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+.home-splash .ico, .home-splash .symbol-inner {
+  display: inline-block;
+  width: 7em;
+  height: 7em;
+  overflow: visible;
+  -webkit-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+}
+.home-splash .symbol-wrap, .home-splash .tagline-wrap {
+  float: left;
+}
+.home-splash .symbol-wrap, .home-splash .tagline-wrap {
+  width: 50%;
+}
+.home-splash .symbol-wrap {
+  text-align: right;
+  padding-right: 1.3em;
+  height: 7em;
+}
+.home-splash .tagline-wrap {
+  padding-top: 1.25em;
+  padding-left: 1.5em;
+}
+.home-splash h2 {
+  margin-bottom: 0.8em;
+}
+.home-splash h2:last-child {
+  margin-bottom: 0;
+}
+
+html.splash .home-splash {
+  -moz-transform: translateX(0);
+  -ms-transform: translateX(0);
+  -o-transform: translateX(0);
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
+  opacity: 1;
+  visibility: visible;
+}
+html.splash .home-splash .ico, html.splash .home-splash h2 {
+  opacity: 0;
+}
+html.splash .home-splash .ico {
+  -moz-transform: rotate(-300deg);
+  -ms-transform: rotate(-300deg);
+  -o-transform: rotate(-300deg);
+  -webkit-transform: rotate(-300deg);
+  transform: rotate(-300deg);
+}
+html.splash .home-splash .whimsy {
+  -moz-transform: scale(1, -1) translateY(-5.5%);
+  -ms-transform: scale(1, -1) translateY(-5.5%);
+  -o-transform: scale(1, -1) translateY(-5.5%);
+  -webkit-transform: scale(1, -1) translateY(-5.5%);
+  transform: scale(1, -1) translateY(-5.5%);
+}
+
+main.home .fit-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  overflow: hidden;
+  width: 100%;
+  display: none;
+  opacity: 0;
+}
+main.home .fit-bg.display {
+  display: block;
+}
+main.home .fit-bg.show {
+  opacity: 0.999999;
+}
+main.home .fit-bg.coming {
+  z-index: -2;
+}
+main.home .fit-bg img {
+  position: absolute;
+  width: 100.5%;
+  top: 50%;
+  left: 50%;
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+main.home .slide-nav-wrap {
+  position: absolute;
+  bottom: 1.5em;
+  width: 100%;
+  text-align: center;
+  line-height: 0;
+}
+main.home .slide-nav-wrap .dot {
+  display: inline-block;
+  padding: 0.4em;
+  cursor: pointer;
+}
+main.home .slide-nav-wrap .dot .circle {
+  width: 0.8em;
+  height: 0.8em;
+  background: #F1EEEA;
+}
+main.home .slide-nav-wrap .dot.active .circle {
+  background: #FF551E;
+}
+
+@media screen and (orientation: landscape) and (max-aspect-ratio: 16/10) {
+  main.home .fit-bg img {
+    height: 100.5%;
+    max-width: none;
+    width: auto;
+  }
+}
+@media screen and (orientation: portrait) and (max-aspect-ratio: 768/1024) {
+  main.home .fit-bg img {
+    height: 100.5%;
+    max-width: none;
+    width: auto;
+  }
+}

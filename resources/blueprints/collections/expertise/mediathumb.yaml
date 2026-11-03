@@ -1,0 +1,142 @@
+title: 'Media Thumbnail'
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              display: Title
+          -
+            handle: thumbnail
+            field:
+              type: assets
+              max_files: 1
+              container: assets
+              folder: media
+              instructions: 'JPG, Ideally at least 800px wide'
+              width: 50
+          -
+            handle: media_type
+            field:
+              display: 'Media Type'
+              instructions: 'Choose a type to show related input fields'
+              type: radio
+              width: 50
+              options:
+                popup: 'Text Popup'
+                page: 'Internal Page'
+                project: 'Internal Project Page'
+                site: 'External Page'
+                download: 'File Download'
+          -
+            handle: media_text
+            field:
+              display: 'Text Popup'
+              type: bard
+              save_html: true
+              buttons:
+                - h2
+                - h3
+                - bold
+                - italic
+                - unorderedlist
+                - orderedlist
+                - removeformat
+                - anchor
+              width: 66
+              if:
+                media_type: popup
+          -
+            handle: media_text_btn
+            field:
+              display: 'Button Text'
+              type: text
+              default: 'Read More'
+              width: 33
+              if:
+                media_type: popup
+          -
+            handle: media_page
+            field:
+              display: 'Internal Page Link'
+              instructions: 'Choose a page from your website to link to'
+              type: entries
+              collections:
+                - pages
+              max_items: 1
+              width: 66
+              if:
+                media_type: page
+          -
+            handle: media_page_btn
+            field:
+              display: 'Button Text'
+              type: text
+              default: 'Read More'
+              width: 33
+              if:
+                media_type: page
+          -
+            handle: media_project
+            field:
+              display: 'Internal Project Link'
+              instructions: 'Choose a project from your website to link to'
+              type: entries
+              collections:
+                - projects
+              max_items: 1
+              width: 66
+              if:
+                media_type: project
+          -
+            handle: media_project_btn
+            field:
+              display: 'Button Text'
+              type: text
+              default: 'View Project'
+              width: 33
+              if:
+                media_type: project
+          -
+            handle: media_site
+            field:
+              display: 'External Page Link'
+              instructions: 'Input a full URL to an external web page (include the "http://" part)'
+              type: text
+              default: 'http://'
+              width: 66
+              if:
+                media_type: site
+          -
+            handle: media_site_btn
+            field:
+              display: 'Button Text'
+              type: text
+              default: 'Visit Article'
+              width: 33
+              if:
+                media_type: site
+          -
+            handle: media_file
+            field:
+              display: 'File Download (Usually PDF)'
+              type: assets
+              container: assets
+              folder: media
+              max_files: 1
+              width: 66
+              if:
+                media_type: download
+          -
+            handle: media_file_btn
+            field:
+              display: 'Button Text'
+              type: text
+              default: 'Download Article'
+              width: 33
+              if:
+                media_type: download

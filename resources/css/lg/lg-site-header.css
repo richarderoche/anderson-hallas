@@ -1,0 +1,102 @@
+/* from lg/_lg-site-header.scss */
+@media (min-width: 1018px) {
+#wrapper {
+  padding-top: 3.4em;
+}
+
+header.top, .header-wrap {
+  height: 3.4em;
+}
+
+header.top .logo-wrap {
+  margin-top: 0.7em;
+  position: relative;
+  left: -0.35em;
+}
+header.top .logo-wrap .ico {
+  width: 2em;
+  height: 2em;
+  overflow: visible;
+}
+header.top .logo-wrap h1 {
+  margin-top: 0.35em;
+}
+
+@media (hover: none), (pointer: coarse) {
+header.top .nav-toggle-wrap {
+  margin-top: 1.1em;
+}
+}
+
+@media (hover: none), (pointer: coarse) {
+header.top .nav-toggle-wrap a, header.top .nav-toggle-wrap .ico {
+  width: 1.5em;
+  height: 1.2692307692em;
+  overflow: visible;
+}
+}
+
+@media (hover: none), (pointer: coarse) {
+header.top .lg-only {
+  display: none !important;
+}
+}
+
+@media (hover: none), (pointer: coarse) {
+header.top .md-down {
+  display: block !important;
+}
+}
+
+@media (hover: none), (pointer: coarse) {
+header.top nav.mobile {
+  top: 3.4em;
+}
+}
+
+@media (hover: none), (pointer: coarse) {
+header.top nav.mobile .nav-mobile-wrap {
+  margin-left: 75%;
+  left: 0;
+}
+}
+
+@media (hover: none), (pointer: coarse) {
+header.top nav.mobile .toggle-sec {
+  right: -0.4em;
+}
+}
+
+@media (hover: none), (pointer: coarse) {
+header.top nav.mobile .children-wrap {
+  padding-left: 1em;
+}
+}
+
+
+.header-nav-wrap {
+  margin-top: 1em;
+  text-align: right;
+}
+.header-nav-wrap .nav-link {
+  display: inline-block;
+  margin-left: 2em;
+}
+.header-nav-wrap .nav-link:first-child {
+  margin-left: 0;
+}
+.header-nav-wrap .children-wrap {
+  position: fixed;
+  top: 3.4em;
+  left: 0;
+  width: 100%;
+  padding: 0.8em 0 0.95em;
+  background: rgba(59, 43, 30, 0.95);
+  opacity: 0;
+  visibility: hidden;
+}
+.header-nav-wrap .active .children-wrap {
+  opacity: 1;
+  visibility: visible;
+}
+}

@@ -1,0 +1,48 @@
+/* from lg/_lg-portfolio.scss */
+@media (min-width: 1018px) {
+nav.cat {
+  margin-top: 7.7em;
+  text-align: right;
+}
+nav.cat a {
+  margin-left: 1.2em;
+}
+nav.cat a:first-child {
+  margin-left: 0;
+}
+
+.project-thumb {
+  margin-top: 1.7657142857em;
+}
+
+#tag-content .tag-item {
+  display: block;
+  opacity: 0.2;
+}
+#tag-content .tag-item.active {
+  opacity: 1;
+}
+
+.thumb-group.single .thumb-info {
+  width: 31.5985130112%;
+}
+
+.thumb-group.double .lg-6-12 .thumb-info {
+  width: 64.8854961832%;
+}
+.thumb-group.double .lg-8-12 .thumb-info {
+  width: 48.0225988701%;
+}
+
+.thumb-group.quad .lg-8-8 .thumb-info {
+  width: 48.0225988701%;
+}
+
+.portfolio-past-clients {
+  margin-top: 2em;
+}
+.portfolio-past-clients li {
+  font-size: 1em;
+  margin-bottom: 0.65em;
+}
+}

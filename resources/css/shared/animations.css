@@ -1,0 +1,242 @@
+/* from shared/_animations.scss */
+.vid-thumb .play,
+.less-more-wrap span,
+article.person .info,
+article.person .candid,
+.less-more-wrap,
+.btn.submit,
+article.media .action,
+h2.whimsy .play,
+article.person .candid,
+.tag-item {
+  -webkit-transition: opacity 0.2s ease-in-out;
+  -moz-transition: opacity 0.2s ease-in-out;
+  transition: opacity 0.2s ease-in-out;
+  -webkit-backface-visibility: hidden;
+}
+
+nav.cat a,
+.close-lb-wrap a,
+.lb-wrap.staff .email a,
+.big-link a,
+footer.bottom .footer-contents a,
+.nav-toggle-wrap a,
+.logo-wrap a,
+.bodytxt a {
+  -webkit-transition: opacity 0.2s ease-in-out;
+  -moz-transition: opacity 0.2s ease-in-out;
+  transition: opacity 0.2s ease-in-out;
+  -webkit-backface-visibility: hidden;
+}
+
+picture.img img {
+  -webkit-transition: opacity 0.8s ease-in-out;
+  -moz-transition: opacity 0.8s ease-in-out;
+  transition: opacity 0.8s ease-in-out;
+  -webkit-backface-visibility: hidden;
+}
+
+header.top nav a {
+  -webkit-transition: color 0.2s ease-in-out, opacity 0.2s ease-in-out;
+  -moz-transition: color 0.2s ease-in-out, opacity 0.2s ease-in-out;
+  transition: color 0.2s ease-in-out, opacity 0.2s ease-in-out;
+  -webkit-backface-visibility: hidden;
+}
+
+/* ===============================================
+/* TOGGLE SECTIONS
+/* ============================================ */
+.toggle-section {
+  -webkit-transition: visibility 0s linear 0.35s, max-height 0.35s cubic-bezier(0.45, 0, 0.12, 1);
+  -moz-transition: visibility 0s linear 0.35s, max-height 0.35s cubic-bezier(0.45, 0, 0.12, 1);
+  transition: visibility 0s linear 0.35s, max-height 0.35s cubic-bezier(0.45, 0, 0.12, 1);
+  -webkit-backface-visibility: hidden;
+}
+
+.expanded .toggle-section {
+  -webkit-transition: visibility 0s linear, max-height 0.35s cubic-bezier(0.45, 0, 0.12, 1);
+  -moz-transition: visibility 0s linear, max-height 0.35s cubic-bezier(0.45, 0, 0.12, 1);
+  transition: visibility 0s linear, max-height 0.35s cubic-bezier(0.45, 0, 0.12, 1);
+  -webkit-backface-visibility: hidden;
+}
+
+/* ===============================================
+/* DESKTOP CHILD NAV
+/* ============================================ */
+.header-nav-wrap .children-wrap {
+  -webkit-transition: visibility 0s linear 0.15s, opacity 0.15s ease-in-out;
+  -moz-transition: visibility 0s linear 0.15s, opacity 0.15s ease-in-out;
+  transition: visibility 0s linear 0.15s, opacity 0.15s ease-in-out;
+  -webkit-backface-visibility: hidden;
+}
+
+.header-nav-wrap .active .children-wrap {
+  -webkit-transition: visibility 0s linear, opacity 0.15s ease-in-out;
+  -moz-transition: visibility 0s linear, opacity 0.15s ease-in-out;
+  transition: visibility 0s linear, opacity 0.15s ease-in-out;
+  -webkit-backface-visibility: hidden;
+}
+
+/* ===============================================
+/* LIGHT BOX / MOBILE NAV
+/* ============================================ */
+nav.mobile,
+.lb-wrap {
+  -webkit-transition: -webkit-transform 0s linear 0.3s, visibility 0s linear 0.3s, opacity 0.35s ease-in-out;
+  -moz-transition: transform 0s linear 0.3s, visibility 0s linear 0.3s, opacity 0.35s ease-in-out;
+  transition: transform 0s linear 0.3s, visibility 0s linear 0.3s, opacity 0.35s ease-in-out;
+  -webkit-backface-visibility: hidden;
+}
+
+.main-nav-on nav.mobile,
+.ee-lb-on .lb-wrap,
+.lb-on .lb-wrap {
+  -webkit-transition: -webkit-transform 0s linear, visibility 0s linear, opacity 0.35s ease-in-out;
+  -moz-transition: transform 0s linear, visibility 0s linear, opacity 0.35s ease-in-out;
+  transition: transform 0s linear, visibility 0s linear, opacity 0.35s ease-in-out;
+  -webkit-backface-visibility: hidden;
+}
+
+/* ===============================================
+/* PORTFOLIO
+/* ============================================ */
+.project-thumb .thumb-info,
+.project-thumb .thumb-image {
+  -webkit-transition: opacity 0.3s ease-in-out, background-color 0.2s ease-in-out;
+  -moz-transition: opacity 0.3s ease-in-out, background-color 0.2s ease-in-out;
+  transition: opacity 0.3s ease-in-out, background-color 0.2s ease-in-out;
+  -webkit-backface-visibility: hidden;
+}
+
+#tag-box {
+  -webkit-transition: opacity 0.35s ease-in-out;
+  -moz-transition: opacity 0.35s ease-in-out;
+  transition: opacity 0.35s ease-in-out;
+  -webkit-backface-visibility: hidden;
+}
+
+#tag-content {
+  -webkit-transition: height 0.5s cubic-bezier(0.45, 0, 0.12, 1);
+  -moz-transition: height 0.5s cubic-bezier(0.45, 0, 0.12, 1);
+  transition: height 0.5s cubic-bezier(0.45, 0, 0.12, 1);
+  -webkit-backface-visibility: hidden;
+}
+
+/* ===============================================
+/* PROJECT
+/* ============================================ */
+aside.project-info {
+  -webkit-transition: -webkit-transform 0.2s cubic-bezier(0.45, 0, 0.12, 1);
+  -moz-transition: transform 0.2s cubic-bezier(0.45, 0, 0.12, 1);
+  transition: transform 0.2s cubic-bezier(0.45, 0, 0.12, 1);
+  -webkit-backface-visibility: hidden;
+}
+
+.slide {
+  -webkit-transition: opacity 0.35s ease-in-out;
+  -moz-transition: opacity 0.35s ease-in-out;
+  transition: opacity 0.35s ease-in-out;
+  -webkit-backface-visibility: hidden;
+}
+
+.autoplay .slide {
+  -webkit-transition: opacity 0.7s ease-in-out;
+  -moz-transition: opacity 0.7s ease-in-out;
+  transition: opacity 0.7s ease-in-out;
+  -webkit-backface-visibility: hidden;
+}
+
+.slide-nav:hover .slide-arrow {
+  -webkit-animation: tempArrows 2.25s cubic-bezier(0.45, 0, 0.12, 1);
+  -moz-animation: tempArrows 2.25s cubic-bezier(0.45, 0, 0.12, 1);
+  -o-animation: tempArrows 2.25s cubic-bezier(0.45, 0, 0.12, 1);
+  animation: tempArrows 2.25s cubic-bezier(0.45, 0, 0.12, 1);
+}
+
+@-moz-keyframes tempArrows {
+  0% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@-webkit-keyframes tempArrows {
+  0% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes tempArrows {
+  0% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+/* ===============================================
+/* HOME SPLASH
+/* ============================================ */
+.home-splash {
+  -webkit-transition: -webkit-transform 0s linear 7.5s, visibility 0s linear 7.5s, opacity 1.8s ease-in-out 5.7s;
+  -moz-transition: transform 0s linear 7.5s, visibility 0s linear 7.5s, opacity 1.8s ease-in-out 5.7s;
+  transition: transform 0s linear 7.5s, visibility 0s linear 7.5s, opacity 1.8s ease-in-out 5.7s;
+  -webkit-backface-visibility: hidden;
+}
+.home-splash .symbol-inner,
+.home-splash .ico {
+  -webkit-transition: -webkit-transform 1.6s cubic-bezier(0.45, 0, 0.18, 1), opacity 0.96s ease-in-out;
+  -moz-transition: transform 1.6s cubic-bezier(0.45, 0, 0.18, 1), opacity 0.96s ease-in-out;
+  transition: transform 1.6s cubic-bezier(0.45, 0, 0.18, 1), opacity 0.96s ease-in-out;
+  -webkit-backface-visibility: hidden;
+}
+.home-splash .craft {
+  -webkit-transition: opacity 0.9s ease-in-out 1.7s;
+  -moz-transition: opacity 0.9s ease-in-out 1.7s;
+  transition: opacity 0.9s ease-in-out 1.7s;
+  -webkit-backface-visibility: hidden;
+}
+.home-splash .balance {
+  -webkit-transition: opacity 0.9s ease-in-out 2.5s;
+  -moz-transition: opacity 0.9s ease-in-out 2.5s;
+  transition: opacity 0.9s ease-in-out 2.5s;
+  -webkit-backface-visibility: hidden;
+}
+.home-splash .whimsy {
+  -webkit-transition: -webkit-opacity 0.9s ease-in-out 3.3s, transform 0.5s cubic-bezier(0.45, -0.5, 0.12, 1.15) 4.4s;
+  -moz-transition: opacity 0.9s ease-in-out 3.3s, transform 0.5s cubic-bezier(0.45, -0.5, 0.12, 1.15) 4.4s;
+  transition: opacity 0.9s ease-in-out 3.3s, transform 0.5s cubic-bezier(0.45, -0.5, 0.12, 1.15) 4.4s;
+  -webkit-backface-visibility: hidden;
+}
+
+/* ===============================================
+/* HOME SLIDER
+/* ============================================ */
+.slide-nav-wrap .circle,
+.slide-nav-wrap .dot {
+  -webkit-transition: opacity 0.2s ease-in-out, background-color 0.3s ease-in-out;
+  -moz-transition: opacity 0.2s ease-in-out, background-color 0.3s ease-in-out;
+  transition: opacity 0.2s ease-in-out, background-color 0.3s ease-in-out;
+  -webkit-backface-visibility: hidden;
+}

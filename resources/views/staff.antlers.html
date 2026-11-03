@@ -1,0 +1,112 @@
+<div class="page-body-wrap staff">
+  {{ if cover_image }}
+  <div class="cover-image-wrap default">
+    {{ cover_image }}
+    {{ partial src="partials/images/cover" }}
+    {{ /cover_image }}
+  </div>
+  {{ /if }}
+  <div class="grid-wrap">
+    <main class="id-{{ id }} page staff {{ slug }}">
+      <section class="leadership">
+        <div class="row">
+          <header class="page-section smd-6-6 lg-10-12">
+            <h1 class="page-title">{{ leadership_title | smartypants }}</h1>
+          </header>
+        </div>
+        <div class="leadership-wrap members-block row">
+          {{ leadership }}
+          {{ partial src="partials/staff/leader" }}
+          {{ /leadership }}
+        </div>
+      </section>
+      <section class="team">
+        <div class="row">
+          <header class="page-section smd-6-6 lg-10-12">
+            <h1 class="page-title">{{ team_title | smartypants }}</h1>
+          </header>
+        </div>
+        <div class="associate-wrap format-{{ associate_format | slugify }} members-block row">
+          {{ if associate_format == "two" }}
+          {{ associates }}
+          {{ partial src="partials/staff/employee-large" }}
+          {{ /associates }}
+          {{ else }}
+          {{ associates }}
+          {{ partial src="partials/staff/employee" }}
+          {{ /associates }}
+          {{ /if }}
+        </div>
+        <div class="team-wrap members-block row">
+          {{ if team_alpha }}
+          {{ collection:staff_members principal:is="false" associate:is="false" sort="last_name" }}
+          {{ partial src="partials/staff/employee" }}
+          {{ /collection:staff_members }}
+          {{ else }}
+          {{ team }}
+          {{ partial src="partials/staff/employee" }}
+          {{ /team }}
+          {{ /if }}
+        </div>
+      </section>
+    </main>
+  </div>
+  <div class="lb-wrap staff">
+    <div class="lb">
+      <div class="grid-wrap">
+        <div class="row">
+          <div class="panel-wrap sm-6-6 md-5-6 lg-8-12">
+            {{ collection:staff_members }}
+            <div class="id-{{ id }} panel staff-popup">
+              <div class="close-lb-wrap">
+                <a class="toggle close-lb" href="#close">
+                  <svg aria-labelledby="title" class="ico nav-close" role="img" title="Close Lightbox">
+                    <use xlink:href="#nav-close"></use>
+                  </svg>
+                </a>
+              </div>
+              <div class="image">
+                {{ candid }}
+                {{ partial src="partials/images/staff-candid" }}
+                {{ /candid }}
+              </div>
+              <div class="content">
+                <div class="lg-grid-inset">
+                  <div class="row">
+                    <div class="inner lg-7-8">
+                      <h2 class="name">{{ first_name | smartypants }} {{ last_name | smartypants }}</h2>
+                      {{ if credentials }}
+                      <h3 class="cred">{{ credentials }}</h3>
+                      {{ /if }}
+                      {{ if principal }}
+                      <h3 class="position">Principal</h3>
+                      {{ elseif position }}
+                      <h3 class="position">
+                        {{ if associate }}
+                        {{ associate_title | smartypants }}, {{ position | smartypants }}
+                        {{ else }}
+                        {{ position | smartypants }}
+                        {{ /if }}
+                      </h3>
+                      {{ /if }}
+                      <div class="bio bodytxt">{{ bio | smartypants }}</div>
+                      {{ if show_email && personal_email }}
+                      <div class="email sm-only">
+                        <a class="mailto underline" data-mailto-1="{{ personal_email | explode:@ | first | obfuscate }}" data-mailto-2="{{ personal_email | explode:@ | last | obfuscate }}" href="#email"></a>
+                      </div>
+                      <div class="email md-up">
+                        <a class="mailto underline" data-mailto-1="{{ personal_email | explode:@ | first | obfuscate }}" data-mailto-2="{{ personal_email | explode:@ | last | obfuscate }}" href="#email"></a>
+                      </div>
+                      {{ /if }}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            {{ /collection:staff_members }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

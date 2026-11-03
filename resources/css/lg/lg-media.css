@@ -1,0 +1,35 @@
+/* from lg/_lg-media.scss */
+@media (min-width: 1018px) {
+.page-body-wrap.news .pagination {
+  margin-top: 3.5em;
+}
+.page-body-wrap.news .pagination .prev + .next {
+  margin-left: 2em;
+}
+
+article.media {
+  margin-bottom: 2.6em;
+}
+article.media:nth-child(odd) {
+  clear: none;
+}
+article.media:nth-child(3n+1) {
+  clear: both;
+}
+article.media .image {
+  margin-bottom: 0.8em;
+}
+
+.lb-wrap.media .panel-wrap {
+  margin-left: auto;
+  margin-right: auto;
+  float: none;
+}
+.lb-wrap.media .content {
+  padding: 1.7657142857em 1.7657142857em 1.4em;
+}
+.lb-wrap.media h2 {
+  margin-bottom: 1.2em;
+  margin-right: 0;
+}
+}

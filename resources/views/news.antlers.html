@@ -1,0 +1,66 @@
+<div class="page-body-wrap news">
+  {{ if cover_image }}
+  <div class="cover-image-wrap default">
+    {{ cover_image }}
+    {{ partial src="partials/images/cover" }}
+    {{ /cover_image }}
+  </div>
+  {{ /if }}
+  <div class="grid-wrap">
+    <div class="row">
+      <header class="page smd-6-6 lg-10-12">
+        <h1 class="page-title">{{ alt_title | smartypants ?? title | smartypants }}</h1>
+      </header>
+    </div>
+    <main class="id-{{ id }} news page {{ slug }}">
+      {{ collection:news limit="{ news_limit }" paginate="true" as="posts" }}
+      <div class="media-thumbs row">
+        {{ posts }}
+        {{ partial src="partials/media/thumb" }}
+        {{ /posts }}
+      </div>
+      <div class="pagination row">
+        <div class="pagination-links smd-6-6 lg-12-12">
+          {{ paginate }}
+          {{ if next_page }}
+          <a class="prev underline" href="{{ next_page }}">Older Posts</a>
+          {{ /if }}
+          {{ if prev_page }}
+          <a class="next underline" href="{{ prev_page }}">Newer Posts</a>
+          {{ /if }}
+          {{ /paginate }}
+        </div>
+      </div>
+      {{ /collection:news }}
+    </main>
+  </div>
+  <div class="lb-wrap media">
+    <div class="lb">
+      <div class="grid-wrap">
+        <div class="row">
+          <div class="panel-wrap sm-6-6 md-5-6 lg-7-12">
+            {{ collection:news limit="{ news_limit }" paginate="true" as="panels" }}
+            {{ panels }}
+            {{ if media_type == "popup" }}
+            <div class="id-{{ id }} media-popup panel">
+              <div class="close-lb-wrap">
+                <a class="toggle close-lb" href="#close">
+                  <svg aria-labelledby="title" class="ico nav-close" role="img" title="Close Lightbox">
+                    <use xlink:href="#nav-close"></use>
+                  </svg>
+                </a>
+              </div>
+              <div class="content">
+                <h2 class="title">{{ title | smartypants }}</h2>
+                <div class="bodytxt">{{ media_text | smartypants }}</div>
+              </div>
+            </div>
+            {{ /if }}
+            {{ /panels }}
+            {{ /collection:news }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

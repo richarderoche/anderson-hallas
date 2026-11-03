@@ -1,0 +1,9 @@
+/* from lg/_lg-forms.scss */
+@media (min-width: 1018px) {
+form .form-block {
+  margin-bottom: 1.2em;
+}
+form .form-block:last-child {
+  margin-bottom: 0;
+}
+}

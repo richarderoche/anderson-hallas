@@ -1,0 +1,11 @@
+<title>
+  {{ if ! segment_1 }}
+  {{ global:short_name }} • {{ global:page_title_base }}
+  {{ else }}
+  {{ if title }}
+  {{ title }} • {{ global:short_name }} • {{ global:page_title_base }}
+  {{ else }}
+  {{ last_segment | deslugify | title }} • {{ global:short_name }} • {{ global:page_title_base }}
+  {{ /if }}
+  {{ /if }}
+</title>

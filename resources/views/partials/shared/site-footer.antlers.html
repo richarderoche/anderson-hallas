@@ -1,0 +1,83 @@
+<div class="grid-wrap">
+  <div class="footer-contents row">
+    <div class="tagline-wrap sm-2-6 md-2-6 lg-2-12">
+      <h2>Craft</h2>
+      <h2>Balance</h2>
+      <h2 class="whimsy">
+        <span class="ee-lb-btn">
+          {{ if footer:ee_video }}
+          <span>Whimsy</span>
+          <svg aria-labelledby="title" class="ico play" role="img" title="Play">
+            <use xlink:href="#play"></use>
+          </svg>
+          {{ else }}
+          Whimsy
+          {{ /if }}
+        </span>
+      </h2>
+    </div>
+    <div class="contact-wrap sm-4-6 md-4-6 lg-3-12">
+      {{ collection:pages slug="contact" }}
+      <h3 class="email">
+        <a class="mailto" data-mailto-1="{{ contact_email | explode:@ | first | obfuscate }}" data-mailto-2="{{ contact_email | explode:@ | last | obfuscate }}" href="#email"></a>
+      </h3>
+      <h3 class="phone">
+        <a href="tel:{{ contact_phone }}">{{ contact_phone }}</a>
+      </h3>
+      {{ /collection:pages }}
+      <h3 class="txt location">{{ global:company_location }}</h3>
+    </div>
+    <div class="nav-copyright-wrap sm-6-6 md-3-6 lg-4-12">
+      {{ if footer:footer_nav_on }}
+      <h3 class="nav">
+        {{ footer:footer_nav }}
+        <a class="underline" href="{{ url }}">{{ title }}</a>
+        {{ /footer:footer_nav }}
+      </h3>
+      {{ else }}
+      <h3 class="txt lg-only">&nbsp;</h3>
+      {{ /if }}
+      <h3 class="txt copyright">© {{ now format="Y" }} All Rights Reserved</h3>
+      <h3 class="txt company">{{ global:long_name }}</h3>
+    </div>
+    <div class="social-wrap sm-6-6 md-3-6 lg-3-12">
+      {{ footer:social_links }}
+      <a class="iblock" href="{{ url }}" target="_blank" title="{{ network }}">
+        <svg aria-labelledby="title" class="ico social {{ network | slugify }}" role="img" title="{{ network }}">
+          <use xlink:href="#social-{{ network | slugify }}"></use>
+        </svg>
+      </a>
+      {{ /footer:social_links }}
+    </div>
+  </div>
+</div>
+{{ if footer:ee_video }}
+<div class="lb-wrap whimsy">
+  <div class="lb">
+    <div class="grid-wrap">
+      <div class="row">
+        <div class="panel-wrap smd-6-6 lg-6-12">
+          <div class="panel ee-popup">
+            <div class="close-lb-wrap">
+              <a class="toggle close-lb" href="#close">
+                <svg aria-labelledby="title" class="ico nav-close" role="img" title="Close Lightbox">
+                  <use xlink:href="#nav-close"></use>
+                </svg>
+              </a>
+            </div>
+            <div class="content">
+              {{ footer:ee_video }}
+              <div class="video-holder" style="padding-top: {{ footer:ee_vheight | divide:footer:ee_vwidth | multiply:100 | round:6 }}%">
+                <video class="vid" controls="" preload="metadata">
+                  <source src="{{ url }}" type="video/mp4">
+                </video>
+              </div>
+              {{ /footer:ee_video }}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{{ /if }}

@@ -1,0 +1,17 @@
+{{if img_crop || cover_crop || crop}}
+<picture class='img load ratio r-banner'>
+  <source media='(min-width: 1441px)' srcset='{{ glide:url width="2560" height="960" quality="70" fit="crop_focal" }}'>
+  <source media='(min-width: 961px)' srcset='{{ glide:url width="1920" height="720" quality="70" fit="crop_focal" }}'>
+  <source media='(min-width: 680px)' srcset='{{ glide:url width="1280" height="480" quality="70" fit="crop_focal" }}'>
+  <source srcset='{{ glide:url width="960" height="360" quality="70" fit="crop_focal" }}'>
+  <img alt='{{ alt ?? title ?? page:title }}' srcset='{{ glide:url width="960" height="360" quality="70" fit="crop_focal" }}'>
+</picture>
+{{else}}
+<picture class='img'>
+  <source media='(min-width: 1441px)' srcset='{{ glide:url width="2560" quality="70" fit="crop_focal" }}'>
+  <source media='(min-width: 961px)' srcset='{{ glide:url width="1920" quality="70" fit="crop_focal" }}'>
+  <source media='(min-width: 680px)' srcset='{{ glide:url width="1280" quality="70" fit="crop_focal" }}'>
+  <source srcset='{{ glide:url width="960" quality="70" fit="crop_focal" }}'>
+  <img alt='{{ alt ?? title ?? page:title }}' srcset='{{ glide:url width="960" quality="70" fit="crop_focal" }}'>
+</picture>
+{{/if}}
