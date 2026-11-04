@@ -126,7 +126,7 @@ return [
     |
     */
 
-    'default_timezone' => env('STATAMIC_CP_DEFAULT_TIMEZONE', 'auto'),
+    'default_timezone' => env('STATAMIC_CP_DEFAULT_TIMEZONE', 'America/Denver'),
 
     /*
     |--------------------------------------------------------------------------

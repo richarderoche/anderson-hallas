@@ -40,7 +40,10 @@ nav:
       action: '@create'
       display: Site
       items:
-        'content::globals': '@move'
+        'content::globals':
+          action: '@move'
+          reorder:
+            - 'content::globals::global'
         'content::navigation': '@move'
         'content::assets': '@move'
     fields: '@hide'
