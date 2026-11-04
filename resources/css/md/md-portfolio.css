@@ -1,7 +1,7 @@
 /* from md/_md-portfolio.scss */
 @media (min-width: 680px) {
 .project-thumb {
-  margin-top: 0.6666666667em;
+  margin-top: var(--gut-md);
 }
 
 .portfolio-past-clients li {

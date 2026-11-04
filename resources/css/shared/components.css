@@ -16,7 +16,7 @@
   left: 0;
   width: 100%;
   bottom: 0;
-  background: rgba(59, 43, 30, 0.95);
+  background: var(--overlay);
   z-index: 9999;
   -webkit-backface-visibility: hidden;
   opacity: 0;
@@ -28,7 +28,7 @@
   transform: translateX(-101%);
 }
 .lb-wrap .panel {
-  background: #F1EEEA;
+  background: var(--stone);
   display: none;
   position: relative;
 }
@@ -53,7 +53,7 @@
   position: absolute;
   top: 0;
   right: 0;
-  background: #FF551E;
+  background: var(--orange);
   z-index: 5;
 }
 .lb-wrap .close-lb-wrap a, .lb-wrap .close-lb-wrap .ico {
@@ -103,7 +103,7 @@
   pointer-events: none;
 }
 #nprogress .bar {
-  background: #FF551E;
+  background: var(--orange);
   position: fixed;
   z-index: 9999;
   top: 3em;
@@ -124,9 +124,9 @@
   visibility: hidden;
 }
 #main-content .expanded .toggle-section {
-  max-height: 9999em;
+  /* Height is animated via inline max-height in expandables.js */
   visibility: visible;
-  overflow: visible;
+  overflow: hidden;
 }
 
 .less-more-wrap {

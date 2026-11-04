@@ -20,7 +20,7 @@ table, caption, tbody, tfoot, thead, tr, th, td {
 }
 
 html {
-  font-size: 62.5%;
+  font-size: calc(var(--one-8) * 5);
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
   -moz-font-feature-settings: "kern" 1, "liga" 1;
@@ -130,6 +130,6 @@ object {
   clear: both;
 }
 
-.devtest, .robot-hide {
+.devtest, .robot-hide, .bot {
   display: none;
 }

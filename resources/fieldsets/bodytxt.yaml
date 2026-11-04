@@ -397,6 +397,27 @@ sections:
                       - removeformat
                       - anchor
                     width: 50
+                -
+                  handle: dimensions_info
+                  field:
+                    type: info
+                    display: Dimensions
+                    content: 'Change values if different from 1920x1080 (16:9) to allow for proper responsive resizing. Use the video’s native pixel ratio (e.g. 1080x1920 for portrait).'
+                    state: notice
+                -
+                  handle: vwidth
+                  field:
+                    display: Width
+                    type: text
+                    default: '1920'
+                    width: 25
+                -
+                  handle: vheight
+                  field:
+                    display: Height
+                    type: text
+                    default: '1080'
+                    width: 25
             new_section:
               display: 'New Section Heading'
               fields:

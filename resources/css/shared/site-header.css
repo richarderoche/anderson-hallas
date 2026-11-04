@@ -1,6 +1,6 @@
 /* from shared/_site-header.scss */
 #wrapper {
-  padding-top: 3em;
+  padding-top: var(--header-sm);
 }
 
 header.top, .header-wrap {
@@ -12,7 +12,7 @@ header.top {
   top: 0;
   left: 0;
   width: 100%;
-  min-width: 272px;
+  min-width: var(--bp-min);
   z-index: 999;
   -webkit-backface-visibility: hidden;
 }
@@ -67,23 +67,23 @@ nav.mobile {
   width: 100%;
   -webkit-overflow-scrolling: touch;
   overflow: auto;
-  min-width: 272px;
+  min-width: var(--bp-min);
   -moz-transform: translateY(-101%);
   -ms-transform: translateY(-101%);
   -o-transform: translateY(-101%);
   -webkit-transform: translateY(-101%);
   transform: translateY(-101%);
   visibility: hidden;
-  background: rgba(59, 43, 30, 0.95);
+  background: var(--overlay);
   opacity: 0;
   z-index: -1;
 }
 nav.mobile .nav-mobile-wrap {
-  margin-left: 16.6666666667%;
+  margin-left: var(--one-6);
   padding-top: 1.3em;
   padding-bottom: 1.55em;
   position: relative;
-  left: -1.1111111111em;
+  left: calc(var(--gut-sm-2) * -1);
 }
 nav.mobile .parent-wrap {
   position: relative;
@@ -117,13 +117,14 @@ nav.mobile .parent-wrap.expanded .children-wrap {
   visibility: visible;
 }
 nav.mobile .children-wrap {
-  padding-left: 1.1111111111em;
+  padding-left: var(--gut-sm-2);
   max-height: 0;
   overflow: hidden;
   visibility: hidden;
 }
 nav.mobile .expanded .children-wrap {
-  max-height: 99em;
+  /* Open height from expandables.js; none keeps SSR-expanded parents open */
+  max-height: none;
   visibility: visible;
 }
 nav.mobile .nav-link, nav.mobile .sub-link {
@@ -153,7 +154,7 @@ header.top .nav-toggle-wrap a:hover, header.top .logo-wrap a:hover {
 
 @media (hover: hover) and (pointer: fine) {
 header.top nav a:hover {
-  color: #FF551E;
+  color: var(--orange);
 }
 }
 
@@ -166,7 +167,7 @@ header.top .nav-toggle-wrap a:active, header.top .logo-wrap a:active {
 
 @media (hover: none), (pointer: coarse) {
 header.top nav a:active {
-  color: #FF551E;
+  color: var(--orange);
 }
 }
 

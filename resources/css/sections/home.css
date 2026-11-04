@@ -15,7 +15,7 @@ main.home, main.home .slide-wrap, .home-splash {
 
 .home-splash {
   z-index: 9999;
-  min-width: 272px;
+  min-width: var(--bp-min);
   top: 0;
   opacity: 0;
   -moz-transform: translateX(-101%);
@@ -139,10 +139,10 @@ main.home .slide-nav-wrap .dot {
 main.home .slide-nav-wrap .dot .circle {
   width: 0.8em;
   height: 0.8em;
-  background: #F1EEEA;
+  background: var(--stone);
 }
 main.home .slide-nav-wrap .dot.active .circle {
-  background: #FF551E;
+  background: var(--orange);
 }
 
 @media screen and (orientation: landscape) and (max-aspect-ratio: 16/10) {

@@ -62,7 +62,7 @@ article.person:hover .info {
   float: left;
 }
 .lb-wrap.staff .content {
-  padding: 0 1.1111111111em;
+  padding: 0 var(--gut-sm-2);
 }
 .lb-wrap.staff .name {
   margin-top: 0.6em;

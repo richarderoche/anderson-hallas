@@ -2,9 +2,9 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>{{ config:app:url }}</loc>
-    {{ collection:pages slug="home" }}
+    {{ get_content from="db0ae4e3-4f10-4802-bc40-0b880cbf02c7" }}
     <lastmod>{{ updated_at format="Y-m-d" }}</lastmod>
-    {{ /collection:pages }}
+    {{ /get_content }}
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -26,7 +26,7 @@
     <priority>0.7</priority>
   </url>
   {{ /collection:projects }}
-  {{ collection:pages slug="portfolio" }}
+  {{ get_content from="58ff9cf2-f42c-4c9c-bc92-b038e400d761" }}
   {{ project_filters }}
   <url>
     <loc>{{ config:app:url }}/portfolio/categories/{{ slug }}</loc>
@@ -35,5 +35,5 @@
     <priority>0.6</priority>
   </url>
   {{ /project_filters }}
-  {{ /collection:pages }}
+  {{ /get_content }}
 </urlset>

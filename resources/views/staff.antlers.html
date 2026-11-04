@@ -39,9 +39,9 @@
         </div>
         <div class="team-wrap members-block row">
           {{ if team_alpha }}
-          {{ collection:staff_members principal:is="false" associate:is="false" sort="last_name" }}
+          {{ collection:staff-members principal:is="false" associate:is="false" sort="last_name" }}
           {{ partial src="partials/staff/employee" }}
-          {{ /collection:staff_members }}
+          {{ /collection:staff-members }}
           {{ else }}
           {{ team }}
           {{ partial src="partials/staff/employee" }}
@@ -56,7 +56,7 @@
       <div class="grid-wrap">
         <div class="row">
           <div class="panel-wrap sm-6-6 md-5-6 lg-8-12">
-            {{ collection:staff_members }}
+            {{ collection:staff-members }}
             <div class="id-{{ id }} panel staff-popup">
               <div class="close-lb-wrap">
                 <a class="toggle close-lb" href="#close">
@@ -103,7 +103,7 @@
                 </div>
               </div>
             </div>
-            {{ /collection:staff_members }}
+            {{ /collection:staff-members }}
           </div>
         </div>
       </div>

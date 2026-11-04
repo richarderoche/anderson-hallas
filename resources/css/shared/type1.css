@@ -105,7 +105,7 @@ nav.mobile a {
 }
 
 h1.wordmark-wrap {
-  font-size: 0.6666666667em;
+  font-size: calc(2em / 3);
   line-height: 1.275;
   text-transform: uppercase;
   letter-spacing: 0.13em;

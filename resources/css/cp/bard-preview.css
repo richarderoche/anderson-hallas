@@ -25,5 +25,5 @@
 .redactor-editor .orange,
 .redactor-dropdown .redactor-formatting-h3-orange,
 .redactor-dropdown .redactor-formatting-h2-orange {
-  color: #FF551E;
+  color: var(--orange);
 }

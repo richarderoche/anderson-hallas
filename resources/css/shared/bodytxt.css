@@ -38,19 +38,19 @@ a.underline {
   text-decoration: underline;
 }
 
-.cssgradients .bodytxt p a,
+.bodytxt p a,
 article.media .action,
-.cssgradients a.underline {
+a.underline {
   text-decoration: none;
-  background-image: linear-gradient(to bottom, #A49990 50%, #A49990 50%);
+  background-image: linear-gradient(to bottom, var(--brown-50) 50%, var(--brown-50) 50%);
   background-repeat: repeat-x;
   background-size: 1px 1px;
   background-position: bottom 0.03em left 0;
 }
 
-.cssgradients .bodytxt p a,
+.bodytxt p a,
 article.media .action {
-  background-image: linear-gradient(to bottom, #FF551E 50%, #FF551E 50%);
+  background-image: linear-gradient(to bottom, var(--orange) 50%, var(--orange) 50%);
 }
 
 ol {

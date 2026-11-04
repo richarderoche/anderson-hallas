@@ -59,7 +59,7 @@ main.home .slide-nav-wrap .dot .circle {
 main.home .title-wrap {
   height: 24em;
   width: 2.65em;
-  background: rgba(241, 238, 234, 0.9);
+  background: var(--overlay-light);
   text-align: center;
   -moz-transform: translateY(-50%);
   -ms-transform: translateY(-50%);

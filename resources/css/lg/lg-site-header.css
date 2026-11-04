@@ -1,7 +1,7 @@
 /* from lg/_lg-site-header.scss */
 @media (min-width: 1018px) {
 #wrapper {
-  padding-top: 3.4em;
+  padding-top: var(--header-lg);
 }
 
 header.top, .header-wrap {
@@ -91,7 +91,7 @@ header.top nav.mobile .children-wrap {
   left: 0;
   width: 100%;
   padding: 0.8em 0 0.95em;
-  background: rgba(59, 43, 30, 0.95);
+  background: var(--overlay);
   opacity: 0;
   visibility: hidden;
 }

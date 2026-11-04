@@ -1,14 +1,110 @@
-/* Design tokens from shared/_sizes.scss (media queries still use literal px). */
+/* Design tokens from shared/_colors.scss + shared/_sizes.scss.
+   Breakpoints stay literal in @media (custom props aren't reliable there). */
 :root {
+  /* ——— colors ——— */
+  --white: #fff;
+  --stone: #F1EEEA;
+  --orange: #FF551E;
+  --brown-txt: #493421;
+  --brown-bg: #3B2B1E;
+  --brown-50: #A49990;
+  --overlay: rgba(59, 43, 30, 0.95);
+  --overlay-light: rgba(241, 238, 234, 0.9);
+  --link-underline: var(--brown-50);
+  --form-input-bg: var(--stone);
+
+  /* ——— baselines (unitless for calc) ——— */
   --font-sm: 18;
   --font-md: 18;
   --font-lg: 14;
-  --gut-sm: 10;
-  --gut-md: 12;
-  --gut-lg: 12.36;
+  --gut-sm-n: 10;
+  --gut-md-n: 12;
+  --gut-lg-n: 12.36;
+
+  /* ——— breakpoints / max widths (px; use outside @media) ——— */
   --bp-min: 272px;
   --bp-mid: 680px;
   --bp-full: 1018px;
   --bp-exlg: 1360px;
+  --max-width-grid: 3312px;
+  --max-width-site: 4164px;
+
+  /* ——— source layout widths (unitless) ——— */
+  --site-sm: 414;
+  --grid-sm: 384;
+  --grid-sm-ratio-l: 0.825;
+  --site-md: 680;
+  --grid-md: 640;
+  --grid-md-ratio-l: 0.9;
+  --site-lg: 1024;
+  --grid-lg: 974.6;
+  --site-ex: 2082;
+  --grid-ex: 1656;
+
+  /* ——— gutters (em, relative to current font-size) ——— */
+  --gut-sm: calc(var(--gut-sm-n) / var(--font-sm) * 1em);
+  --gut-sm-2: calc(var(--gut-sm) * 2);
+  --gut-md: calc(var(--gut-md-n) / var(--font-md) * 1em);
+  --gut-md-2: calc(var(--gut-md) * 2);
+  --gut-lg: calc(var(--gut-lg-n) / var(--font-lg) * 1em);
+  --gut-lg-2: calc(var(--gut-lg) * 2);
+  --gut-ex: var(--gut-lg);
+
+  /* ——— outer grid margins ——— */
+  --outer-marg-sm: calc((100% - (100% * var(--grid-sm) / var(--site-sm))) * 0.5);
+  --outer-marg-sm-l: calc((100% - (100% * var(--grid-sm-ratio-l))) * 0.5);
+  --outer-marg-md: calc((100% - (100% * var(--grid-md) / var(--site-md))) * 0.5);
+  --outer-marg-md-l: calc((100% - (100% * var(--grid-md-ratio-l))) * 0.5);
+  --outer-marg-lg: calc((100% - (100% * var(--grid-lg) / var(--site-lg))) * 0.5);
+  --outer-marg-ex: calc((100% - (100% * var(--grid-ex) / var(--site-ex))) * 0.5);
+
+  /* ——— headers ——— */
   --header-sm: 3em;
+  --header-md: var(--header-sm);
+  --header-sm-l: 3.5em;
+  --header-md-l: var(--header-sm-l);
+  --header-lg: 3.4em;
+
+  /* ——— misc units ——— */
+  --px-sm: calc(1em / var(--font-sm));
+  --px-md: calc(1em / var(--font-md));
+  --px-lg: calc(1em / var(--font-lg));
+  --underline-sm: 2px;
+  --underline-md: calc(var(--px-md) * 2);
+  --underline-lg: calc(var(--px-lg) * 4);
+  --kern: 0.01em;
+  --outdent: -0.078em;
+
+  /* ——— z-index ——— */
+  --z-loader: 9999;
+  --z-lb: 9999;
+  --z-header: 999;
+  --z-panel: var(--z-header);
+
+  /* ——— aspect ratios (padding-top %) ——— */
+  --r-banner: calc(6 / 16 * 100%);
+  --r-2-1: calc(1 / 2 * 100%);
+  --r-16-9: calc(9 / 16 * 100%);
+  --r-16-10: calc(10 / 16 * 100%);
+  --r-4-3: calc(3 / 4 * 100%);
+  --r-3-4: calc(4 / 3 * 100%);
+  --r-square: 100%;
+  --r-portrait: calc(3 / 2 * 100%);
+  --rp: var(--r-16-9);
+  --rp-1614-510: calc(510 / 1614 * 100%);
+  --rp-786-510: calc(510 / 786 * 100%);
+  --rp-1062-510: calc(510 / 1062 * 100%);
+  --rp-510-510: 100%;
+  --rp-510-786: calc(786 / 510 * 100%);
+  --rp-1062-372: calc(372 / 1062 * 100%);
+  --rp-510-372: calc(372 / 510 * 100%);
+
+  /* ——— percent shortcuts ——— */
+  --one-3: calc(100% / 3);
+  --one-4: calc(100% / 4);
+  --one-6: calc(100% / 6);
+  --one-8: calc(100% / 8);
+  --one-9: calc(100% / 9);
+  --one-10: calc(100% / 10);
+  --one-12: calc(100% / 12);
 }

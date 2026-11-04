@@ -4,10 +4,9 @@ email:
   -
     to: '{{ subject }}'
     from: info@andarch.com
-    subject: 'Contact Form Message from {{ company or name }}'
+    subject: 'Contact Form Message from {{ company ?? name }}'
     reply_to: '{{ email }}'
-    html:
-      - emails/contact_form
+    html: emails/contact_form
 metrics:
   -
     type: total

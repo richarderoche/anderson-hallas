@@ -100,15 +100,13 @@
   </section>
   {{ elseif type == "embed_video" }}
   <section class="align-{{ align | slugify }} lg-6-12 md-5-6 sm-6-6 video video-embed">
-    {{ if video:height && video:width }}
-    <div class="video-holder" style="padding-top: {{ video:height | divide:video:width | multiply:100 | round:6 }}%">
-      <iframe src="{{ video:url | embed_url }}" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-    </div>
+    {{ if vwidth && vheight }}
+    <div class="video-holder" style="padding-top: {{ vheight | divide:vwidth | multiply:100 | round:6 }}%">
     {{ else }}
     <div class="video-holder">
+    {{ /if }}
       <iframe src="{{ video:url | embed_url }}" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
     </div>
-    {{ /if }}
     {{ if caption }}
     <h4 class="caption">{{ caption | smartypants }}</h4>
     {{ /if }}

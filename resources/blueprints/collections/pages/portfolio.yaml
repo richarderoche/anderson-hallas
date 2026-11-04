@@ -1,5 +1,16 @@
 title: Portfolio
 tabs:
+  sidebar:
+    display: Sidebar
+    sections:
+      -
+        fields:
+          -
+            handle: nav_hide
+            field:
+              display: 'Exclude from Header Navigation'
+              type: toggle
+              default: false
   main:
     display: Main
     sections:

@@ -26,7 +26,7 @@ article.media .image {
   float: none;
 }
 .lb-wrap.media .content {
-  padding: 1.7657142857em 1.7657142857em 1.4em;
+  padding: var(--gut-lg-2) var(--gut-lg-2) 1.4em;
 }
 .lb-wrap.media h2 {
   margin-bottom: 1.2em;

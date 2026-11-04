@@ -3,16 +3,16 @@ form input[type=text], form input[type=email],
 form input[type=password], form input[type=search],
 form input[type=number], form input[type=tel] {
   padding: 0.25em 0.5em 0.35em 0;
-  background: #F1EEEA;
-  border-bottom: 1px solid #493421;
+  background: var(--stone);
+  border-bottom: 1px solid var(--brown-txt);
 }
 form select, form textarea {
   padding: 0.25em 0.5em 0.35em;
-  background: #F1EEEA;
+  background: var(--stone);
 }
 form textarea {
   min-height: 8em;
-  border: 1px solid #493421;
+  border: 1px solid var(--brown-txt);
 }
 form .form-block {
   margin-bottom: 0.8em;
@@ -26,7 +26,7 @@ form input[type=submit], form .button {
 }
 form .select-wrap {
   position: relative;
-  border: 1px solid #493421;
+  border: 1px solid var(--brown-txt);
 }
 form .select-wrap select {
   padding-right: 2.5em;
@@ -44,7 +44,7 @@ form .select-wrap:before {
   right: 1px;
   text-align: center;
   width: 2em;
-  border-left: 1px solid #493421;
+  border-left: 1px solid var(--brown-txt);
 }
 
 html.placeholder label.fallback {
@@ -113,5 +113,5 @@ textarea[placeholder]:focus::placeholder {
 
 input:-webkit-autofill,
 input:-webkit-autofill:focus {
-  -webkit-box-shadow: 0 0 0px 9999em #F1EEEA inset;
+  -webkit-box-shadow: 0 0 0px 9999em var(--stone) inset;
 }

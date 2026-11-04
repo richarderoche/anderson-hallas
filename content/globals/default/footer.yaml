@@ -1,0 +1,12 @@
+social_links:
+  -
+    network: Facebook
+    url: 'https://www.facebook.com/andersonhallasarchitects'
+  -
+    network: Instagram
+    url: 'https://www.instagram.com/anderson_hallas_architects'
+  -
+    network: 'Linked In'
+    url: 'https://www.linkedin.com/company/anderson-hallas-architects-pc'
+ee_vwidth: '1440'
+ee_vheight: '1080'

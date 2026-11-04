@@ -1,9 +1,9 @@
-{{ if height && width }}
+{{ if vwidth && vheight }}
+<div class="video-holder" style="padding-top: {{ vheight | divide:vwidth | multiply:100 | round:6 }}%">
+{{ elseif height && width }}
 <div class="video-holder" style="padding-top: {{ height | divide:width | multiply:100 | round:6 }}%">
-  <iframe src="{{ url | embed_url }}" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-</div>
 {{ else }}
 <div class="video-holder">
+{{ /if }}
   <iframe src="{{ url | embed_url }}" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 </div>
-{{ /if }}

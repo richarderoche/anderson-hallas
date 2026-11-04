@@ -47,17 +47,11 @@ header.top nav a {
 /* TOGGLE SECTIONS
 /* ============================================ */
 .toggle-section {
-  -webkit-transition: visibility 0s linear 0.35s, max-height 0.35s cubic-bezier(0.45, 0, 0.12, 1);
-  -moz-transition: visibility 0s linear 0.35s, max-height 0.35s cubic-bezier(0.45, 0, 0.12, 1);
   transition: visibility 0s linear 0.35s, max-height 0.35s cubic-bezier(0.45, 0, 0.12, 1);
-  -webkit-backface-visibility: hidden;
 }
 
 .expanded .toggle-section {
-  -webkit-transition: visibility 0s linear, max-height 0.35s cubic-bezier(0.45, 0, 0.12, 1);
-  -moz-transition: visibility 0s linear, max-height 0.35s cubic-bezier(0.45, 0, 0.12, 1);
   transition: visibility 0s linear, max-height 0.35s cubic-bezier(0.45, 0, 0.12, 1);
-  -webkit-backface-visibility: hidden;
 }
 
 /* ===============================================

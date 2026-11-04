@@ -4,39 +4,39 @@
       <h2>Craft</h2>
       <h2>Balance</h2>
       <h2 class="whimsy">
+        {{ if footer:ee_video }}
         <span class="ee-lb-btn">
-          {{ if footer:ee_video }}
           <span>Whimsy</span>
           <svg aria-labelledby="title" class="ico play" role="img" title="Play">
             <use xlink:href="#play"></use>
           </svg>
-          {{ else }}
-          Whimsy
-          {{ /if }}
         </span>
+        {{ else }}
+        Whimsy
+        {{ /if }}
       </h2>
     </div>
     <div class="contact-wrap sm-4-6 md-4-6 lg-3-12">
-      {{ collection:pages slug="contact" }}
+      {{ get_content from="57ac61fb-a48d-461a-acbc-636ca6ece2e0" }}
       <h3 class="email">
         <a class="mailto" data-mailto-1="{{ contact_email | explode:@ | first | obfuscate }}" data-mailto-2="{{ contact_email | explode:@ | last | obfuscate }}" href="#email"></a>
       </h3>
       <h3 class="phone">
         <a href="tel:{{ contact_phone }}">{{ contact_phone }}</a>
       </h3>
-      {{ /collection:pages }}
+      {{ /get_content }}
       <h3 class="txt location">{{ global:company_location }}</h3>
     </div>
     <div class="nav-copyright-wrap sm-6-6 md-3-6 lg-4-12">
-      {{ if footer:footer_nav_on }}
+      {{ nav:footer_nav }}
+      {{ if first }}
       <h3 class="nav">
-        {{ footer:footer_nav }}
-        <a class="underline" href="{{ url }}">{{ title }}</a>
-        {{ /footer:footer_nav }}
-      </h3>
-      {{ else }}
-      <h3 class="txt lg-only">&nbsp;</h3>
       {{ /if }}
+        <a class="underline" href="{{ url }}"{{ if url | starts_with:http }} target="_blank" rel="noopener noreferrer"{{ /if }}>{{ title }}</a>
+      {{ if last }}
+      </h3>
+      {{ /if }}
+      {{ /nav:footer_nav }}
       <h3 class="txt copyright">© {{ now format="Y" }} All Rights Reserved</h3>
       <h3 class="txt company">{{ global:long_name }}</h3>
     </div>

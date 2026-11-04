@@ -3,25 +3,25 @@
 /* DEFAULTS
 /* ============================================ */
 body, html {
-  color: #493421;
-  background: #3B2B1E;
+  color: var(--brown-txt);
+  background: var(--brown-bg);
 }
 
 #wrapper {
-  background: #F1EEEA;
+  background: var(--stone);
 }
 
 .invert {
-  color: #F1EEEA;
-  background: #3B2B1E;
+  color: var(--stone);
+  background: var(--brown-bg);
 }
 
 ::selection {
-  background: #A49990;
+  background: var(--brown-50);
 }
 
 ::-moz-selection {
-  background: #A49990;
+  background: var(--brown-50);
 }
 
 /* ===============================================
@@ -30,7 +30,7 @@ body, html {
 main.project .slide-arrow,
 .close-lb-wrap,
 nav.mobile {
-  color: #F1EEEA;
+  color: var(--stone);
 }
 
 .bodytxt .ee-lb-btn,
@@ -53,7 +53,7 @@ p.quote-credit,
 footer.bottom .whimsy,
 nav.mobile a:before,
 .logo-wrap .ico {
-  color: #FF551E;
+  color: var(--orange);
 }
 
 .panel.media-popup h2,
@@ -106,11 +106,11 @@ nav.cat a:active, .close-lb-wrap a:active, .lb-wrap.staff .email a:active, .big-
 /* BACKGROUND
 /* ============================================ */
 .slide.empty {
-  background: #A49990;
+  background: var(--brown-50);
 }
 
 .divider {
-  background: #FF551E;
+  background: var(--orange);
 }
 
 /* ===============================================

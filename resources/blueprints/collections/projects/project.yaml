@@ -165,23 +165,32 @@ tabs:
               if:
                 show_video: 'contains_any upload,embed'
           -
+            handle: video_dimensions_info
+            field:
+              type: info
+              display: 'Video Dimensions'
+              content: 'Change values if different from 1920x1080 (16:9) to allow for proper responsive resizing. Use the video’s native pixel ratio (e.g. 1080x1920 for portrait).'
+              state: notice
+              if:
+                show_video: 'contains_any upload,embed'
+          -
             handle: vwidth
             field:
-              display: 'Video Width'
+              display: Width
               type: text
               default: '1920'
               width: 25
               if:
-                show_video: upload
+                show_video: 'contains_any upload,embed'
           -
             handle: vheight
             field:
-              display: 'Video Height'
+              display: Height
               type: text
               default: '1080'
               width: 25
               if:
-                show_video: upload
+                show_video: 'contains_any upload,embed'
       -
         display: Images
         fields:

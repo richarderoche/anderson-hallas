@@ -3,7 +3,7 @@ main.project {
   padding-bottom: 4em;
 }
 main.project .slide {
-  margin-bottom: 0.5555555556em;
+  margin-bottom: var(--gut-sm);
 }
 main.project .slide:last-child {
   margin-bottom: 0;

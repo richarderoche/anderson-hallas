@@ -1,18 +1,38 @@
 {{ form:create in="contact" }}
+{{ if success }}
+<div class="body-content">
+  <div class="cb row">
+    <section class="align-left introtxt lg-8-12 smd-6-6">
+      <h2>{{ form_success_message | smartypants }}</h2>
+    </section>
+  </div>
+</div>
+{{ else }}
+{{ if errors }}
+<div class="body-content">
+  <div class="cb row">
+    <section class="align-left introtxt lg-8-12 smd-6-6">
+      {{ errors }}
+      <h2>{{ value }}</h2>
+      {{ /errors }}
+    </section>
+  </div>
+</div>
+{{ /if }}
 <fieldset>
   <div class="row">
     <div class="left-col sm-6-6 md-5-6 lg-5-12">
       <div class="form-block input-block">
         {{ if form_name_required }}
         <div class="input-wrap">
-          <input name="name" placeholder="{{ form_name_ph | smartypants }}" required="" type="text">
+          <input name="name" placeholder="{{ form_name_ph | smartypants }}" required="" type="text" value="{{ old:name }}">
         </div>
         <div class="label-wrap">
           <label>{{ form_name_label | smartypants }}*</label>
         </div>
         {{ else }}
         <div class="input-wrap">
-          <input name="name" placeholder="{{ form_name_ph | smartypants }}" type="text">
+          <input name="name" placeholder="{{ form_name_ph | smartypants }}" type="text" value="{{ old:name }}">
         </div>
         <div class="label-wrap">
           <label>{{ form_name_label | smartypants }}</label>
@@ -22,14 +42,14 @@
       <div class="form-block input-block">
         {{ if form_email_required }}
         <div class="input-wrap">
-          <input name="email" placeholder="{{ form_email_ph | smartypants }}" required="" type="text">
+          <input name="email" placeholder="{{ form_email_ph | smartypants }}" required="" type="text" value="{{ old:email }}">
         </div>
         <div class="label-wrap">
           <label>{{ form_email_label | smartypants }}*</label>
         </div>
         {{ else }}
         <div class="input-wrap">
-          <input name="email" placeholder="{{ form_email_ph | smartypants }}" type="text">
+          <input name="email" placeholder="{{ form_email_ph | smartypants }}" type="text" value="{{ old:email }}">
         </div>
         <div class="label-wrap">
           <label>{{ form_email_label | smartypants }}</label>
@@ -39,14 +59,14 @@
       <div class="form-block input-block">
         {{ if form_phone_required }}
         <div class="input-wrap">
-          <input name="phone" placeholder="{{ form_phone_ph | smartypants }}" required="" type="text">
+          <input name="phone" placeholder="{{ form_phone_ph | smartypants }}" required="" type="text" value="{{ old:phone }}">
         </div>
         <div class="label-wrap">
           <label>{{ form_phone_label | smartypants }}*</label>
         </div>
         {{ else }}
         <div class="input-wrap">
-          <input name="phone" placeholder="{{ form_phone_ph | smartypants }}" type="text">
+          <input name="phone" placeholder="{{ form_phone_ph | smartypants }}" type="text" value="{{ old:phone }}">
         </div>
         <div class="label-wrap">
           <label>{{ form_phone_label | smartypants }}</label>
@@ -56,26 +76,26 @@
       <div class="form-block input-block">
         {{ if form_company_required }}
         <div class="input-wrap">
-          <input name="company" placeholder="{{ form_company_ph | smartypants }}" required="" type="text">
+          <input name="company" placeholder="{{ form_company_ph | smartypants }}" required="" type="text" value="{{ old:company }}">
         </div>
         <div class="label-wrap">
           <label>{{ form_company_label | smartypants }}*</label>
         </div>
         {{ else }}
         <div class="input-wrap">
-          <input name="company" placeholder="{{ form_company_ph | smartypants }}" type="text">
+          <input name="company" placeholder="{{ form_company_ph | smartypants }}" type="text" value="{{ old:company }}">
         </div>
         <div class="label-wrap">
           <label>{{ form_company_label | smartypants }}</label>
         </div>
         {{ /if }}
       </div>
-      <div class="form-block input-block bot">
+      <div class="form-block input-block bot" aria-hidden="true">
         <div class="input-wrap">
-          <input name="website" placeholder="Leave blank so we know you're human" type="text">
+          <input name="{{ honeypot }}" type="text" value="" tabindex="-1" autocomplete="off">
         </div>
         <div class="label-wrap">
-          <label>Leave Blank</label>
+          <label>{{ honeypot }}</label>
         </div>
       </div>
     </div>
@@ -84,7 +104,7 @@
         <div class="select-wrap">
           <select name="subject">
             {{ form_subjects }}
-            <option value="{{ email | obfuscate ?? contact_email | obfuscate }}">{{ subject }}</option>
+            <option value="{{ email ?? contact_email }}">{{ subject }}</option>
             {{ /form_subjects }}
           </select>
         </div>
@@ -97,7 +117,7 @@
           <label>{{ form_msg_label | smartypants }}*</label>
         </div>
         <div class="textarea-wrap">
-          <textarea name="message" placeholder="{{ form_msg_ph | smartypants }}" required=""></textarea>
+          <textarea name="message" placeholder="{{ form_msg_ph | smartypants }}" required="">{{ old:message }}</textarea>
         </div>
       </div>
       <div class="submit-block">
@@ -108,4 +128,5 @@
     </div>
   </div>
 </fieldset>
+{{ /if }}
 {{ /form:create }}

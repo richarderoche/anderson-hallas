@@ -32,7 +32,7 @@ article.media .action {
   margin-bottom: 0;
 }
 .lb-wrap.media .content {
-  padding: 1.1111111111em 1.1111111111em 1em;
+  padding: var(--gut-sm-2) var(--gut-sm-2) 1em;
 }
 .lb-wrap.media h2 {
   margin-right: 2.7777777778em;

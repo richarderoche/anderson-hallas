@@ -18,7 +18,7 @@ header.page-section {
 .body-content section.image.small,
 .body-content section.content.single,
 .body-content section.align-indented {
-  margin-left: 16.6666666667%;
+  margin-left: var(--one-6);
 }
 .body-content section.introtxt {
   margin-top: 3em;
@@ -61,10 +61,10 @@ header.page-section {
   margin-bottom: 0.65em;
 }
 .body-content section.big-list p:nth-child(odd) {
-  padding-right: 0.8828571429em;
+  padding-right: var(--gut-lg);
 }
 .body-content section.big-list p:nth-child(even) {
-  padding-left: 0.8828571429em;
+  padding-left: var(--gut-lg);
 }
 .body-content section.jobs {
   margin-top: 2.5em;

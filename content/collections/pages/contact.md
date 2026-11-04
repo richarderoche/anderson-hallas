@@ -1,4 +1,5 @@
 ---
+nav_hide: false
 title: Contact
 cover_crop: true
 contact_email: info@andarch.com
@@ -36,7 +37,7 @@ form_subjects:
     email: info@andarch.com
 form_msg_label: Message
 form_msg_ph: 'Your message'
-form_success_page: 4cbd8b94-91dd-4b21-9f63-4ad30a4e30fc
+form_success_message: "Your message has been sent, we'll get back to you shortly."
 template: contact
 id: 57ac61fb-a48d-461a-acbc-636ca6ece2e0
 blueprint: contact

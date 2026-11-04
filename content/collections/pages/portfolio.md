@@ -1,4 +1,5 @@
 ---
+nav_hide: false
 title: Portfolio
 template: portfolio
 project_filters:

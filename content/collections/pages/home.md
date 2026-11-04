@@ -1,4 +1,5 @@
 ---
+nav_hide: false
 title: Home
 randomize: false
 home_slides:

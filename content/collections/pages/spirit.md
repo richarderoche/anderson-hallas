@@ -22,6 +22,8 @@ content_blocks:
     type: embed_video
     video: 'https://vimeo.com/1156555781'
     align: Indented
+    vwidth: '240'
+    vheight: '426'
     caption: |-
       <p><i>We hope your holidays are filled with whimsy and wonder! Happy Holidays from AH!</i>
       </p>

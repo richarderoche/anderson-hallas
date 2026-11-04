@@ -15,10 +15,10 @@ article.person .images {
 }
 
 .lb-wrap.staff .panel-wrap {
-  margin-left: 16.6666666667%;
+  margin-left: var(--one-6);
 }
 .lb-wrap.staff .content {
-  padding: 0 0 0 1.7657142857em;
+  padding: 0 0 0 var(--gut-lg-2);
 }
 .lb-wrap.staff .name {
   margin-top: 0.8em;

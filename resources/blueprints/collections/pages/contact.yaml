@@ -1,5 +1,16 @@
 title: Contact
 tabs:
+  sidebar:
+    display: Sidebar
+    sections:
+      -
+        fields:
+          -
+            handle: nav_hide
+            field:
+              display: 'Exclude from Header Navigation'
+              type: toggle
+              default: false
   main:
     display: Main
     sections:
@@ -212,10 +223,9 @@ tabs:
               default: 'Your Message'
               width: 66
           -
-            handle: form_success_page
+            handle: form_success_message
             field:
-              display: 'Success Message Page'
-              type: entries
-              collections:
-                - pages
-              max_items: 1
+              display: 'Success Message'
+              instructions: 'Shown on this page after a successful form submission (replaces the form).'
+              type: textarea
+              default: "Your message has been sent, we'll get back to you shortly."

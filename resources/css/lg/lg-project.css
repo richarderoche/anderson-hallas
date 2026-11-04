@@ -62,11 +62,11 @@ main.project .slide-nav.slide-next {
 main.project .slide-arrow {
   position: absolute;
   top: 50%;
-  -moz-transform: translate(0.5555555556em, -50%);
-  -ms-transform: translate(0.5555555556em, -50%);
-  -o-transform: translate(0.5555555556em, -50%);
-  -webkit-transform: translate(0.5555555556em, -50%);
-  transform: translate(0.5555555556em, -50%);
+  -moz-transform: translate(var(--gut-sm), -50%);
+  -ms-transform: translate(var(--gut-sm), -50%);
+  -o-transform: translate(var(--gut-sm), -50%);
+  -webkit-transform: translate(var(--gut-sm), -50%);
+  transform: translate(var(--gut-sm), -50%);
   left: 7.2463768116%;
   opacity: 0;
 }
@@ -94,7 +94,7 @@ aside.project-info {
   right: 1.2069335938%;
   width: 57.9310546875%;
   z-index: 999;
-  background: rgba(241, 238, 234, 0.9);
+  background: var(--overlay-light);
 }
 aside.project-info .panel-wrap {
   position: absolute;
@@ -102,7 +102,7 @@ aside.project-info .panel-wrap {
   left: 0;
   bottom: 0;
   width: 100%;
-  padding: 0.6em 0.8828571429em;
+  padding: 0.6em var(--gut-lg);
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
 }
@@ -133,10 +133,10 @@ aside.project-info .toggle-section, aside.project-info.expanded .toggle-section 
   visibility: visible;
 }
 aside.project-info header {
-  padding-left: 0.8828571429em;
-  padding-right: 0.8828571429em;
+  padding-left: var(--gut-lg);
+  padding-right: var(--gut-lg);
   height: 3.35em;
-  background: rgba(241, 238, 234, 0.9);
+  background: var(--overlay-light);
   margin-top: 0;
   position: absolute;
   top: -3.35em;

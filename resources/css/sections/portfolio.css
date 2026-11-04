@@ -7,7 +7,7 @@ form.cat-select h3 {
 }
 
 .project-thumb {
-  margin-top: 0.5555555556em;
+  margin-top: var(--gut-sm);
 }
 .project-thumb a.thumbnail {
   display: block;
@@ -30,7 +30,7 @@ form.cat-select h3 {
 
 @media (hover: hover) and (pointer: fine) {
 .project-thumb a:hover .thumb-info {
-  background: #FF551E;
+  background: var(--orange);
 }
 }
 

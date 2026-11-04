@@ -67,10 +67,10 @@ header.page-section {
   margin-bottom: 1.8em;
 }
 .body-content article.job {
-  border-top: 1px solid #493421;
+  border-top: 1px solid var(--brown-txt);
 }
 .body-content article.job:last-child {
-  border-bottom: 1px solid #493421;
+  border-bottom: 1px solid var(--brown-txt);
 }
 .body-content article.job header {
   padding: 0.5em 0 0.625em;

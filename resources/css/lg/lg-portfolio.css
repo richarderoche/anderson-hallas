@@ -12,7 +12,7 @@ nav.cat a:first-child {
 }
 
 .project-thumb {
-  margin-top: 1.7657142857em;
+  margin-top: var(--gut-lg-2);
 }
 
 #tag-content .tag-item {
@@ -24,18 +24,18 @@ nav.cat a:first-child {
 }
 
 .thumb-group.single .thumb-info {
-  width: 31.5985130112%;
+  width: var(--rp-1614-510);
 }
 
 .thumb-group.double .lg-6-12 .thumb-info {
-  width: 64.8854961832%;
+  width: var(--rp-786-510);
 }
 .thumb-group.double .lg-8-12 .thumb-info {
-  width: 48.0225988701%;
+  width: var(--rp-1062-510);
 }
 
 .thumb-group.quad .lg-8-8 .thumb-info {
-  width: 48.0225988701%;
+  width: var(--rp-1062-510);
 }
 
 .portfolio-past-clients {

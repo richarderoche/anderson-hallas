@@ -30,19 +30,21 @@
                 </a>
               </div>
               <div class="content">
-                {{ if show_video == "upload" }}
-                {{ upload_video }}
+                {{ if vwidth && vheight }}
+                <div class="video-holder" style="padding-top: {{ vheight | divide:vwidth | multiply:100 | round:6 }}%">
+                {{ else }}
                 <div class="video-holder">
+                {{ /if }}
+                  {{ if show_video == "upload" }}
+                  {{ upload_video }}
                   <video class="vid" controls="" preload="metadata">
                     <source src="{{ url }}" type="video/mp4">
                   </video>
-                </div>
-                {{ /upload_video }}
-                {{ else }}
-                <div class="video-holder">
+                  {{ /upload_video }}
+                  {{ else }}
                   <iframe src="{{ embed_video | embed_url }}" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                  {{ /if }}
                 </div>
-                {{ /if }}
               </div>
             </div>
           </div>

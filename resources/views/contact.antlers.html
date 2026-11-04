@@ -9,15 +9,20 @@
   <div class="grid-wrap">
     <div class="row">
       <header class="page smd-6-6 lg-10-12">
-        <h1 class="page-title">{{ alt_title | smartypants ?? title | smartypants }}</h1>
+        <h1 class="page-title">
+          {{ if {form:success in="contact"} }}
+          Thank You
+          {{ elseif {form:errors in="contact"} }}
+          Error
+          {{ else }}
+          {{ alt_title | smartypants ?? title | smartypants }}
+          {{ /if }}
+        </h1>
       </header>
     </div>
     <main class="contact id-{{ id }} page {{ slug }}">
       <section class="contact-form">
         {{ partial src="partials/contact/form" }}
-        {{ form_success_page }}
-        <a href="{{ url }}" id="success" style="position: absolute; left: -9999em;"></a>
-        {{ /form_success_page }}
       </section>
       <section class="office row">
         <div class="info-col sm-6-6 md-5-6 lg-4-12">

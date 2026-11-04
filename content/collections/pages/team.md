@@ -1,4 +1,5 @@
 ---
+nav_hide: false
 title: Team
 template: staff
 cover_crop: false

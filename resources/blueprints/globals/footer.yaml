@@ -4,32 +4,15 @@ tabs:
     display: Main
     sections:
       -
-        display: 'Footer Navigation'
+        display: Footer
         fields:
           -
             handle: footer_note
             field:
               type: info
               display: Note
-              content: 'Contact info is managed on the Contact page. Company name and location are managed in the General Globals.'
+              content: 'Footer links are managed under Navigations → Footer Nav. Contact info is managed on the Contact page. Company name and location are managed in the General Globals.'
               state: notice
-          -
-            handle: footer_nav_on
-            field:
-              display: 'Show footer nav links?'
-              type: toggle
-              default: true
-              width: 25
-          -
-            handle: footer_nav
-            field:
-              display: 'Page Links (Limit 4)'
-              instructions: 'Click into field and select a page from dropdown (start typing to narrow list), drag and drop to change order.'
-              type: entries
-              collections:
-                - pages
-              max_items: 4
-              width: 75
       -
         display: 'Social Links'
         fields:
