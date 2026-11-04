@@ -1,0 +1,50 @@
+nav:
+  reorder:
+    - content
+    - portfolio
+    - site
+  sections:
+    top_level:
+      'top_level::dashboard': '@hide'
+    content:
+      reorder:
+        - 'content::collections::pages'
+        - 'content::collections::news'
+        - 'content::collections::team'
+        - 'content::collections::expertise'
+        - 'content::collections'
+      items:
+        'content::collections::pages':
+          action: '@move'
+          icon: page
+        'content::collections::news':
+          action: '@move'
+          icon: media-news-paper
+        'content::collections::team':
+          action: '@move'
+          icon: fieldtype-user_roles
+        'content::collections::expertise':
+          action: '@move'
+          icon: money-graph-bar-decrease
+        'content::collections': '@hide'
+        'content::taxonomies': '@hide'
+    portfolio:
+      action: '@create'
+      display: Portfolio
+      items:
+        'content::collections::projects':
+          action: '@move'
+          icon: buildings-city-hall
+        'content::taxonomies::categories': '@move'
+    site:
+      action: '@create'
+      display: Site
+      items:
+        'content::globals': '@move'
+        'content::navigation': '@move'
+        'content::assets': '@move'
+    fields: '@hide'
+    tools:
+      'tools::addons': '@hide'
+start_page: /collections/pages
+theme: null

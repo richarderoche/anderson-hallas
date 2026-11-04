@@ -40,13 +40,16 @@ tabs:
               save_html: true
               buttons:
                 - h2
+                - h2_orange
                 - h3
+                - h3_orange
                 - bold
                 - italic
                 - unorderedlist
                 - orderedlist
                 - removeformat
                 - anchor
+                - tag_word
               width: 66
               if:
                 media_type: popup

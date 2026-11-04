@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "20a07fd492ba6df0a3a885dc19c1568d",
+    "content-hash": "694607f20e4d7828523386c9e35a6248",
     "packages": [
         {
             "name": "ajthinking/archetype",
@@ -1570,6 +1570,61 @@
                 }
             ],
             "time": "2026-10-30T13:38:01+00:00"
+        },
+        {
+            "name": "jacksleight/statamic-bard-texstyle",
+            "version": "4.2.6",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/jacksleight/statamic-bard-texstyle.git",
+                "reference": "09c88712450309fa0e14bc8a8c739b47064ac183"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/jacksleight/statamic-bard-texstyle/zipball/09c88712450309fa0e14bc8a8c739b47064ac183",
+                "reference": "09c88712450309fa0e14bc8a8c739b47064ac183",
+                "shasum": ""
+            },
+            "require": {
+                "statamic/cms": "^6.0"
+            },
+            "require-dev": {
+                "laravel/pint": "^1.21",
+                "nunomaduro/collision": "^8.0",
+                "orchestra/testbench": "^10.0",
+                "pestphp/pest": "^4.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "JackSleight\\StatamicBardTexstyle\\ServiceProvider"
+                    ]
+                },
+                "statamic": {
+                    "name": "Bard Texstyle",
+                    "editions": [
+                        "free",
+                        "pro"
+                    ],
+                    "description": "Add custom styles, inline elements and attributes to the Bard fieldtype, and collapse them into a styles menu."
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "JackSleight\\StatamicBardTexstyle\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "proprietary"
+            ],
+            "description": "Add custom styles, inline elements and attributes to the Bard fieldtype, and collapse them into a styles menu.",
+            "support": {
+                "issues": "https://github.com/jacksleight/statamic-bard-texstyle/issues",
+                "source": "https://github.com/jacksleight/statamic-bard-texstyle/tree/4.2.6"
+            },
+            "time": "2026-11-02T10:30:13+00:00"
         },
         {
             "name": "james-heinrich/getid3",

@@ -1,20 +1,23 @@
-/* CP Bard typography preview (ported from Statamic 2 override.scss; Redactor → ProseMirror) */
+/* CP Bard typography preview — mirrors front-end bodytxt type + old Redactor override.scss */
 @import "../shared/tokens.css";
+
 .bard-fieldtype .ProseMirror h2 {
   font-size: 24px;
   line-height: 1.2;
   font-weight: 400;
 }
-.bard-fieldtype .ProseMirror .ee-lb-btn,
-.bard-fieldtype .ProseMirror .tag-word,
-.bard-fieldtype .ProseMirror h3 {
+
+.bard-fieldtype .ProseMirror h3,
+.bard-fieldtype .ProseMirror .tag-word {
   font-size: 16px;
   line-height: 1;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.06em;
 }
-.bard-fieldtype .ProseMirror .ee-lb-btn,
+
+.bard-fieldtype .ProseMirror h2.orange,
+.bard-fieldtype .ProseMirror h3.orange,
 .bard-fieldtype .ProseMirror .orange {
   color: var(--orange);
 }

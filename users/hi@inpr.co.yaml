@@ -12,3 +12,6 @@ preferences:
       view: list
     expertise:
       view: list
+    news:
+      view: list
+  color_mode: light

@@ -37,13 +37,16 @@ sections:
                     save_html: true
                     buttons:
                       - h2
+                      - h2_orange
                       - h3
+                      - h3_orange
                       - bold
                       - italic
                       - unorderedlist
                       - orderedlist
                       - removeformat
                       - anchor
+                      - tag_word
                     width: 66
                 -
                   handle: size
@@ -66,13 +69,16 @@ sections:
                     save_html: true
                     buttons:
                       - h2
+                      - h2_orange
                       - h3
+                      - h3_orange
                       - bold
                       - italic
                       - unorderedlist
                       - orderedlist
                       - removeformat
                       - anchor
+                      - tag_word
                     width: 50
                 -
                   handle: right_column
@@ -82,13 +88,16 @@ sections:
                     save_html: true
                     buttons:
                       - h2
+                      - h2_orange
                       - h3
+                      - h3_orange
                       - bold
                       - italic
                       - unorderedlist
                       - orderedlist
                       - removeformat
                       - anchor
+                      - tag_word
                     width: 50
             image_big:
               display: 'Image Big'
@@ -111,13 +120,16 @@ sections:
                     save_html: true
                     buttons:
                       - h2
+                      - h2_orange
                       - h3
+                      - h3_orange
                       - bold
                       - italic
                       - unorderedlist
                       - orderedlist
                       - removeformat
                       - anchor
+                      - tag_word
                     width: 50
             image_small:
               display: 'Image Small'
@@ -140,13 +152,16 @@ sections:
                     save_html: true
                     buttons:
                       - h2
+                      - h2_orange
                       - h3
+                      - h3_orange
                       - bold
                       - italic
                       - unorderedlist
                       - orderedlist
                       - removeformat
                       - anchor
+                      - tag_word
                     width: 50
             image_double:
               display: 'Image Double'
@@ -188,13 +203,16 @@ sections:
                     save_html: true
                     buttons:
                       - h2
+                      - h2_orange
                       - h3
+                      - h3_orange
                       - bold
                       - italic
                       - unorderedlist
                       - orderedlist
                       - removeformat
                       - anchor
+                      - tag_word
                     width: 66
             block_quote:
               display: 'Pull Quote'
@@ -330,13 +348,16 @@ sections:
                     save_html: true
                     buttons:
                       - h2
+                      - h2_orange
                       - h3
+                      - h3_orange
                       - bold
                       - italic
                       - unorderedlist
                       - orderedlist
                       - removeformat
                       - anchor
+                      - tag_word
                     width: 50
                 -
                   handle: dimensions_info
@@ -389,13 +410,16 @@ sections:
                     save_html: true
                     buttons:
                       - h2
+                      - h2_orange
                       - h3
+                      - h3_orange
                       - bold
                       - italic
                       - unorderedlist
                       - orderedlist
                       - removeformat
                       - anchor
+                      - tag_word
                     width: 50
                 -
                   handle: dimensions_info
@@ -440,13 +464,16 @@ sections:
                     save_html: true
                     buttons:
                       - h2
+                      - h2_orange
                       - h3
+                      - h3_orange
                       - bold
                       - italic
                       - unorderedlist
                       - orderedlist
                       - removeformat
                       - anchor
+                      - tag_word
                     instructions: 'Separate each line by a single return. Flows left to right, top to bottom.'
             job_list:
               display: 'Job List'
@@ -473,13 +500,16 @@ sections:
                               save_html: true
                               buttons:
                                 - h2
+                                - h2_orange
                                 - h3
+                                - h3_orange
                                 - bold
                                 - italic
                                 - unorderedlist
                                 - orderedlist
                                 - removeformat
                                 - anchor
+                                - tag_word
                               width: 50
                               default: |
                                 <h3>Job Description</h3>
@@ -492,13 +522,16 @@ sections:
                               save_html: true
                               buttons:
                                 - h2
+                                - h2_orange
                                 - h3
+                                - h3_orange
                                 - bold
                                 - italic
                                 - unorderedlist
                                 - orderedlist
                                 - removeformat
                                 - anchor
+                                - tag_word
                               width: 50
                               default: |
                                 <h3>Qualifications & Experience</h3>
