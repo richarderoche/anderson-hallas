@@ -1,25 +1,33 @@
 /* from sections/_contact.scss */
-main.contact form .right-col {
-  margin-top: 0.9em;
-}
-main.contact form .submit-block {
-  margin-top: 1.4em;
-}
-main.contact section.office {
-  margin-top: 3em;
+main.contact {
+  form {
+    .right-col {
+      margin-top: 0.9em;
+    }
+    .submit-block {
+      margin-top: 1.4em;
+    }
+  }
+  section.office {
+    margin-top: 3em;
+  }
 }
 main.contact section.office .address, main.contact section.office .phone {
   margin-top: 0.8em;
 }
-main.contact section.office .location-info {
-  margin-top: 1.2em;
-}
-main.contact .map {
-  margin-top: 0.8em;
-  height: 24em;
-  min-height: 201px;
-}
-main.contact #map-container {
-  height: 100%;
-  background: none !important;
+main.contact {
+  section.office {
+    .location-info {
+      margin-top: 1.2em;
+    }
+  }
+  .map {
+    margin-top: 0.8em;
+    height: 24em;
+    min-height: 201px;
+  }
+  #map-container {
+    height: 100%;
+    background: none !important;
+  }
 }

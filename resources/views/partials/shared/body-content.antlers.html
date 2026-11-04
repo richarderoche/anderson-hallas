@@ -1,30 +1,30 @@
 <div class="cb cb-{{ index }} cb-{{ type | slugify }} row">
   {{ if type == "intro_text" }}
   <section class="align-{{ align | slugify }} introtxt lg-8-12 smd-6-6">
-    <h2>{{ text | smartypants }}</h2>
+    <h2 class="widont">{{ text | smartypants }}</h2>
   </section>
   {{ elseif type == "content_single" }}
   {{ if size == "Large" }}
   <section class="content lg-8-12 md-6-6 single sm-6-6 {{ size | slugify }}">
-    <div class="bodytxt">
+    <div class="bodytxt widont">
       {{ column | smartypants }}
     </div>
   </section>
   {{ else }}
   <section class="content lg-7-12 md-5-6 single sm-6-6 {{ size | slugify }}">
-    <div class="bodytxt">
+    <div class="bodytxt widont">
       {{ column | smartypants }}
     </div>
   </section>
   {{ /if }}
   {{ elseif type == "content_double" }}
   <section class="content double left sm-6-6 md-5-6 lg-6-12">
-    <div class="bodytxt">
+    <div class="bodytxt widont">
       {{ left_column | smartypants }}
     </div>
   </section>
   <section class="content double right sm-6-6 md-5-6 lg-6-12">
-    <div class="bodytxt">
+    <div class="bodytxt widont">
       {{ right_column | smartypants }}
     </div>
   </section>
@@ -34,7 +34,7 @@
     {{ partial src="partials/images/cb-large" }}
     {{ /img }}
     {{ if caption }}
-    <h4 class="caption">{{ caption | smartypants }}</h4>
+    <h4 class="caption widont">{{ caption | smartypants }}</h4>
     {{ /if }}
   </section>
   {{ elseif type == "image_small" }}
@@ -43,7 +43,7 @@
     {{ partial src="partials/images/cb-small" }}
     {{ /img }}
     {{ if caption }}
-    <h4 class="caption">{{ caption | smartypants }}</h4>
+    <h4 class="caption widont">{{ caption | smartypants }}</h4>
     {{ /if }}
   </section>
   {{ elseif type == "image_double" }}
@@ -63,22 +63,22 @@
     {{ if caption }}
     <div class="row">
       <div class="caption-wrap smd-6-6 lg-10-12">
-        <h4 class="caption">{{ caption | smartypants }}</h4>
+        <h4 class="caption widont">{{ caption | smartypants }}</h4>
       </div>
     </div>
     {{ /if }}
   </section>
   {{ elseif type == "block_quote" }}
   <section class="align-{{ align | slugify }} block-quote lg-8-12 md-5-6 sm-6-6">
-    <p class="marks-{{ marks }} quote">{{ quote | smartypants }}</p>
+    <p class="marks-{{ marks }} quote widont">{{ quote | smartypants }}</p>
     {{ if optional_credit }}
-    <p class="quote-credit">{{ optional_credit | smartypants }}</p>
+    <p class="quote-credit widont">{{ optional_credit | smartypants }}</p>
     {{ /if }}
   </section>
   {{ elseif type == "cta_link" }}
   <section class="align-{{ align | slugify }} big-link cta lg-8-12 smd-6-6">
     {{ if pre_text }}
-    <h3 class="pre">{{ pre_text }}</h3>
+    <h3 class="pre widont">{{ pre_text }}</h3>
     {{ /if }}
     <a class="underline" href="{{ url }}">
       {{ text | smartypants }}
@@ -108,7 +108,7 @@
       <iframe src="{{ video:url | embed_url }}" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
     </div>
     {{ if caption }}
-    <h4 class="caption">{{ caption | smartypants }}</h4>
+    <h4 class="caption widont">{{ caption | smartypants }}</h4>
     {{ /if }}
   </section>
   {{ elseif type == "upload_video" }}
@@ -127,7 +127,7 @@
     </div>
     {{ /video }}
     {{ if caption }}
-    <h4 class="caption">{{ caption | smartypants }}</h4>
+    <h4 class="caption widont">{{ caption | smartypants }}</h4>
     {{ /if }}
   </section>
   {{ elseif type == "new_section" }}
@@ -136,8 +136,8 @@
   </header>
   {{ elseif type == "big_list" }}
   <section class="big-list sm-6-6 md-6-6 lg-12-12">
-    <h2>{{ heading | smartypants }}</h2>
-    <div class="bodytxt">
+    <h2 class="widont">{{ heading | smartypants }}</h2>
+    <div class="bodytxt widont">
       <div class="row">
         {{ list | smartypants }}
       </div>
@@ -165,10 +165,10 @@
       </header>
       <div class="content-wrap lg-grid-inset toggle-section">
         <div class="row">
-          <div class="bodytxt left lg-6-12">
+          <div class="bodytxt left lg-6-12 widont">
             {{ left_column | smartypants }}
           </div>
-          <div class="bodytxt right lg-6-12">
+          <div class="bodytxt right lg-6-12 widont">
             {{ right_column | smartypants }}
           </div>
         </div>

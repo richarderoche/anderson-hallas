@@ -1,40 +1,33 @@
 /* from shared/_type3.scss */
 @media (min-width: 1018px) {
-/* ===============================================
-/* DEFAULTS (BODY SIZE)
-/* ============================================ */
-/* ===============================================
-/* LARGE TO SMALL
-/* ============================================ */
-.contact-form .select-wrap, .contact-form textarea, .contact-form input, .contact-form .submit .txt, section.office p.large, article.person h1 .name, .cat-select .select-wrap, section.big-list h2, article.job h1, .cb p.quote, section.content.large .bodytxt, .bodytxt h2 {
-  font-size: 1.3571428571em;
-}
-
-.panel.media-popup h2, article.media .action, section.contact-form label, main.home .title-wrap h2, .staff-popup h3, article.person h2, aside.project-info .foot-wrap h3, .count-wrap h4, nav.cat a, .cat-select h3, .project-thumb h2, section.big-link h3, .cb p.quote-credit {
-  font-size: 0.7357142857em;
-}
-
-.bodytxt .ee-lb-btn, .bodytxt .tag-word, section.office h1, aside.project-info h1.normal, .bodytxt h3 {
-  font-size: 1em;
-}
-
-h1.page-section-title, h1.page-title {
-  font-size: 4.2857142857em;
-}
-
-.staff-popup h2, aside.project-info h2, section.big-link a, section.introtxt h2 {
-  font-size: 2.7142857143em;
-}
-
-footer.bottom h2, h1.wordmark-wrap, footer.bottom h3 {
-  font-size: 1em;
-}
-
-article.person h1 .associate, aside.project-info h1.tiny, .staff-popup .sm-only.email a, article.person h3, aside.project-info .data-wrap p, .project-quotes p, .less-more-wrap .txt, .cb h4.caption {
-  font-size: 0.7357142857em;
-}
-
-.home-splash h2 {
-  font-size: 1.4285714286em;
-}
+  /* ===============================================
+  /* DEFAULTS (BODY SIZE)
+  /* ============================================ */
+  /* ===============================================
+  /* LARGE TO SMALL
+  /* ============================================ */
+  .contact-form .select-wrap, .contact-form textarea, .contact-form input, .contact-form .submit .txt, section.office p.large, article.person h1 .name, .cat-select .select-wrap, section.big-list h2, article.job h1, .cb p.quote, section.content.large .bodytxt, .bodytxt h2 {
+    font-size: 1.3571428571em;
+  }
+  .panel.media-popup h2, article.media .action, section.contact-form label, main.home .title-wrap h2, .staff-popup h3, article.person h2, aside.project-info .foot-wrap h3, .count-wrap h4, nav.cat .tag-nav, .cat-select h3, .project-thumb h2, section.big-link h3, .cb p.quote-credit {
+    font-size: 0.7357142857em;
+  }
+  .bodytxt .ee-lb-btn, .bodytxt .tag-word, section.office h1, aside.project-info h1.normal, .bodytxt h3 {
+    font-size: 1em;
+  }
+  h1.page-section-title, h1.page-title {
+    font-size: 4.2857142857em;
+  }
+  .staff-popup h2, aside.project-info h2, section.big-link a, section.introtxt h2 {
+    font-size: 2.7142857143em;
+  }
+  footer.bottom h2, h1.wordmark-wrap, footer.bottom h3 {
+    font-size: 1em;
+  }
+  article.person h1 .associate, aside.project-info h1.tiny, .staff-popup .sm-only.email a, article.person h3, aside.project-info .data-wrap p, .project-quotes p, .less-more-wrap .txt, .cb h4.caption {
+    font-size: 0.7357142857em;
+  }
+  .home-splash h2 {
+    font-size: 1.4285714286em;
+  }
 }

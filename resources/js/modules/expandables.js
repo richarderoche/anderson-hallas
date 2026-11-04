@@ -1,13 +1,26 @@
+const DESKTOP_MQ = '(min-width: 1018px)';
+
 export function initExpandables() {
   document.addEventListener('click', (e) => {
     const btn = e.target.closest('.toggle-sec');
     if (!btn) return;
 
-    // Project info panel slides as a whole; don't run accordion height logic.
     const projectInfo = btn.closest('aside.project-info');
     if (projectInfo) {
       e.preventDefault();
-      projectInfo.classList.toggle('expanded');
+      // Desktop: whole panel slides via CSS transform.
+      // Mobile: same accordion height animation as job drawers.
+      if (window.matchMedia(DESKTOP_MQ).matches) {
+        projectInfo.classList.toggle('expanded');
+        return;
+      }
+      const sec = projectInfo.querySelector('.toggle-section');
+      if (!sec) return;
+      if (projectInfo.classList.contains('expanded')) {
+        collapseSection(projectInfo, sec);
+      } else {
+        expandSection(projectInfo, sec);
+      }
       return;
     }
 

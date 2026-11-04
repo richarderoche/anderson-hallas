@@ -44,15 +44,15 @@
             {{ if media_type == "popup" }}
             <div class="id-{{ id }} media-popup panel">
               <div class="close-lb-wrap">
-                <a class="toggle close-lb" href="#close">
+                <button type="button" class="toggle close-lb" aria-label="Close Lightbox">
                   <svg aria-labelledby="title" class="ico nav-close" role="img" title="Close Lightbox">
                     <use xlink:href="#nav-close"></use>
                   </svg>
-                </a>
+                </button>
               </div>
               <div class="content">
-                <h2 class="title">{{ title | smartypants }}</h2>
-                <div class="bodytxt">{{ media_text | smartypants }}</div>
+                <h2 class="title widont">{{ title | smartypants }}</h2>
+                <div class="bodytxt widont">{{ media_text | smartypants }}</div>
               </div>
             </div>
             {{ /if }}

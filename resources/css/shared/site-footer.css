@@ -2,7 +2,6 @@
 body.home footer.bottom {
   visibility: hidden;
 }
-
 footer.bottom {
   padding: 2em 0;
 }
@@ -12,62 +11,75 @@ footer.bottom h2, footer.bottom h3 {
 footer.bottom h2:last-child, footer.bottom h3:last-child {
   margin-bottom: 0;
 }
-footer.bottom .nav-copyright-wrap {
-  margin-top: 1.5em;
-}
-footer.bottom .nav a {
-  margin-right: 0.8em;
-}
-footer.bottom .nav a:last-child {
-  margin-right: 0;
-}
-footer.bottom h3.nav {
-  opacity: 1;
-}
-footer.bottom .social-wrap {
-  margin-top: 1.6em;
+footer.bottom {
+  .nav-copyright-wrap {
+    margin-top: 1.5em;
+  }
+  .nav {
+    a {
+      margin-right: 0.8em;
+    }
+    a:last-child {
+      margin-right: 0;
+    }
+  }
+  h3.nav {
+    opacity: 1;
+  }
+  .social-wrap {
+    margin-top: 1.6em;
+  }
 }
 footer.bottom .social-wrap a, footer.bottom .social-wrap .ico {
   width: 2.45em;
   height: 2.45em;
   overflow: visible;
 }
-footer.bottom .social-wrap a {
-  margin-right: 0.825em;
+footer.bottom {
+  .social-wrap {
+    a {
+      margin-right: 0.825em;
+    }
+    a:last-child {
+      margin-right: 0;
+    }
+  }
+  h2.whimsy {
+    .play {
+      display: inline-block;
+      width: 0.8em;
+      height: 0.8em;
+      overflow: visible;
+      opacity: 0;
+      margin-top: 0.06em;
+    }
+  }
 }
-footer.bottom .social-wrap a:last-child {
-  margin-right: 0;
-}
-footer.bottom h2.whimsy .play {
-  display: inline-block;
-  width: 0.8em;
-  height: 0.8em;
-  overflow: visible;
-  opacity: 0;
-  margin-top: 0.06em;
-}
-
 @media (hover: none), (pointer: coarse) {
-footer.bottom .footer-contents a:active {
-  opacity: 1;
+  footer.bottom {
+    .footer-contents {
+      a:active {
+        opacity: 1;
+      }
+      h2.whimsy:active {
+        .play {
+          opacity: 0.6;
+        }
+      }
+    }
+  }
 }
-}
-
-@media (hover: none), (pointer: coarse) {
-footer.bottom .footer-contents h2.whimsy:active .play {
-  opacity: 0.6;
-}
-}
-
-
 @media (hover: hover) and (pointer: fine) {
-footer.bottom .footer-contents a:hover {
-  opacity: 1;
-}
-}
-
-@media (hover: hover) and (pointer: fine) {
-footer.bottom .footer-contents h2.whimsy:hover .play {
-  opacity: 0.6;
-}
+  footer.bottom {
+    .footer-contents {
+      a:hover {
+        opacity: 1;
+      }
+      h2.whimsy:hover {
+        .play {
+          opacity: 0.6;
+        }
+      }
+    }
+  }
 }

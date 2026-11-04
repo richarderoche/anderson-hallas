@@ -10,108 +10,56 @@ form select, form textarea {
   padding: 0.25em 0.5em 0.35em;
   background: var(--stone);
 }
-form textarea {
-  min-height: 8em;
-  border: 1px solid var(--brown-txt);
-}
-form .form-block {
-  margin-bottom: 0.8em;
-}
-form .form-block:last-child {
-  margin-bottom: 0;
+form {
+  textarea {
+    min-height: 8em;
+    border: 1px solid var(--brown-txt);
+  }
+  .form-block {
+    margin-bottom: 0.8em;
+  }
+  .form-block:last-child {
+    margin-bottom: 0;
+  }
 }
 form input[type=submit], form .button {
   padding: 1em;
   text-align: center;
 }
-form .select-wrap {
-  position: relative;
-  border: 1px solid var(--brown-txt);
-}
-form .select-wrap select {
-  padding-right: 2.5em;
-  position: relative;
-  z-index: 1;
-  background: transparent;
-}
-form .select-wrap:before {
-  content: "↓";
-  display: block;
-  position: absolute;
-  padding-top: 0.3em;
-  top: 0;
-  bottom: 0;
-  right: 1px;
-  text-align: center;
-  width: 2em;
-  border-left: 1px solid var(--brown-txt);
-}
+form {
+  .select-wrap {
+    position: relative;
+    border: 1px solid var(--brown-txt);
 
-html.placeholder label.fallback {
-  display: none;
+    select {
+      padding-right: 2.5em;
+      position: relative;
+      z-index: 1;
+      background: transparent;
+    }
+  }
+  .select-wrap:before {
+    content: "↓";
+    display: block;
+    position: absolute;
+    padding-top: 0.3em;
+    top: 0;
+    bottom: 0;
+    right: 1px;
+    text-align: center;
+    width: 2em;
+    border-left: 1px solid var(--brown-txt);
+  }
 }
-
-input[placeholder]::-webkit-input-placeholder,
-textarea[placeholder]::-webkit-input-placeholder {
-  opacity: 0.35;
-}
-
-input[placeholder]:-moz-placeholder,
-textarea[placeholder]:-moz-placeholder {
-  opacity: 0.35;
-}
-
-input[placeholder]::-moz-placeholder,
-textarea[placeholder]::-moz-placeholder {
-  opacity: 0.35;
-}
-
-input[placeholder]:-ms-input-placeholder,
-textarea[placeholder]:-ms-input-placeholder {
-  opacity: 0.35;
-}
-
-input[placeholder]::input-placeholder,
-textarea[placeholder]::input-placeholder {
-  opacity: 0.35;
-}
-
 input[placeholder]::placeholder,
 textarea[placeholder]::placeholder {
   opacity: 0.35;
 }
-
-input[placeholder]:focus::-webkit-input-placeholder,
-textarea[placeholder]:focus::-webkit-input-placeholder {
-  opacity: 0.15;
-}
-
-input[placeholder]:focus:-moz-placeholder,
-textarea[placeholder]:focus:-moz-placeholder {
-  opacity: 0.15;
-}
-
-input[placeholder]:focus::-moz-placeholder,
-textarea[placeholder]:focus::-moz-placeholder {
-  opacity: 0.15;
-}
-
-input[placeholder]:focus:-ms-input-placeholder,
-textarea[placeholder]:focus:-ms-input-placeholder {
-  opacity: 0.15;
-}
-
-input[placeholder]:focus::input-placeholder,
-textarea[placeholder]:focus::input-placeholder {
-  opacity: 0.15;
-}
-
 input[placeholder]:focus::placeholder,
 textarea[placeholder]:focus::placeholder {
   opacity: 0.15;
 }
-
 input:-webkit-autofill,
 input:-webkit-autofill:focus {
-  -webkit-box-shadow: 0 0 0px 9999em var(--stone) inset;
+  box-shadow: 0 0 0px 9999em var(--stone) inset;
 }

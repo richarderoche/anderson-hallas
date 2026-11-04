@@ -2,42 +2,48 @@
 .bodytxt p, .bodytxt ul, .bodytxt ol, .bodytxt blockquote {
   margin-bottom: 0.85em;
 }
-.bodytxt h3 {
-  margin-bottom: 0.25em;
-}
-.bodytxt img {
-  margin: 0.425em 0;
-  max-width: 100%;
-}
-.bodytxt .img img {
-  width: 100%;
-}
-.bodytxt ul li:before {
-  content: "•";
-}
-.bodytxt li {
-  margin: 0 0 0.425em 0.85em;
-  position: relative;
+.bodytxt {
+  h3 {
+    margin-bottom: 0.25em;
+  }
+  img {
+    margin: 0.425em 0;
+    max-width: 100%;
+  }
+  .img {
+    img {
+      width: 100%;
+    }
+  }
+  ul {
+    li:before {
+      content: "•";
+    }
+  }
+  li {
+    margin: 0 0 0.425em 0.85em;
+    position: relative;
+  }
 }
 .bodytxt li ol, .bodytxt li ul {
   margin: 0.425em 0;
 }
-.bodytxt li:before {
-  position: absolute;
-  left: -0.85em;
+.bodytxt {
+  li:before {
+    position: absolute;
+    left: -0.85em;
+  }
+  sup {
+    font-size: 0.625em;
+    line-height: 0;
+    position: relative;
+    top: 0.095em;
+    vertical-align: super;
+  }
 }
-.bodytxt sup {
-  font-size: 0.625em;
-  line-height: 0;
-  position: relative;
-  top: 0.095em;
-  vertical-align: super;
-}
-
 a.underline {
   text-decoration: underline;
 }
-
 .bodytxt p a,
 article.media .action,
 a.underline {
@@ -47,34 +53,37 @@ a.underline {
   background-size: 1px 1px;
   background-position: bottom 0.03em left 0;
 }
-
 .bodytxt p a,
 article.media .action {
   background-image: linear-gradient(to bottom, var(--orange) 50%, var(--orange) 50%);
 }
-
 ol {
   counter-reset: olcounter;
-}
-ol li ol {
-  counter-reset: innercounter;
-}
-ol li ol > li:before {
-  content: counter(innercounter, upper-latin);
-  counter-increment: innercounter;
+
+  li {
+    ol {
+      counter-reset: innercounter;
+    }
+    ol > li:before {
+      content: counter(innercounter, upper-latin);
+      counter-increment: innercounter;
+    }
+  }
 }
 ol > li:before {
   content: counter(olcounter);
   counter-increment: olcounter;
 }
-ol.outer li {
-  position: relative;
-  margin-bottom: 0.25em;
-}
-ol.outer li:before {
-  position: absolute;
-  display: inline-block;
-  width: 1em;
-  text-align: right;
-  left: -2.5011111111em;
+ol.outer {
+  li {
+    position: relative;
+    margin-bottom: 0.25em;
+  }
+  li:before {
+    position: absolute;
+    display: inline-block;
+    width: 1em;
+    text-align: right;
+    left: -2.5011111111em;
+  }
 }

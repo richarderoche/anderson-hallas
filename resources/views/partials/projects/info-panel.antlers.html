@@ -32,7 +32,7 @@
     <div class="row">
       <div class="panel smd-6-6">
         <header class="project-info md-down">
-          <h1 class="normal">{{ title | smartypants }}</h1>
+          <h1 class="normal widont">{{ title | smartypants }}</h1>
           <div class="less-more-wrap toggle-sec">
             <span class="txt">
               <span class="more">Show Info</span>
@@ -48,15 +48,15 @@
             <div class="row">
               {{ if description | length > 500 }}
               <div class="description-wrap lg-7-7">
-                <h2 class="sm-only">{{ description_title | smartypants }}</h2>
-                <h2 class="md-up">{{ description_title | smartypants }}</h2>
-                <div class="bodytxt">{{ description | smartypants }}</div>
+                <h2 class="sm-only widont">{{ description_title | smartypants }}</h2>
+                <h2 class="md-up widont">{{ description_title | smartypants }}</h2>
+                <div class="bodytxt widont">{{ description | smartypants }}</div>
               </div>
               {{ else }}
               <div class="description-wrap lg-6-7">
-                <h2 class="sm-only">{{ description_title | smartypants }}</h2>
-                <h2 class="md-up">{{ description_title | smartypants }}</h2>
-                <div class="bodytxt">{{ description | smartypants }}</div>
+                <h2 class="sm-only widont">{{ description_title | smartypants }}</h2>
+                <h2 class="md-up widont">{{ description_title | smartypants }}</h2>
+                <div class="bodytxt widont">{{ description | smartypants }}</div>
               </div>
               {{ /if }}
             </div>
@@ -66,9 +66,9 @@
                 <div class="row">
                   {{ project_quotes }}
                   <div class="quote-row md-5-6 lg-6-7">
-                    <p class="quote">{{ quote | smartypants }}</p>
+                    <p class="quote widont">{{ quote | smartypants }}</p>
                     {{ if credit }}
-                    <p class="quote-credit">{{ credit | smartypants }}</p>
+                    <p class="quote-credit widont">{{ credit | smartypants }}</p>
                     {{ /if }}
                   </div>
                   {{ /project_quotes }}
@@ -94,14 +94,14 @@
                   <div class="details">
                     <h3>Details</h3>
                     {{ details }}
-                    <p>{{ line | smartypants }}</p>
+                    <p class="widont">{{ line | smartypants }}</p>
                     {{ /details }}
                   </div>
                   {{ if show_recognition }}
                   <div class="recognition">
                     <h3>Recognition</h3>
                     {{ recognition }}
-                    <p>{{ line | smartypants }}</p>
+                    <p class="widont">{{ line | smartypants }}</p>
                     {{ /recognition }}
                   </div>
                   {{ /if }}
@@ -112,13 +112,13 @@
                   <div class="details md-2-6 lg-3-7">
                     <h3>Details</h3>
                     {{ details }}
-                    <p>{{ line | smartypants }}</p>
+                    <p class="widont">{{ line | smartypants }}</p>
                     {{ /details }}
                   </div>
                   <div class="recognition md-4-6 lg-4-7 side">
                     <h3>Recognition</h3>
                     {{ recognition }}
-                    <p>{{ line | smartypants }}</p>
+                    <p class="widont">{{ line | smartypants }}</p>
                     {{ /recognition }}
                   </div>
                 </div>
@@ -127,7 +127,7 @@
                   <div class="details">
                     <h3>Details</h3>
                     {{ details }}
-                    <p>{{ line | smartypants }}</p>
+                    <p class="widont">{{ line | smartypants }}</p>
                     {{ /details }}
                   </div>
                 </div>

@@ -1,55 +1,52 @@
 /* from lg/_lg-components.scss */
 @media (min-width: 1018px) {
-/* ===============================================
-/* LIGHTBOX
-/* ============================================ */
-.lb-wrap .close-lb-wrap {
-  right: -3.15em;
-  background: none;
-}
-.lb-wrap .close-lb-wrap a, .lb-wrap .close-lb-wrap .ico {
-  width: 1.5em;
-  height: 1.2692307692em;
-  overflow: visible;
-}
-.lb-wrap .close-lb-wrap a {
-  padding: 0;
-}
+  /* ===============================================
+  /* LIGHTBOX
+  /* ============================================ */
+  .lb-wrap {
+    .close-lb-wrap {
+      right: -3.15em;
+      background: none;
 
-.lb-wrap.project .panel-wrap,
-.lb-wrap.whimsy .panel-wrap {
-  margin-left: 25%;
-}
-
-@media screen and (orientation: landscape) and (max-aspect-ratio: 16/9) {
+      .close-lb {
+        width: 1.5em;
+        height: 1.2692307692em;
+        padding: 0;
+        overflow: visible;
+      }
+    }
+  }
   .lb-wrap.project .panel-wrap,
   .lb-wrap.whimsy .panel-wrap {
-    width: calc(var(--one-6) * 4);
-    margin-left: var(--one-6);
+    margin-left: 25%;
   }
-}
-/* ===============================================
-/* BUTTONS
-/* ============================================ */
-/* ===============================================
-/* LOADING INDICATORS
-/* ============================================ */
-#nprogress .bar {
-  top: 3.4em;
-  height: 4px;
-}
-
-/* ===============================================
-/* TOGGLES
-/* ============================================ */
-.less-more-wrap span.txt {
-  top: 1em;
-}
-
-/* ===============================================
-/* LABELS / DIVIDERS
-/* ============================================ */
-.divider {
-  height: 0.2857142857em;
-}
+  @media screen and (orientation: landscape) and (max-aspect-ratio: 16/9) {
+    .lb-wrap.project .panel-wrap,
+      .lb-wrap.whimsy .panel-wrap {
+        width: calc(var(--one-6) * 4);
+        margin-left: var(--one-6);
+      }
+  }
+  /* ===============================================
+  /* BUTTONS
+  /* ============================================ */
+  /* ===============================================
+  /* LOADING INDICATORS
+  /* ============================================ */
+  #nprogress .bar {
+    top: 3.4em;
+    height: 4px;
+  }
+  /* ===============================================
+  /* TOGGLES
+  /* ============================================ */
+  .less-more-wrap span.txt {
+    top: 1em;
+  }
+  /* ===============================================
+  /* LABELS / DIVIDERS
+  /* ============================================ */
+  .divider {
+    height: 0.2857142857em;
+  }
 }

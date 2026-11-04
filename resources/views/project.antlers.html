@@ -1,20 +1,20 @@
 <main class="id-{{ id }} project {{ slug }}">
   {{ partial src="partials/projects/info-panel" }}
   {{ partial src="partials/projects/slider" }}
-  <a class="slide-nav slide-prev lg-only">
-    <div class="slide-arrow prev" href="#prev-slide">
+  <button type="button" class="slide-nav slide-prev lg-only" aria-label="Previous Slide">
+    <span class="slide-arrow prev">
       <svg aria-labelledby="title" class="ico" role="img" title="Previous Slide">
         <use xlink:href="#arrow-left"></use>
       </svg>
-    </div>
-  </a>
-  <a class="slide-nav slide-next lg-only">
-    <div class="slide-arrow next" href="#next-slide">
+    </span>
+  </button>
+  <button type="button" class="slide-nav slide-next lg-only" aria-label="Next Slide">
+    <span class="slide-arrow next">
       <svg aria-labelledby="title" class="ico" role="img" title="Next Slide">
         <use xlink:href="#arrow-right"></use>
       </svg>
-    </div>
-  </a>
+    </span>
+  </button>
   {{ if show_video }}
   <div class="lb-wrap project">
     <div class="lb">
@@ -23,11 +23,11 @@
           <div class="panel-wrap smd-6-6 lg-6-12">
             <div class="panel project-vid-popup">
               <div class="close-lb-wrap">
-                <a class="toggle close-lb" href="#close">
+                <button type="button" class="toggle close-lb" aria-label="Close Lightbox">
                   <svg aria-labelledby="title" class="ico nav-close" role="img" title="Close Lightbox">
                     <use xlink:href="#nav-close"></use>
                   </svg>
-                </a>
+                </button>
               </div>
               <div class="content">
                 {{ if vwidth && vheight }}

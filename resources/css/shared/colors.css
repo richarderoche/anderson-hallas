@@ -6,24 +6,16 @@ body, html {
   color: var(--brown-txt);
   background: var(--brown-bg);
 }
-
 #wrapper {
   background: var(--stone);
 }
-
 .invert {
   color: var(--stone);
   background: var(--brown-bg);
 }
-
 ::selection {
   background: var(--brown-50);
 }
-
-::-moz-selection {
-  background: var(--brown-50);
-}
-
 /* ===============================================
 /* FOREGROUND
 /* ============================================ */
@@ -32,7 +24,6 @@ main.project .slide-arrow,
 nav.mobile {
   color: var(--stone);
 }
-
 .bodytxt .ee-lb-btn,
 article.media .action,
 .splash .whimsy,
@@ -55,7 +46,6 @@ nav.mobile a:before,
 .logo-wrap .ico {
   color: var(--orange);
 }
-
 .panel.media-popup h2,
 section.contact-form label,
 section.office h1,
@@ -75,44 +65,44 @@ nav.main-menu .sub-link.current .child-link,
 .parent-wrap .triangle {
   opacity: 0.6;
 }
-
+/* FOREGROUND HOVER/ACTIVE */
 @media (hover: hover) and (pointer: fine) {
-/* =============================================== /* FOREGROUND HOVER/ACTIVE /* ============================================ */ .vid-thumb:hover .play, .slide-nav-wrap .dot:hover, .less-more-wrap:hover, .btn.submit:hover, article.media .action:hover {
-  opacity: 0.4;
+  .vid-thumb:hover .play,
+    .slide-nav-wrap .dot:hover,
+    .less-more-wrap:hover,
+    .btn.submit:hover,
+    article.media .action:hover,
+    nav.cat .tag-nav:hover,
+    .close-lb-wrap .close-lb:hover,
+    .lb-wrap.staff .email a:hover,
+    .big-link a:hover,
+    .bodytxt a:hover {
+      opacity: 0.4;
+    }
 }
-}
-
-@media (hover: hover) and (pointer: fine) {
-nav.cat a:hover, .close-lb-wrap a:hover, .lb-wrap.staff .email a:hover, .big-link a:hover, .bodytxt a:hover {
-  opacity: 0.4;
-}
-}
-
-
 @media (hover: none), (pointer: coarse) {
-.vid-thumb:active .play, .slide-nav-wrap .dot:active, .less-more-wrap:active, .btn.submit:active, article.media .action:active {
-  opacity: 0.4;
+  .vid-thumb:active .play,
+    .slide-nav-wrap .dot:active,
+    .less-more-wrap:active,
+    .btn.submit:active,
+    article.media .action:active,
+    nav.cat .tag-nav:active,
+    .close-lb-wrap .close-lb:active,
+    .lb-wrap.staff .email a:active,
+    .big-link a:active,
+    .bodytxt a:active {
+      opacity: 0.4;
+    }
 }
-}
-
-@media (hover: none), (pointer: coarse) {
-nav.cat a:active, .close-lb-wrap a:active, .lb-wrap.staff .email a:active, .big-link a:active, .bodytxt a:active {
-  opacity: 0.4;
-}
-}
-
-
 /* ===============================================
 /* BACKGROUND
 /* ============================================ */
 .slide.empty {
   background: var(--brown-50);
 }
-
 .divider {
   background: var(--orange);
 }
-
 /* ===============================================
 /* BACKGROUND HOVER/ACTIVE
 /* ============================================ */

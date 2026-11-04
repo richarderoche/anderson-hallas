@@ -1,29 +1,20 @@
-.redactor-editor h2,
-.redactor-dropdown .redactor-formatting-h2,
-.redactor-dropdown .redactor-formatting-h2-orange {
+/* CP Bard typography preview (ported from Statamic 2 override.scss; Redactor → ProseMirror) */
+@import "../shared/tokens.css";
+.bard-fieldtype .ProseMirror h2 {
   font-size: 24px;
   line-height: 1.2;
   font-weight: 400;
 }
-
-.redactor-dropdown .redactor-formatting-span-ee-lb-btn,
-.redactor-dropdown .redactor-formatting-span-tag-word,
-.redactor-editor .ee-lb-btn,
-.redactor-editor .tag-word,
-.redactor-editor h3,
-.redactor-dropdown .redactor-formatting-h3,
-.redactor-dropdown .redactor-formatting-h3-orange {
+.bard-fieldtype .ProseMirror .ee-lb-btn,
+.bard-fieldtype .ProseMirror .tag-word,
+.bard-fieldtype .ProseMirror h3 {
   font-size: 16px;
   line-height: 1;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.06em;
 }
-
-.redactor-dropdown .ee-lb-btn,
-.redactor-editor .ee-lb-btn,
-.redactor-editor .orange,
-.redactor-dropdown .redactor-formatting-h3-orange,
-.redactor-dropdown .redactor-formatting-h2-orange {
+.bard-fieldtype .ProseMirror .ee-lb-btn,
+.bard-fieldtype .ProseMirror .orange {
   color: var(--orange);
 }

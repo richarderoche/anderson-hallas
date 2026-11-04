@@ -1,25 +1,27 @@
 /* from lg/_lg-site-footer.scss */
 @media (min-width: 1018px) {
-body.project footer.bottom {
-  visibility: hidden;
-}
+  body.project {
+    footer.bottom {
+      visibility: hidden;
+    }
+  }
+  footer.bottom {
+    padding: 3em 0;
 
-footer.bottom {
-  padding: 3em 0;
-}
-footer.bottom .nav-copyright-wrap {
-  margin-top: 0;
-}
-footer.bottom .social-wrap {
-  text-align: right;
-  margin-top: 1.7em;
-}
-footer.bottom .social-wrap a, footer.bottom .social-wrap .ico {
-  width: 3em;
-  height: 3em;
-  overflow: visible;
-}
-footer.bottom .social-wrap a {
-  margin-right: 0.85em;
-}
+    .nav-copyright-wrap {
+      margin-top: 0;
+    }
+    .social-wrap {
+      text-align: right;
+      margin-top: 1.7em;
+    }
+  }
+  footer.bottom .social-wrap a, footer.bottom .social-wrap .ico {
+    width: 3em;
+    height: 3em;
+    overflow: visible;
+  }
+  footer.bottom .social-wrap a {
+    margin-right: 0.85em;
+  }
 }

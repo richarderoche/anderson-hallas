@@ -15,7 +15,7 @@ export function initSliders({ reduced = false } = {}) {
   if (!document.querySelector('.slide-wrap')) return;
 
   document.addEventListener('click', (e) => {
-    const nav = e.target.closest('a.slide-nav');
+    const nav = e.target.closest('.slide-nav');
     if (nav) {
       e.preventDefault();
       clearOverlays();

@@ -59,11 +59,11 @@
             {{ collection:staff-members }}
             <div class="id-{{ id }} panel staff-popup">
               <div class="close-lb-wrap">
-                <a class="toggle close-lb" href="#close">
+                <button type="button" class="toggle close-lb" aria-label="Close Lightbox">
                   <svg aria-labelledby="title" class="ico nav-close" role="img" title="Close Lightbox">
                     <use xlink:href="#nav-close"></use>
                   </svg>
-                </a>
+                </button>
               </div>
               <div class="image">
                 {{ candid }}
@@ -89,7 +89,7 @@
                         {{ /if }}
                       </h3>
                       {{ /if }}
-                      <div class="bio bodytxt">{{ bio | smartypants }}</div>
+                      <div class="bio bodytxt widont">{{ bio | smartypants }}</div>
                       {{ if show_email && personal_email }}
                       <div class="email sm-only">
                         <a class="mailto underline" data-mailto-1="{{ personal_email | explode:@ | first | obfuscate }}" data-mailto-2="{{ personal_email | explode:@ | last | obfuscate }}" href="#email"></a>

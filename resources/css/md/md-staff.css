@@ -1,25 +1,28 @@
 /* from md/_md-staff.scss */
 @media (min-width: 680px) {
-main.staff header.page-section {
-  text-align: left;
-}
+  main.staff {
+    header.page-section {
+      text-align: left;
+    }
+  }
+  article.person {
+    text-align: left;
+    margin-bottom: 1.5em;
 
-article.person {
-  text-align: left;
-  margin-bottom: 1.5em;
-}
-article.person:nth-child(odd) {
-  clear: both;
-}
-article.person .images {
-  width: 100%;
-  margin: 0 0 0.5em;
-}
-
-.lb-wrap.staff .panel-wrap {
-  margin-left: 8.3333333333%;
-}
-.lb-wrap.staff .content {
-  padding: 0 1.3333333333em;
-}
+    .images {
+      width: 100%;
+      margin: 0 0 0.5em;
+    }
+  }
+  article.person:nth-child(odd) {
+    clear: both;
+  }
+  .lb-wrap.staff {
+    .panel-wrap {
+      margin-left: 8.3333333333%;
+    }
+    .content {
+      padding: 0 1.3333333333em;
+    }
+  }
 }

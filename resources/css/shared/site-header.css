@@ -2,11 +2,9 @@
 #wrapper {
   padding-top: var(--header-sm);
 }
-
 header.top, .header-wrap {
   height: 3em;
 }
-
 header.top {
   position: fixed;
   top: 0;
@@ -14,51 +12,58 @@ header.top {
   width: 100%;
   min-width: var(--bp-min);
   z-index: 999;
-  -webkit-backface-visibility: hidden;
-}
-header.top .logo-wrap {
-  margin-top: 0.6em;
-}
-header.top .logo-wrap .ico {
-  float: left;
-  width: 1.8em;
-  height: 1.8em;
-  overflow: visible;
-}
-header.top .logo-wrap h1 {
-  display: inline-block;
-  margin-top: 0.1em;
-  margin-left: 0.9em;
-  float: left;
-}
-header.top .logo-wrap .new-line:before {
-  content: "\a";
-  white-space: pre;
-}
-header.top .nav-toggle-wrap {
-  text-align: right;
-  margin-top: 0.85em;
-}
-header.top .nav-toggle-wrap .inner {
-  position: relative;
-}
-header.top .nav-toggle-wrap a, header.top .nav-toggle-wrap .ico {
-  width: 1.5em;
-  height: 1.2692307692em;
-  overflow: visible;
-}
-header.top .nav-toggle-wrap .toggle-nav-close {
-  position: absolute;
-  -moz-transform: translateX(-999em);
-  -ms-transform: translateX(-999em);
-  -o-transform: translateX(-999em);
-  -webkit-transform: translateX(-999em);
-  transform: translateX(-999em);
-  visibility: hidden;
-  opacity: 0;
-  right: 0;
-}
+  backface-visibility: hidden;
 
+  .logo-wrap {
+    margin-top: 0.6em;
+
+    .ico {
+      float: left;
+      width: 1.8em;
+      height: 1.8em;
+      overflow: visible;
+    }
+    h1 {
+      display: inline-block;
+      margin-top: 0.1em;
+      margin-left: 0.9em;
+      float: left;
+    }
+    .new-line:before {
+      content: "\a";
+      white-space: pre;
+    }
+  }
+  .nav-toggle-wrap {
+    text-align: right;
+    margin-top: 0.85em;
+
+    .inner {
+      position: relative;
+    }
+    button {
+      display: inline-block;
+      box-sizing: content-box;
+      line-height: 0;
+      width: 1.5em;
+      height: 1.2692307692em;
+      overflow: visible;
+    }
+    .ico {
+      display: block;
+      width: 100%;
+      height: 100%;
+      overflow: visible;
+    }
+    .toggle-nav-close {
+      position: absolute;
+      transform: translateX(-999em);
+      visibility: hidden;
+      opacity: 0;
+      right: 0;
+    }
+  }
+}
 nav.mobile {
   position: fixed;
   top: 3em;
@@ -68,64 +73,58 @@ nav.mobile {
   -webkit-overflow-scrolling: touch;
   overflow: auto;
   min-width: var(--bp-min);
-  -moz-transform: translateY(-101%);
-  -ms-transform: translateY(-101%);
-  -o-transform: translateY(-101%);
-  -webkit-transform: translateY(-101%);
   transform: translateY(-101%);
   visibility: hidden;
   background: var(--overlay);
   opacity: 0;
   z-index: -1;
-}
-nav.mobile .nav-mobile-wrap {
-  margin-left: var(--one-6);
-  padding-top: 1.3em;
-  padding-bottom: 1.55em;
-  position: relative;
-  left: calc(var(--gut-sm-2) * -1);
-}
-nav.mobile .parent-wrap {
-  position: relative;
-}
-nav.mobile .parent-wrap .toggle-sec {
-  position: absolute;
-  top: 0;
-  right: 0em;
-  padding: 0.4em;
-  cursor: pointer;
-}
-nav.mobile .parent-wrap .triangle {
-  width: 0.75em;
-  height: 0.65em;
-  overflow: visible;
-  display: block;
-  -moz-transform: rotate(180deg);
-  -ms-transform: rotate(180deg);
-  -o-transform: rotate(180deg);
-  -webkit-transform: rotate(180deg);
-  transform: rotate(180deg);
-}
-nav.mobile .parent-wrap.expanded .triangle {
-  -moz-transform: rotate(0);
-  -ms-transform: rotate(0);
-  -o-transform: rotate(0);
-  -webkit-transform: rotate(0);
-  transform: rotate(0);
-}
-nav.mobile .parent-wrap.expanded .children-wrap {
-  visibility: visible;
-}
-nav.mobile .children-wrap {
-  padding-left: var(--gut-sm-2);
-  max-height: 0;
-  overflow: hidden;
-  visibility: hidden;
-}
-nav.mobile .expanded .children-wrap {
-  /* Open height from expandables.js; none keeps SSR-expanded parents open */
-  max-height: none;
-  visibility: visible;
+
+  .nav-mobile-wrap {
+    margin-left: var(--one-6);
+    padding-top: 1.3em;
+    padding-bottom: 1.55em;
+    position: relative;
+    left: calc(var(--gut-sm-2) * -1);
+  }
+  .parent-wrap {
+    position: relative;
+
+    .toggle-sec {
+      position: absolute;
+      top: 0;
+      right: 0em;
+      padding: 0.4em;
+      cursor: pointer;
+    }
+    .triangle {
+      width: 0.75em;
+      height: 0.65em;
+      overflow: visible;
+      display: block;
+      transform: rotate(180deg);
+    }
+  }
+  .parent-wrap.expanded {
+    .triangle {
+      transform: rotate(0);
+    }
+    .children-wrap {
+      visibility: visible;
+    }
+  }
+  .children-wrap {
+    padding-left: var(--gut-sm-2);
+    max-height: 0;
+    overflow: hidden;
+    visibility: hidden;
+  }
+  .expanded {
+    .children-wrap {
+      /* Open height from expandables.js; none keeps SSR-expanded parents open */
+      max-height: none;
+      visibility: visible;
+    }
+  }
 }
 nav.mobile .nav-link, nav.mobile .sub-link {
   margin-top: 0.6em;
@@ -145,57 +144,38 @@ nav.mobile .sub-link.current .child-link:before {
   left: -1.2em;
   top: -0.065em;
 }
-
 @media (hover: hover) and (pointer: fine) {
-header.top .nav-toggle-wrap a:hover, header.top .logo-wrap a:hover {
-  opacity: 0.6;
+  header.top .nav-toggle-wrap button:hover, header.top .logo-wrap a:hover {
+    opacity: 0.6;
+  }
+  header.top nav a:hover {
+    color: var(--orange);
+  }
 }
-}
-
-@media (hover: hover) and (pointer: fine) {
-header.top nav a:hover {
-  color: var(--orange);
-}
-}
-
-
 @media (hover: none), (pointer: coarse) {
-header.top .nav-toggle-wrap a:active, header.top .logo-wrap a:active {
-  opacity: 0.6;
+  header.top .nav-toggle-wrap button:active, header.top .logo-wrap a:active {
+    opacity: 0.6;
+  }
+  header.top nav a:active {
+    color: var(--orange);
+  }
 }
-}
-
-@media (hover: none), (pointer: coarse) {
-header.top nav a:active {
-  color: var(--orange);
-}
-}
-
-
-.main-nav-on header.top .toggle-nav-open {
-  -moz-transform: translateX(-999em);
-  -ms-transform: translateX(-999em);
-  -o-transform: translateX(-999em);
-  -webkit-transform: translateX(-999em);
-  transform: translateX(-999em);
-  visibility: hidden;
-  opacity: 0;
-}
-.main-nav-on header.top .toggle-nav-close {
-  -moz-transform: translateX(0);
-  -ms-transform: translateX(0);
-  -o-transform: translateX(0);
-  -webkit-transform: translateX(0);
-  transform: translateX(0);
-  visibility: visible;
-  opacity: 1;
-}
-.main-nav-on nav.mobile {
-  -moz-transform: translateY(0);
-  -ms-transform: translateY(0);
-  -o-transform: translateY(0);
-  -webkit-transform: translateY(0);
-  transform: translateY(0);
-  visibility: visible;
-  opacity: 1;
+.main-nav-on {
+  header.top {
+    .toggle-nav-open {
+      transform: translateX(-999em);
+      visibility: hidden;
+      opacity: 0;
+    }
+    .toggle-nav-close {
+      transform: translateX(0);
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+  nav.mobile {
+    transform: translateY(0);
+    visibility: visible;
+    opacity: 1;
+  }
 }

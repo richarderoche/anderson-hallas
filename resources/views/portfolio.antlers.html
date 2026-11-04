@@ -16,9 +16,9 @@
         </div>
       </form>
       <nav class="cat lg-8-12 lg-only">
-        <a class="tag-nav nav-all active" data-tag="all" href="#filter">All</a>
+        <button type="button" class="tag-nav nav-all active" data-tag="all">All</button>
         {{ project_filters }}
-        <a class="nav-{{ slug }} tag-nav" data-tag="{{ slug }}" href="#filter">{{ title }}</a>
+        <button type="button" class="nav-{{ slug }} tag-nav" data-tag="{{ slug }}">{{ title }}</button>
         {{ /project_filters }}
       </nav>
     </div>
@@ -34,18 +34,18 @@
         <div class="body-content">
           <div class="cb row">
             <section class="introtxt smd-6-6 lg-8-12">
-              <h2>{{ past_intro | smartypants }}</h2>
+              <h2 class="widont">{{ past_intro | smartypants }}</h2>
             </section>
           </div>
         </div>
         <ul class="client-list-wrap row">
           {{ if past_order == "Alphabetical" }}
           {{ past_list sort="client:asc" }}
-          <li class="sm-6-6 md-3-6 lg-4-12">{{ client | smartypants }}</li>
+          <li class="sm-6-6 md-3-6 lg-4-12 widont">{{ client | smartypants }}</li>
           {{ /past_list }}
           {{ else }}
           {{ past_list }}
-          <li class="sm-6-6 md-3-6 lg-4-12">{{ client | smartypants }}</li>
+          <li class="sm-6-6 md-3-6 lg-4-12 widont">{{ client | smartypants }}</li>
           {{ /past_list }}
           {{ /if }}
           <li class="note sm-6-6 md-3-6 lg-4-12">

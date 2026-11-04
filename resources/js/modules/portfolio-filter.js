@@ -12,12 +12,12 @@ export function initPortfolioFilter() {
   });
 
   document.addEventListener('click', (e) => {
-    const nav = e.target.closest('a.tag-nav');
+    const nav = e.target.closest('.tag-nav');
     if (!nav) return;
     e.preventDefault();
     const tag = nav.getAttribute('data-tag');
     if (!tag) return;
-    document.querySelectorAll('a.tag-nav').forEach((a) => a.classList.remove('active'));
+    document.querySelectorAll('.tag-nav').forEach((el) => el.classList.remove('active'));
     nav.classList.add('active');
     applyTag(tag, { skipNav: true });
 
@@ -49,7 +49,7 @@ function applyTag(tag, { skipNav = false } = {}) {
   });
 
   if (!skipNav) {
-    document.querySelectorAll('a.tag-nav').forEach((a) => a.classList.remove('active'));
+    document.querySelectorAll('.tag-nav').forEach((el) => el.classList.remove('active'));
     document.querySelector(`.nav-${CSS.escape(tag)}`)?.classList.add('active');
   }
 

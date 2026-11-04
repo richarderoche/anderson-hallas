@@ -3,19 +3,19 @@ export function initNav() {
   const header = document.querySelector('header.top');
 
   document.addEventListener('click', (e) => {
-    const open = e.target.closest('a.toggle-nav-open');
+    const open = e.target.closest('.toggle-nav-open');
     if (open) {
       e.preventDefault();
       body.classList.add('main-nav-on');
       return;
     }
-    const close = e.target.closest('a.toggle-nav-close');
+    const close = e.target.closest('.toggle-nav-close');
     if (close) {
       e.preventDefault();
       body.classList.remove('main-nav-on');
       return;
     }
-    const on = e.target.closest('a.toggle-on');
+    const on = e.target.closest('.toggle-on');
     if (on) {
       e.preventDefault();
       clearOverlays();
@@ -23,14 +23,14 @@ export function initNav() {
       if (cls) body.classList.add(cls);
       return;
     }
-    const off = e.target.closest('a.toggle-off');
+    const off = e.target.closest('.toggle-off');
     if (off) {
       e.preventDefault();
       const cls = off.getAttribute('data-toggle');
       if (cls) body.classList.remove(cls);
       return;
     }
-    if (e.target.closest('a.toggle-off-all')) {
+    if (e.target.closest('.toggle-off-all')) {
       e.preventDefault();
       clearOverlays();
     }
