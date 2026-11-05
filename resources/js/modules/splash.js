@@ -2,6 +2,13 @@ import gsap from 'gsap';
 
 export function initSplash({ reduced = false } = {}) {
   const html = document.documentElement;
+  const splash = document.querySelector('.home-splash');
+
+  if (splash && !html.classList.contains('splash')) {
+    splash.remove();
+    return;
+  }
+
   if (!html.classList.contains('splash')) return;
 
   const dismiss = () => {

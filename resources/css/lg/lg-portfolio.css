@@ -2,13 +2,14 @@
 @media (min-width: 1018px) {
   nav.cat {
     margin-top: 7.7em;
-    text-align: right;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 1.2em;
 
     .tag-nav {
-      margin-left: 1.2em;
-    }
-    .tag-nav:first-child {
-      margin-left: 0;
+      width: auto;
     }
   }
   .project-thumb {

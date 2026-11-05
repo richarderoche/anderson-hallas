@@ -1,6 +1,13 @@
 <!DOCTYPE html>
 <html lang="en" class="splash">
 <head>
+  <script>
+    try {
+      if (sessionStorage.getItem('home_splash')) {
+        document.documentElement.classList.remove('splash');
+      }
+    } catch (e) {}
+  </script>
   {{ if config:app:env == "production" && global:analytics_code }}
   {{ partial src="partials/shared/meta-gtag" }}
   {{ /if }}

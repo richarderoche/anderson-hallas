@@ -1,39 +1,45 @@
 {{ if url | segment:1 == parent_slug }}
+  <div
+    class="nav-link current parent {{ url | segment:1 | remove_left:/ | replace('/', '-') }} {{ url | remove_left:/ | replace('/', '-') or template | slugify }}">
 
-<div class="nav-link current parent {{ url | segment:1 | remove_left:/ | replace('/', '-') }} {{ url | remove_left:/ | replace('/', '-') or template | slugify }}">
-
-<div class="parent-wrap expandable expanded">
-
+    <div class="parent-wrap expandable expanded">
 {{ else }}
+  <div
+    class="nav-link parent {{ url | segment:1 | remove_left:/ | replace('/', '-') }} {{ url | remove_left:/ | replace('/', '-') or template | slugify }}">
 
-<div class="nav-link parent {{ url | segment:1 | remove_left:/ | replace('/', '-') }} {{ url | remove_left:/ | replace('/', '-') or template | slugify }}">
-
-<div class="parent-wrap expandable">
-
+    <div class="parent-wrap expandable">
 {{ /if }}
-<a class="top-link parent-link" href="{{ url }}">{{ title }}</a>
+<a class="top-link parent-link"
+  href="{{ url }}">{{ title }}</a>
 <div class="toggle-sec md-down">
-  <svg aria-labelledby="title" class="ico triangle" role="img" title="Expand or Collapse">
+  <svg aria-labelledby="title"
+    class="ico triangle"
+    role="img"
+    title="Expand or Collapse">
     <use xlink:href="#triangle"></use>
   </svg>
 </div>
 <div class="children-wrap toggle-section">
   {{ if is_current }}
-  <div class="sub-link duplicate current {{ url | remove_left:/ | replace('/', '-') or template | slugify }}">
+    <div class="sub-link duplicate current {{ url | remove_left:/ | replace('/', '-') or template | slugify }}">
   {{ else }}
-  <div class="sub-link duplicate {{ url | remove_left:/ | replace('/', '-') or template | slugify }}">
+    <div class="sub-link duplicate {{ url | remove_left:/ | replace('/', '-') or template | slugify }}">
   {{ /if }}
-  <a class="child-link" href="{{ url }}">{{ title }}</a>
-  </div>
-  {{ children }}
-  {{ if is_current }}
-  <div class="sub-link current {{ url | remove_left:/ | replace('/', '-') or template | slugify }}">
-  {{ else }}
-  <div class="sub-link {{ url | remove_left:/ | replace('/', '-') or template | slugify }}">
-  {{ /if }}
-  <a class="child-link" href="{{ url }}">{{ title }}</a>
-  </div>
-  {{ /children }}
+  <a class="child-link"
+    href="{{ url }}">{{ title }}</a>
+</div>
+{{ children }}
+  {{ unless nav_hide }}
+    {{ if is_current }}
+      <div class="sub-link current {{ url | remove_left:/ | replace('/', '-') or template | slugify }}">
+    {{ else }}
+      <div class="sub-link {{ url | remove_left:/ | replace('/', '-') or template | slugify }}">
+    {{ /if }}
+    <a class="child-link"
+      href="{{ url }}">{{ title }}</a>
+    </div>
+  {{ /unless }}
+{{ /children }}
 </div>
 </div>
 </div>
