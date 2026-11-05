@@ -49,5 +49,5 @@ nav:
     fields: '@hide'
     tools:
       'tools::addons': '@hide'
-start_page: /collections/pages
+start_page: collections/pages
 theme: null
