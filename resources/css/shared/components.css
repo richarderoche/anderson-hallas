@@ -16,7 +16,6 @@
   bottom: 0;
   background: var(--overlay);
   z-index: 9999;
-  backface-visibility: hidden;
   opacity: 0;
   visibility: hidden;
   transform: translateX(-101%);

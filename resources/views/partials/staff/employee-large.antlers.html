@@ -1,13 +1,14 @@
-<article class="person employee large sm-6-6 md-3-6 lg-5-12 lb-btn" data-id="id-{{ id }}">
+<article class="person employee large sm-6-6 md-3-6 lg-5-12 lb-btn"
+  data-id="id-{{ id }}">
   <div class="images">
     <div class="headshot">
       {{ portrait }}
-      {{ partial src="partials/images/staff-leader" }}
+        {{ partial src="images/responsive" crop_ratio="1" :sizes="[67, 43.5, 37]" }}
       {{ /portrait }}
     </div>
     <div class="candid">
       {{ candid }}
-      {{ partial src="partials/images/staff-leader" }}
+        {{ partial src="images/responsive" crop_ratio="1" :sizes="[67, 43.5, 37]" }}
       {{ /candid }}
     </div>
   </div>
@@ -15,14 +16,14 @@
     <h1>
       <span class="name">{{ first_name | smartypants }} {{ last_name | smartypants }}</span>
       {{ if associate }}
-      <span class="associate">{{ associate_title | smartypants }}</span>
+        <span class="associate">{{ associate_title | smartypants }}</span>
       {{ /if }}
     </h1>
     {{ if credentials }}
-    <h2 class="cred">{{ credentials }}</h2>
+      <h2 class="cred">{{ credentials }}</h2>
     {{ /if }}
     {{ if position }}
-    <h3 class="position widont">{{ position | smartypants }}</h3>
+      <h3 class="position widont">{{ position | smartypants }}</h3>
     {{ /if }}
   </div>
 </article>

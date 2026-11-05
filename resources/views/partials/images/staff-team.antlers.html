@@ -1,6 +1,1 @@
-<picture class='img load ratio r-square'>
-  <source media='(min-width: 1681px)' srcset='{{ glide:url width="800" height="800" quality="70" fit="crop_focal"}}'>
-  <source media='(min-width: 1018px)' srcset='{{ glide:url width="550" height="550" quality="70" fit="crop_focal"}}'>
-  <source srcset='{{ glide:url width="600" height="600" quality="70" fit="crop_focal"}}'>
-  <img alt='{{ title }}' srcset='{{ glide:url width="600" height="600" quality="70" fit="crop_focal" }}'>
-</picture>
+{{ partial src="images/responsive" crop_ratio="1" :sizes="[67, 43.5, 29]" }}

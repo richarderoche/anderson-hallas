@@ -3,6 +3,7 @@ import { clearOverlays } from './nav.js';
 
 const SLIDE_FADE = 0.35;
 const AUTO_FADE = 0.7;
+const SPLASH_EXIT_MS = 7500;
 
 export function initSliders({ reduced = false } = {}) {
   // Move home dots into nav wrap
@@ -63,13 +64,65 @@ export function initSliders({ reduced = false } = {}) {
   });
 
   if (!reduced) {
-    const delay = (SLIDE_FADE + 1.8) * 1000;
-    window.setInterval(() => {
-      if (!document.querySelector('.slide-wrap.autoplay')) return;
-      slideInit();
-      slideNext();
-      slideSlide({ reduced, auto: true });
-    }, delay);
+    whenHomeSplashDone(() => startAutoAdvance({ reduced }));
+  }
+}
+
+function startAutoAdvance({ reduced }) {
+  const delay = (SLIDE_FADE + 1.8) * 1000;
+  window.setInterval(() => {
+    if (!document.querySelector('.slide-wrap.autoplay')) return;
+    slideInit();
+    slideNext();
+    slideSlide({ reduced, auto: true });
+  }, delay);
+}
+
+function whenHomeSplashDone(done) {
+  const splash = document.querySelector('.home-splash');
+  if (!splash) {
+    done();
+    return;
+  }
+
+  let settled = false;
+  let exitTimer = 0;
+  const finish = () => {
+    if (settled) return;
+    settled = true;
+    window.clearTimeout(exitTimer);
+    removalObserver.disconnect();
+    classObserver.disconnect();
+    splash.removeEventListener('transitionend', onTransition);
+    done();
+  };
+
+  const onTransition = (e) => {
+    if (e.target !== splash || e.propertyName !== 'opacity') return;
+    finish();
+  };
+  splash.addEventListener('transitionend', onTransition);
+
+  const removalObserver = new MutationObserver(() => {
+    if (!splash.isConnected) finish();
+  });
+  if (splash.parentNode) {
+    removalObserver.observe(splash.parentNode, { childList: true });
+  }
+
+  const html = document.documentElement;
+  const armExitTimer = () => {
+    exitTimer = window.setTimeout(finish, SPLASH_EXIT_MS);
+  };
+  const classObserver = new MutationObserver(() => {
+    if (html.classList.contains('splash')) return;
+    classObserver.disconnect();
+    armExitTimer();
+  });
+  classObserver.observe(html, { attributes: true, attributeFilter: ['class'] });
+  if (!html.classList.contains('splash')) {
+    classObserver.disconnect();
+    armExitTimer();
   }
 }
 

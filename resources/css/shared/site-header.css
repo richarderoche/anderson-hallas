@@ -12,7 +12,6 @@ header.top {
   width: 100%;
   min-width: var(--bp-min);
   z-index: 999;
-  backface-visibility: hidden;
 
   .logo-wrap {
     margin-top: 0.6em;

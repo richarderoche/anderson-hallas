@@ -1,0 +1,82 @@
+{{#
+  Must be used within an img tag pair
+  -------------------------------------
+  crop_ratio - number: w/h (e.g. square = 1, 16:9 = 1.77)
+  sizes - array of vw widths: sm, md (680px), lg (1018px). e.g. [33.33, 50, 66.66]
+  loading - "lazy" or "eager" (default: "lazy")
+  render_size - "sm", "md", or "lg" (default: "md"). Trims srcset widths.
+
+  Example:
+  {{ image_var }}
+    {{ partial src="images/responsive" crop_ratio="1" :sizes="[100, 75, 83.333333]" render_size="lg" loading="eager" }}
+  {{ /image_var }}
+#}}
+
+{{# Prep Attributes #}}
+{{ alttxt = alt ? alt : title | remove_right:.{title | extension} | deslugify }}
+{{# Prep Sizes #}}
+{{ image_sizes = sizes ? sizes : [100, 100, 100] }}
+{{ sizes_attr = "" }}
+{{ image_sizes | reverse }}
+  {{ if first }}
+    {{ sizes_attr = "(min-width: 1018px) " + value + "vw" }}
+  {{ elseif last }}
+    {{ sizes_attr = sizes_attr + ", " + value + "vw" }}
+  {{ else }}
+    {{ sizes_attr = sizes_attr + ", (min-width: 680px) " + value + "vw" }}
+  {{ /if }}
+{{ /image_sizes }}
+{{# Prep Dimensions #}}
+{{ if crop_ratio }}
+  {{ source_ratio = width / height }}
+  {{ if source_ratio > crop_ratio }}
+    {{ img_width = height | multiply:{crop_ratio} | round }}
+    {{ img_height = height }}
+  {{ else }}
+    {{ img_width = width }}
+    {{ img_height = width | divide:{crop_ratio} | round }}
+  {{ /if }}
+{{ else }}
+  {{ img_width = width }}
+  {{ img_height = height }}
+{{ /if }}
+{{# Prep Srcset #}}
+{{ srcset_width_array = [2560, 1920, 1680, 1440, 1280, 960, 640, 320, 160, 80] }}
+{{ if render_size == "sm" }}
+  {{ srcset_width_array = srcset_width_array | offset:4 }}
+{{ elseif render_size == "lg" }}
+  {{ srcset_width_array = srcset_width_array | reverse | offset:2 | reverse }}
+{{ else }}
+  {{ srcset_width_array = srcset_width_array | offset:3 | reverse | offset:1 | reverse }}
+{{ /if }}
+{{ srcset_attr = "" }}
+{{ src_url = "" }}
+{{ srcset_width_array }}
+  {{ if crop_ratio }}
+    {{ slot_height = value | divide:{crop_ratio} | round }}
+    {{ slot_url = {glide:id :width="value" :height="slot_height" fit="crop_focal"} }}
+  {{ else }}
+    {{ slot_url = {glide:id :width="value"} }}
+  {{ /if }}
+  {{ candidate = slot_url + " " + value + "w" }}
+  {{ if first }}
+    {{ srcset_attr = candidate }}
+  {{ else }}
+    {{ srcset_attr = srcset_attr + ", " + candidate }}
+  {{ /if }}
+  {{ if value == 640 }}
+    {{ src_url = slot_url }}
+  {{ /if }}
+{{ /srcset_width_array }}
+{{#
+  ############
+  Render Image
+#}}
+<img alt="{{ alttxt }}"
+  style='aspect-ratio: {{ crop_ratio or "auto" }}'
+  width='{{ img_width }}'
+  height='{{ img_height }}'
+  loading='{{ loading or "lazy" }}'
+  sizes='{{ sizes_attr }}'
+  src='{{ src_url }}'
+  srcset='{{ srcset_attr }}'>

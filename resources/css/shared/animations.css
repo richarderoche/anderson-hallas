@@ -10,7 +10,6 @@ h2.whimsy .play,
 article.person .candid,
 .tag-item {
   transition: opacity 0.2s ease-in-out;
-  backface-visibility: hidden;
 }
 nav.cat .tag-nav,
 .close-lb-wrap .close-lb,
@@ -21,15 +20,12 @@ footer.bottom .footer-contents a,
 .logo-wrap a,
 .bodytxt a {
   transition: opacity 0.2s ease-in-out;
-  backface-visibility: hidden;
 }
 picture.img img {
   transition: opacity 0.8s ease-in-out;
-  backface-visibility: hidden;
 }
 header.top nav a {
   transition: color 0.2s ease-in-out, opacity 0.2s ease-in-out;
-  backface-visibility: hidden;
 }
 /* ===============================================
 /* TOGGLE SECTIONS
@@ -46,12 +42,10 @@ header.top nav a {
 .header-nav-wrap {
   .children-wrap {
     transition: visibility 0s linear 0.15s, opacity 0.15s ease-in-out;
-    backface-visibility: hidden;
   }
   .active {
     .children-wrap {
       transition: visibility 0s linear, opacity 0.15s ease-in-out;
-      backface-visibility: hidden;
     }
   }
 }
@@ -61,13 +55,11 @@ header.top nav a {
 nav.mobile,
 .lb-wrap {
   transition: transform 0s linear 0.3s, visibility 0s linear 0.3s, opacity 0.35s ease-in-out;
-  backface-visibility: hidden;
 }
 .main-nav-on nav.mobile,
 .ee-lb-on .lb-wrap,
 .lb-on .lb-wrap {
   transition: transform 0s linear, visibility 0s linear, opacity 0.35s ease-in-out;
-  backface-visibility: hidden;
 }
 /* ===============================================
 /* PORTFOLIO
@@ -75,30 +67,24 @@ nav.mobile,
 .project-thumb .thumb-info,
 .project-thumb .thumb-image {
   transition: opacity 0.3s ease-in-out, background-color 0.2s ease-in-out;
-  backface-visibility: hidden;
 }
 #tag-box {
   transition: opacity 0.35s ease-in-out;
-  backface-visibility: hidden;
 }
 #tag-content {
   transition: height 0.5s cubic-bezier(0.45, 0, 0.12, 1);
-  backface-visibility: hidden;
 }
 /* ===============================================
 /* PROJECT
 /* ============================================ */
 aside.project-info {
   transition: transform 0.2s cubic-bezier(0.45, 0, 0.12, 1);
-  backface-visibility: hidden;
 }
 .slide {
   transition: opacity 0.35s ease-in-out;
-  backface-visibility: hidden;
 }
 .autoplay .slide {
   transition: opacity 0.7s ease-in-out;
-  backface-visibility: hidden;
 }
 .slide-nav:hover .slide-arrow {
   animation: tempArrows 2.25s cubic-bezier(0.45, 0, 0.12, 1);
@@ -122,25 +108,20 @@ aside.project-info {
 /* ============================================ */
 .home-splash {
   transition: transform 0s linear 7.5s, visibility 0s linear 7.5s, opacity 1.8s ease-in-out 5.7s;
-  backface-visibility: hidden;
 }
 .home-splash .symbol-inner,
 .home-splash .ico {
   transition: transform 1.6s cubic-bezier(0.45, 0, 0.18, 1), opacity 0.96s ease-in-out;
-  backface-visibility: hidden;
 }
 .home-splash {
   .craft {
     transition: opacity 0.9s ease-in-out 1.7s;
-    backface-visibility: hidden;
   }
   .balance {
     transition: opacity 0.9s ease-in-out 2.5s;
-    backface-visibility: hidden;
   }
   .whimsy {
     transition: opacity 0.9s ease-in-out 3.3s, transform 0.5s cubic-bezier(0.45, -0.5, 0.12, 1.15) 4.4s;
-    backface-visibility: hidden;
   }
 }
 /* ===============================================
@@ -149,5 +130,4 @@ aside.project-info {
 .slide-nav-wrap .circle,
 .slide-nav-wrap .dot {
   transition: opacity 0.2s ease-in-out, background-color 0.3s ease-in-out;
-  backface-visibility: hidden;
 }

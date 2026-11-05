@@ -1,13 +1,14 @@
-<article class="person leader sm-6-6 md-3-6 lg-5-12 lb-btn" data-id="id-{{ id }}">
+<article class="person leader sm-6-6 md-3-6 lg-5-12 lb-btn"
+  data-id="id-{{ id }}">
   <div class="images">
     <div class="headshot">
       {{ portrait }}
-      {{ partial src="partials/images/staff-leader" }}
+        {{ partial src="images/responsive" crop_ratio="1" :sizes="[67, 43.5, 37]" loading="eager" }}
       {{ /portrait }}
     </div>
     <div class="candid">
       {{ candid }}
-      {{ partial src="partials/images/staff-leader" }}
+        {{ partial src="images/responsive" crop_ratio="1" :sizes="[67, 43.5, 37]" }}
       {{ /candid }}
     </div>
   </div>

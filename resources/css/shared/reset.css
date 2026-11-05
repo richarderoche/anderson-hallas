@@ -74,6 +74,7 @@ a img {
 img {
   vertical-align: top;
   max-width: 100%;
+  height: auto;
   border: 0;
 }
 img[src*=svg] {
@@ -88,6 +89,7 @@ figure {
 figure img, figure object,
 figure embed, figure video {
   max-width: 100%;
+  height: auto;
   display: block;
 }
 video {

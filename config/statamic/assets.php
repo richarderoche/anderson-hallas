@@ -74,7 +74,8 @@ return [
         */
 
         'defaults' => [
-            // 'quality' => 50,
+            'quality' => 65,
+            'format' => 'webp',
         ],
 
         /*
