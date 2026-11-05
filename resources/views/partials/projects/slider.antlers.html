@@ -1,54 +1,40 @@
 <div class="slide-wrap smd-grid-wrap">
   <div class="row">
     <div class="slide-container smd-6-6">
+      {{ seen_slide = false }}
       {{ slider_images }}
-      {{ unless first }}
+      {{ if (type == "single_image" && image) || (type == "double_image" && (left_image || right_image)) }}
+      {{ if seen_slide }}
+      {{ is_current = false }}
+      {{ else }}
+      {{ is_current = true }}
+      {{ /if }}
+      {{ seen_slide = true }}
       {{ if type == "single_image" }}
-      <picture class="img load slide fit-bg full r-4-3">
+      <picture class="img load slide fit-bg full r-4-3{{ if is_current }} display show{{ /if }}">
         {{ image }}
         {{ partial src="partials/images/slide" }}
         {{ /image }}
       </picture>
       {{ elseif type == "double_image" }}
-      <picture class="img load slide fit-bg left r-3-4">
+      {{ if left_image }}
+      <picture class="img load slide fit-bg left r-3-4{{ if is_current }} display show{{ /if }}">
         {{ left_image }}
         {{ partial src="partials/images/slide-double" }}
         {{ /left_image }}
       </picture>
+      {{ /if }}
       {{ if right_image }}
-      <picture class="img load slide fit-bg right r-3-4">
+      <picture class="img load slide fit-bg right r-3-4{{ if is_current }} display show{{ /if }}">
         {{ right_image }}
         {{ partial src="partials/images/slide-double" }}
         {{ /right_image }}
       </picture>
-      {{ else }}
+      {{ elseif left_image }}
       <div class="slide fit-bg right empty lg-only"></div>
       {{ /if }}
       {{ /if }}
-      {{ else }}
-      {{ if type == "single_image" }}
-      <picture class="img load slide fit-bg full r-4-3 display show">
-        {{ image }}
-        {{ partial src="partials/images/slide" }}
-        {{ /image }}
-      </picture>
-      {{ elseif type == "double_image" }}
-      <picture class="img load slide fit-bg left r-3-4 display show">
-        {{ left_image }}
-        {{ partial src="partials/images/slide-double" }}
-        {{ /left_image }}
-      </picture>
-      {{ if right_image }}
-      <picture class="img load slide fit-bg right r-3-4 display show">
-        {{ right_image }}
-        {{ partial src="partials/images/slide-double" }}
-        {{ /right_image }}
-      </picture>
-      {{ else }}
-      <div class="slide fit-bg right empty lg-only"></div>
       {{ /if }}
-      {{ /if }}
-      {{ /unless }}
       {{ /slider_images }}
     </div>
   </div>

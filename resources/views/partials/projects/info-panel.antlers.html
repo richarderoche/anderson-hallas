@@ -23,7 +23,13 @@
         <h4>
           <span class="slide-num" id="slidecounter">1</span>
           <span class="sep">/</span>
-          <span class="total" id="slidetotal">{{ slider_images | count }}</span>
+          {{ slide_total = 0 }}
+          {{ slider_images }}
+          {{ if (type == "single_image" && image) || (type == "double_image" && (left_image || right_image)) }}
+          {{ slide_total = slide_total + 1 }}
+          {{ /if }}
+          {{ /slider_images }}
+          <span class="total" id="slidetotal">{{ slide_total }}</span>
         </h4>
       </div>
     </div>
