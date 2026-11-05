@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use App\Console\Commands\GenerateProjectImagePresets;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\ServiceProvider;
 use Statamic\Facades\Term;
@@ -22,6 +23,12 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
+        if ($this->app->runningInConsole()) {
+            $this->commands([
+                GenerateProjectImagePresets::class,
+            ]);
+        }
+
         // Old category URLs → collection-scoped /portfolio/categories/{term}.
         Statamic::booted(function () {
             Term::query()

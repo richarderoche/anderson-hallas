@@ -104,7 +104,31 @@ return [
         */
 
         'presets' => [
-            // 'small' => ['w' => 200, 'h' => 200, 'q' => 75, 'fit' => 'crop'],
+            '2880w_1800h_cf' => ['w' => 2880, 'h' => 1800, 'fit' => 'crop_focal'],
+            '2421w_765h_cf' => ['w' => 2421, 'h' => 765, 'fit' => 'crop_focal'],
+            '1920w_1200h_cf' => ['w' => 1920, 'h' => 1200, 'fit' => 'crop_focal'],
+            '1650w_578h_cf' => ['w' => 1650, 'h' => 578, 'fit' => 'crop_focal'],
+            '1645w_790h_cf' => ['w' => 1645, 'h' => 790, 'fit' => 'crop_focal'],
+            '1620w_2160h_cf' => ['w' => 1620, 'h' => 2160, 'fit' => 'crop_focal'],
+            '1462w_462h_cf' => ['w' => 1462, 'h' => 462, 'fit' => 'crop_focal'],
+            '1440w_1800h_cf' => ['w' => 1440, 'h' => 1800, 'fit' => 'crop_focal'],
+            '1410w_1800h_cf' => ['w' => 1410, 'h' => 1800, 'fit' => 'crop_focal'],
+            '1400w_1050h_cf' => ['w' => 1400, 'h' => 1050, 'fit' => 'crop_focal'],
+            '1199w_778h_cf' => ['w' => 1199, 'h' => 778, 'fit' => 'crop_focal'],
+            '1062w_510h_cf' => ['w' => 1062, 'h' => 510, 'fit' => 'crop_focal'],
+            '1062w_372h_cf' => ['w' => 1062, 'h' => 372, 'fit' => 'crop_focal'],
+            '960w_1280h_cf' => ['w' => 960, 'h' => 1280, 'fit' => 'crop_focal'],
+            '960w_1200h_cf' => ['w' => 960, 'h' => 1200, 'fit' => 'crop_focal'],
+            '960w_720h_cf' => ['w' => 960, 'h' => 720, 'fit' => 'crop_focal'],
+            '960w_600h_cf' => ['w' => 960, 'h' => 600, 'fit' => 'crop_focal'],
+            '960w_540h_cf' => ['w' => 960, 'h' => 540, 'fit' => 'crop_focal'],
+            '800w_1233h_cf' => ['w' => 800, 'h' => 1233, 'fit' => 'crop_focal'],
+            '800w_800h_cf' => ['w' => 800, 'h' => 800, 'fit' => 'crop_focal'],
+            '791w_577h_cf' => ['w' => 791, 'h' => 577, 'fit' => 'crop_focal'],
+            '786w_510h_cf' => ['w' => 786, 'h' => 510, 'fit' => 'crop_focal'],
+            '550w_550h_cf' => ['w' => 550, 'h' => 550, 'fit' => 'crop_focal'],
+            '510w_786h_cf' => ['w' => 510, 'h' => 786, 'fit' => 'crop_focal'],
+            '510w_372h_cf' => ['w' => 510, 'h' => 372, 'fit' => 'crop_focal'],
         ],
 
         /*
@@ -118,7 +142,7 @@ return [
         |
         */
 
-        'generate_presets_on_upload' => true,
+        'generate_presets_on_upload' => false,
 
     ],
 
