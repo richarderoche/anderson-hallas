@@ -12,6 +12,10 @@
     position: fixed;
     width: 100%;
     height: 100%;
+
+    .slide {
+      aspect-ratio: unset;
+    }
   }
   main.project {
     .fit-bg {

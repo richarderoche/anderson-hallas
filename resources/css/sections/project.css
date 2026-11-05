@@ -4,6 +4,7 @@ main.project {
 
   .slide {
     margin-bottom: var(--gut-sm);
+    aspect-ratio: 4/3;
   }
   .slide:last-child {
     margin-bottom: 0;
