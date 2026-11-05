@@ -83,9 +83,10 @@ return [
 
         'class' => null,
 
-        'rules' => [
-            //
-        ],
+        // Nav, footer, and globals are on every page, and listings
+        // (portfolio, news, expertise, team) render other entries.
+        // Any save should drop the whole cache.
+        'rules' => 'all',
 
     ],
 
@@ -100,10 +101,10 @@ return [
     |
     */
 
-    'ignore_query_strings' => true,
+    'ignore_query_strings' => false,
 
     'allowed_query_strings' => [
-        //
+        'page',
     ],
 
     'disallowed_query_strings' => [
