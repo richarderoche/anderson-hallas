@@ -112,8 +112,9 @@ tabs:
               max_files: 1
               container: assets
               folder: staff
-              instructions: 'JPG, Ideally at least 1000px wide'
+              instructions: 'Ideally at least 1000px wide'
               width: 50
+              validate: image
           -
             handle: candid
             field:
@@ -121,5 +122,6 @@ tabs:
               max_files: 1
               container: assets
               folder: staff
-              instructions: 'JPG, Ideally at least 1500px wide'
+              instructions: 'Ideally at least 1500px wide'
               width: 50
+              validate: image

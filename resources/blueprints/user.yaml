@@ -27,3 +27,4 @@ fields:
       type: assets
       max_files: 1
       container: assets
+      validate: image

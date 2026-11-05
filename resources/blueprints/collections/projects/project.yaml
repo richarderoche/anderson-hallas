@@ -159,12 +159,13 @@ tabs:
             handle: video_thumb
             field:
               display: 'Thumbnail Image'
-              instructions: 'JPG, at least 400px wide'
+              instructions: 'At least 400px wide'
               type: assets
               container: assets
               folder: projects
               max_files: 1
               width: 50
+              validate: image
               if:
                 show_video: 'contains_any upload,embed'
           -
@@ -209,12 +210,12 @@ tabs:
             handle: thumbnail
             field:
               type: assets
-              instructions: 'Choose or upload high-res JPG'
+              instructions: 'Choose or upload a high-res image'
               container: assets
               folder: projects
               max_files: 1
               width: 66
-              validate: 'ext:jpg'
+              validate: image
               if:
                 manual_thumb: true
           -
@@ -229,12 +230,12 @@ tabs:
                       handle: image
                       field:
                         type: assets
-                        instructions: 'Choose or upload high-res JPG'
+                        instructions: 'Choose or upload a high-res image'
                         container: assets
                         folder: projects
                         max_files: 1
                         width: 50
-                        validate: 'ext:jpg'
+                        validate: image
                     -
                       handle: alt
                       field:
@@ -250,12 +251,12 @@ tabs:
                       field:
                         display: 'Left Image'
                         type: assets
-                        instructions: 'Choose or upload high-res JPG'
+                        instructions: 'Choose or upload a high-res image'
                         container: assets
                         folder: projects
                         max_files: 1
                         width: 50
-                        validate: 'ext:jpg'
+                        validate: image
                     -
                       handle: altL
                       field:
@@ -268,12 +269,12 @@ tabs:
                       field:
                         display: 'Right Image'
                         type: assets
-                        instructions: 'Choose or upload high-res JPG'
+                        instructions: 'Choose or upload a high-res image'
                         container: assets
                         folder: projects
                         max_files: 1
                         width: 50
-                        validate: 'ext:jpg'
+                        validate: image
                     -
                       handle: altR
                       field:

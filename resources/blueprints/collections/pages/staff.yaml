@@ -43,8 +43,9 @@ tabs:
               max_files: 1
               container: assets
               folder: heroes
-              instructions: 'JPG, Ideally at least 2560px wide'
+              instructions: 'Ideally at least 2560px wide'
               width: 66
+              validate: image
           -
             handle: cover_crop
             field:

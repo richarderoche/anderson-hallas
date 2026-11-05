@@ -110,8 +110,9 @@ sections:
                     max_files: 1
                     container: assets
                     folder: page-content
-                    instructions: 'JPG, Ideally at least 2560px wide'
+                    instructions: 'Ideally at least 2560px wide'
                     width: 50
+                    validate: image
                 -
                   handle: caption
                   field:
@@ -142,8 +143,9 @@ sections:
                     max_files: 1
                     container: assets
                     folder: page-content
-                    instructions: 'JPG, Ideally at least 1680px wide'
+                    instructions: 'Ideally at least 1680px wide'
                     width: 50
+                    validate: image
                 -
                   handle: caption
                   field:
@@ -174,8 +176,9 @@ sections:
                     max_files: 1
                     container: assets
                     folder: page-content
-                    instructions: 'JPG, Ideally at least 1920px wide'
+                    instructions: 'Ideally at least 1920px wide'
                     width: 33
+                    validate: image
                 -
                   handle: img_right
                   field:
@@ -184,8 +187,9 @@ sections:
                     max_files: 1
                     container: assets
                     folder: page-content
-                    instructions: 'JPG, Ideally at least 1920px wide'
+                    instructions: 'Ideally at least 1920px wide'
                     width: 33
+                    validate: image
                 -
                   handle: ratio
                   field:
